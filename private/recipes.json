@@ -1,0 +1,32 @@
+[{
+  "season": "summer",
+  "title": "Spicy Chicken Soup",
+  "featured": true,
+  "excerpt": "Lorem ipsum",
+  "source": {
+    "name": "Naturally Ella",
+    "url": "http://foo.com"
+  },
+  "cookTime": "2 hours and 10 minutes",
+  "ingredients": [
+    "1/2 lb tomatoes",
+    "squiggly pasta"
+  ],
+  "imageName": "tomato_pasta.jpg"
+},
+{
+  "season": "winter",
+  "title": "Spicy Chicken Soup 2",
+  "featured": false,
+  "excerpt": "Lorem ipsum",
+  "source": {
+    "name": "Naturally Ella",
+    "url": "http://foo.com"
+  },
+  "cookTime": "2 hours and 10 minutes",
+  "ingredients": [
+    "1/2 lb tomatoes",
+    "squiggly pasta"
+  ],
+  "imageName": "tomato_pasta.jpg"
+}]
