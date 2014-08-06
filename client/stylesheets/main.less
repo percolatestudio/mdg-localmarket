@@ -1,5 +1,7 @@
 @import 'helpers.less.import';
 
+@menu-width: 40%;
+
 
 #container {
   .fill-with-absolute-position;
@@ -10,16 +12,16 @@
 
 #menu {
   .fill-with-absolute-position;
-  right: 10%;
-  overflow-y: auto;
-  padding-bottom: 4em;
-  -webkit-overflow-scrolling: touch;
+  right: 100% - @menu-width;
   
   background: #ddd;
 }
 
 #content-container {
   .fill-with-absolute-position;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  
   background: #eee;
   
   // XXX: not sure if we are using lesshat or what?
@@ -29,6 +31,6 @@
   transform: translate3d(0, 0, 0);
   
   .menu-open & {
-    transform: translate3d(90%, 0, 0);
+    transform: translate3d(@menu-width, 0, 0);
   }
 }
