@@ -1,0 +1,34 @@
+@import 'helpers.less.import';
+
+
+#container {
+  .fill-with-absolute-position;
+
+  // hide anything offscreen .. we can never scroll the body
+  overflow: hidden;
+}
+
+#menu {
+  .fill-with-absolute-position;
+  right: 10%;
+  overflow-y: auto;
+  padding-bottom: 4em;
+  -webkit-overflow-scrolling: touch;
+  
+  background: #ddd;
+}
+
+#content-container {
+  .fill-with-absolute-position;
+  background: #eee;
+  
+  // XXX: not sure if we are using lesshat or what?
+  // .transition(all 200ms ease-out);
+  // .transform(translate3d(0, 0, 0));
+  transition: all 200ms ease-out;
+  transform: translate3d(0, 0, 0);
+  
+  .menu-open & {
+    transform: translate3d(90%, 0, 0);
+  }
+}
