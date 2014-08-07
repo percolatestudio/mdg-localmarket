@@ -397,244 +397,410 @@
   "imageName": "spring-crumiri.jpg"
 },
 {
-  "season": "",
-  "title": "",
-  "featured": false,
-  "excerpt": "",
+  "season": "winter",
+  "title": "Chocolate Tart",
+  "featured": true,
+  "excerpt": "A good chocolate tart doesn’t need to be fancy, but it needs to be deep, dark, and yes, somewhat decadent.",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "David Lebovitz",
+    "url": "http://www.davidlebovitz.com/2011/10/chocolate-tart-recipe/"
   },
-  "cookTime": "",
+  "cookTime": "1 hr",
   "ingredients": [
-
+    "1 1/4 cup (250 g) sugar",
+    "6 tablespoons (90 ml) warm coffee",
+    "4 ounces (115 g) unsalted butter, cubed, room temperature",
+    "pinch of sea salt",
+    "4 ounces (115 g) bittersweet or semisweet chocolate, chopped",
+    "2 ounces (55 g) unsweetened chocolate, chopped",
+    "2 large eggs",
+    "1/4 cup (35 g) flour",
+    "1 tablespoon dark rum or 1 teaspoon vanilla extract",
+    "One 9–10 inch prebaked tart shell"
   ],
-  "imageName": ""
+  "imageName": "winter-chocolate-tart.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "summer",
+  "title": "Elderberry Syrup",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "The gorgeous syrup is great in a glass of sparkling water over ice, dripped some over plain yogurt, atop a bowl of vanilla ice cream, or use it to make an lively kir.",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "David Lebovitz",
+    "url": "http://www.davidlebovitz.com/2007/08/respect-your-el/"
   },
-  "cookTime": "",
+  "cookTime": "35 min",
   "ingredients": [
-
+    "2 pounds (1kg) elderberries, stems removed and rinsed",
+    "4 cups (1l) water",
+    "2 1/2 (500g) cups sugar",
+    "squirt of freshly-squeezed lemon juice"
   ],
-  "imageName": ""
+  "imageName": "summer-elderberry-syrup.jpg"
 },
 {
-  "season": "",
-  "title": "",
-  "featured": false,
-  "excerpt": "",
+  "season": "spring",
+  "title": "Fromage Fort",
+  "featured": true,
+  "excerpt": "So when I’ve got too many cheese bits on hand, it\'s now fromage fort to the rescue.",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "David Lebovitz",
+    "url": "http://www.davidlebovitz.com/2014/04/fromage-forte-cheese-dip-spread-recipe/"
   },
-  "cookTime": "",
+  "cookTime": "15 min",
   "ingredients": [
-
+    "8 ounces (225g) cheese pieces, hard rinds removed",
+    "1 to 2 ounces (30 to 60g) cream cheese",
+    "1/4 cup (60ml) dry white wine",
+    "1 garlic clove, peeled and minced",
+    "a few turns of freshly ground black pepper",
+    "pinch of cayenne or red pepper powder",
+    "1 tablespoon minced chives or flat-leaf parsley",
+    "chives or parsley, for garnish"
   ],
-  "imageName": ""
+  "imageName": "spring-fromage-fort.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "winter",
+  "title": "Dandelion Pesto",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "Usually made with basil and always in a summertime, this rugged version is full-flavored like its basil-rich counterpart",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "David Lebovitz",
+    "url": "http://www.davidlebovitz.com/2011/03/dandelion-pesto-recipe/"
   },
-  "cookTime": "",
+  "cookTime": "25 min",
   "ingredients": [
-
+    "12 ounces (350g) washed and cleaned dandelion leaves",
+    "1 cup (250ml) olive oil",
+    "4 cloves garlic, peeled",
+    "6 tablespoons (40g) pine nuts, lightly toasted",
+    "1 1/2 teaspoons sea salt",
+    "2 1/2 ounces (70g) Parmesan or Romano cheese, grated"
   ],
-  "imageName": ""
+  "imageName": "winter-dandelion-pesto.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "fall",
+  "title": "Sage Buttermilk Biscuits with Sausage & Cheddar",
   "featured": false,
   "excerpt": "",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Epicurious",
+    "url": "http://www.epicurious.com/recipes/food/views/Sage-Buttermilk-Biscuits-with-Sausage-and-Cheddar-102972"
   },
-  "cookTime": "",
+  "cookTime": "50 min",
   "ingredients": [
-
+    "2 cups all-purpose flour",
+    "2 tablespoons finely chopped fresh sage",
+    "2 teaspoons baking powder",
+    "2 teaspoons sugar",
+    "3/4 teaspoon baking soda",
+    "1/2 teaspoon salt",
+    "3/4 stick cold unsalted butter, cut into pieces",
+    "1/4 cup grated sharp cheddar",
+    "3/4 cup well-shaken buttermilk plus additional for brushing",
+    "3/4 pound bulk fresh pork sausage",
+    "16 thin slices sharp cheddar"
   ],
-  "imageName": ""
+  "imageName": "fall-sage-buttermilk-biscuits.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "winter",
+  "title": "Cashew Gateau with Coffe Cardamom Mousse",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "The inspiration for the caramel stained \"glass\" panel comes from my grandmother",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Tartelette",
+    "url": "http://www.tarteletteblog.com/2008/08/cashew-gateau-with-coffee-cardamom.html"
   },
-  "cookTime": "",
+  "cookTime": "1 hr 30 min",
   "ingredients": [
-
+    "3/4 cups cashew, toasted/skinned",
+    "1/3 cup cake flour, unsifted",
+    "1 Tbsp. cornstarch",
+    "3 large egg yolks",
+    "1/2 cup sugar, divided (2Tb & 6 Tb)",
+    "1/2 tsp. vanilla extract",
+    "1/2 tsp. grated lemon rind",
+    "2 lg. egg whites",
+    "2 Tb melted butter, cooled",
+    "1/2 teaspoon ground cardamom",
+    "1/2 cup espresso or strong coffee",
+    "1/4 cup sugar",
+    "1 tsp powdered unflavored gelatin, softened in 1 tablespoon cold water",
+    "1 cup heavy cream, cold",
+    "1/2 cup heavy cream",
+    "3/4 cup chopped chocolate or chocolate chips (about 6 oz or 180 gr)"
   ],
-  "imageName": ""
+  "imageName": "winter-cashew-gateau.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "winter",
+  "title": "Pomegranate Hibiscus Tea & Hony Ginger Yogurt Verrines",
   "featured": false,
   "excerpt": "",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Tartelette",
+    "url": "http://www.tarteletteblog.com/2008/12/pomegranate-hibiscus-tea-honey-ginger.html"
   },
-  "cookTime": "",
+  "cookTime": "30 min",
   "ingredients": [
-
+    "1 1/2 cups brewed hibiscus tea",
+    "1/2 cup pomegranate juice",
+    "2 tablespoons sugar",
+    "1 tablespoon powdered gelatin",
+    "1/4 cup cold water",
+    "1 tablespoon lemon zest",
+    "1 1/2 tsp gelatin",
+    "2 Tb water",
+    "2 cups Greek yogurt",
+    "1/4 cup honey",
+    "2 teaspoons freshly grated ginger"
   ],
-  "imageName": ""
+  "imageName": "winter-pomegranate-hibiscus-tea.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "summer",
+  "title": "Apricots Honey Panna Cotta",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "We have come to grill everything, even fruits. Stone fruits specifically. Juicy, fragrant, perfectly textured for a little fire action",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Tartelette",
+    "url": "http://www.tarteletteblog.com/2011/07/recipe-gluten-free-apricots-honey-panna.html"
   },
-  "cookTime": "",
+  "cookTime": "35 min",
   "ingredients": [
-
+    "6 apricots",
+    "olive oil",
+    "1/4 cup water",
+    "1 tablespoon powdered gelatin (2 sheets gelatin)",
+    "2 cups heavy cream",
+    "1/4 cup honey",
+    "1 cup full fat buttermilk"
   ],
-  "imageName": ""
+  "imageName": "summer-apricots-honey-panna-cotta.jpg"
 },
 {
-  "season": "",
-  "title": "",
-  "featured": false,
+  "season": "winter",
+  "title": "Braised eggs with beef, smoked aubergine and tomato",
+  "featured": true,
   "excerpt": "",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Ottolenghi",
+    "url": "http://www.ottolenghi.co.uk/recipes/meat/braised-eggs-with-beef-smoked-aubergine-and-tomato-shop"
   },
-  "cookTime": "",
+  "cookTime": "1 hr 5 min",
   "ingredients": [
-
+    "4 aubergines (1.1kg gross)",
+    "1 tbsp olive oil, plus extra for drizzling",
+    "1 large onion, finely chopped (200g net)",
+    "6 garlic cloves, roughly chopped (20g net)",
+    "1/2 tsp chilli flakes",
+    "1/2 tsp ground cinnamon",
+    "1/2 tsp ground cumin",
+    "2 tsp tomato paste",
+    "300g minced beef",
+    "2 medium tomatoes, chopped (100g net)",
+    "2 tsp finely chopped preserved lemon (15g)",
+    "4 eggs",
+    "3/4 tsp sumac",
+    "1 tbsp chopped parsley",
+    "Salt and black pepper",
+    "40g tahini",
+    "2 tbsp lemon juice",
+    "1 garlic clove, crushed"
   ],
-  "imageName": ""
+  "imageName": "winter-braised-eggs-with-beef.jpg"
 },
 {
-  "season": "",
-  "title": "",
-  "featured": false,
-  "excerpt": "",
+  "season": "fall",
+  "title": "Roasted Butternut Squash Lasagna",
+  "featured": true,
+  "excerpt": "Making homemade pasta may seem arduous, but this dish is worth the extra work. ",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Martha Stewart",
+    "url": "http://www.marthastewart.com/857657/roasted-butternut-squash-lasagna"
   },
-  "cookTime": "",
+  "cookTime": "1 hr 35 min",
   "ingredients": [
-
+    "2 large butternut squashes (about 2 pounds each), halved lengthwise and seeded",
+    "3 tablespoons extra-virgin olive oil",
+    "Coarse salt and freshly ground pepper",
+    "1 stick unsalted butter, cut into pieces",
+    "2 1/4 cups finely grated Parmesan cheese (about 8 ounces)",
+    "1/2 cup finely crushed amaretti cookies",
+    "1/4 cup finely chopped fresh sage",
+    "1/4 teaspoon freshly grated nutmeg",
+    "6 tablespoons unsalted butter, cut into pieces",
+    "1/4 cup plus 2 tablespoons all-purpose flour",
+    "6 cups whole milk",
+    "Coarse salt",
+    "1/4 teaspoon freshly grated nutmeg",
+    "Homemade Pasta"
   ],
-  "imageName": ""
+  "imageName": "fall-roasted-butternut-squash-lasagna.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "spring",
+  "title": "Easiest Spaghetti & Meatballs",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "No pasta\'s more iconic than spaghetti and meatballs, and now, it\'s a breeze to make -- the meatballs simmer right in the sauce",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Martha Stewart",
+    "url": "http://www.marthastewart.com/336523/easiest-spaghetti-and-meatballs?czone=food%2Fdinner-tonight-center%2Fdinner-tonight-main-courses&gallery=274538&slide=336523&center=276948"
   },
-  "cookTime": "",
+  "cookTime": "30 min",
   "ingredients": [
-
+    "Coarse salt and ground pepper",
+    "1/4 cup finely grated Parmesan, plus more for serving",
+    "1/4 cup chopped fresh parsley",
+    "2 garlic cloves, minced",
+    "1 large egg",
+    "1 pound ground beef chuck",
+    "1/4 cup plain dried breadcrumbs",
+    "1 tablespoon olive oil",
+    "1 can (28 ounces) crushed tomatoes in puree",
+    "3/4 pound spaghetti"
   ],
-  "imageName": ""
+  "imageName": "spring-easiest-spaghetti-and-meatballs.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "winter",
+  "title": "Basic Chicken Stock",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "If you have chicken stock on hand, you're options for a quick dinner are practically endless",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Ciao Samin",
+    "url": "http://www.ciaosamin.com/2012/08/something-out-of-nothing-basic-chicken.html"
   },
-  "cookTime": "",
+  "cookTime": "6 hr",
   "ingredients": [
-
+    "3-4 carcasses worth of chicken bones, including some raw ones, ideally",
+    "one large or two small carrots",
+    "one rib of celery",
+    "one large or two small onions (peel on is fine)",
+    "a few peppercorns",
+    "a sprig of thyme",
+    "a bay leaf",
+    "some parsley stems",
+    "a leek",
+    "a head of garlic, halved (unpeeled is fine)"
   ],
-  "imageName": ""
+  "imageName": "winter-basic-chicken-stock.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "winter",
+  "title": "Cabbage Slaw",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "At this time of year, when a little brightness on the plate is something we can all use, it's a great addition to anything",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Ciao Samin",
+    "url": "http://www.ciaosamin.com/2012/02/festive-slaw.html"
   },
-  "cookTime": "",
+  "cookTime": "20 min",
   "ingredients": [
-
+    "1 small head of cabbage--red, green, napa, or any combination of the three is fine",
+    "1 small red onion",
+    "2 jalapeños",
+    "1 small bunch cilantro",
+    "red wine vinegar",
+    "1 lime",
+    "1 lemon",
+    "salt",
+    "good olive oil"
   ],
-  "imageName": ""
+  "imageName": "winter-cabbage-slaw.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "fall",
+  "title": "Peanut Butter Cookie with Salted Peanut Caramel",
   "featured": false,
-  "excerpt": "",
+  "excerpt": "This recipe takes Peanut Butter Cookies to the next level, with a puddle of gooey peanuty caramel filling the cookies",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "David Lebovitz",
+    "url": "http://www.davidlebovitz.com/2008/12/peanut-butter-cookies-with-salte-1/"
   },
-  "cookTime": "",
+  "cookTime": "45 min",
   "ingredients": [
-
+    "8 tablespoons (115g) unsalted butter, at room temperature",
+    "1/2 cup (120g) packed light brown sugar",
+    "1/2 cup (100g) granulated sugar",
+    "1 large egg, at room temperature",
+    "1 teaspoon vanilla extract",
+    "3/4 cup (200g) creamy salted peanut butter",
+    "1 3/4 cups (250g) flour",
+    "1/2 teaspoon baking soda",
+    "1/4 teaspoon salt",
+    "1 cup (250ml) heavy cream",
+    "1/2 cup (125ml) water",
+    "1 cup (200g) granulated sugar",
+    "1 tablespoon light corn syrup or glucose",
+    "1/8 teaspoon coarse salt",
+    "3/4 cup (100g) finely chopped roasted salted peanuts"
   ],
-  "imageName": ""
+  "imageName": "fall-peanut-butter-cookie.jpg"
 },
 {
-  "season": "",
-  "title": "",
+  "season": "fall",
+  "title": "Mexican Rice",
   "featured": false,
   "excerpt": "",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "NY Times",
+    "url": "http://www.nytimes.com/recipes/1016674/mexican-rice.html"
   },
-  "cookTime": "",
+  "cookTime": "40 min",
   "ingredients": [
-
+    "1 large clove garlic, roughly chopped",
+    "2 cups canned tomatoes (fresh tomatoes can be used)",
+    "1/2 cup green bell pepper, roughly chopped",
+    "1 medium onion, roughly chopped",
+    "1/2 medium jalapeño, seeds and veins removed",
+    "1 teaspoon salt",
+    "1/2 cup chicken stock or water",
+    "2 tablespoons vegetable oil",
+    "1 heaping cup long-grain white rice, rinsed"
   ],
-  "imageName": ""
+  "imageName": "fall-mexican-rice.jpg"
 },
 {
-  "season": "",
-  "title": "",
-  "featured": false,
-  "excerpt": "",
+  "season": "Spring",
+  "title": "Chicken in Mole",
+  "featured": true,
+  "excerpt": "If there is one dish that could be considered Mexican haute cuisine, then Mole Poblano is surely it",
   "source": {
-    "name": "",
-    "url": ""
+    "name": "Epicurious",
+    "url": "http://www.epicurious.com/recipes/food/views/Chicken-in-Mole-Puebla-Style-238185"
   },
-  "cookTime": "",
+  "cookTime": "2 hr",
   "ingredients": [
-
+    "4 pounds chicken pieces, skin on",
+    "Sea salt and ground black pepper to taste",
+    "2 tablespoons sesame seeds, toasted, for garnish",
+    "white rice",
+    "9 mulato chiles",
+    "7 pasilla chiles",
+    "6 ancho chiles",
+    "1 cup plus 9 tablespoons vegetable oil or lard plus additional as needed",
+    "4 or 5 tomatillos, husked and cooked until soft",
+    "5 whole cloves",
+    "20 whole black peppercorns",
+    "1-inch piece of a Mexican cinnamon stick",
+    "1 tablespoon seeds from the chiles, toasted",
+    "1/2 teaspoon anise seeds, toasted",
+    "1/4 teaspoon coriander seeds, toasted",
+    "8 tablespoons sesame seeds, toasted",
+    "4 garlic cloves, roasted",
+    "3 tablespoons raisins",
+    "20 whole almonds, blanched",
+    "1/4 cup pumpkin seeds",
+    "2 corn tortillas, torn into pieces",
+    "3 stale French rolls, cut into 1-inch slices",
+    "6 to 7 cups reserved chicken broth as needed",
+    "1 1/2 ounces Mexican chocolate, chopped"
   ],
-  "imageName": ""
+  "imageName": "spring-chicken-in-mole.jpg"
 },
 {
   "season": "",
