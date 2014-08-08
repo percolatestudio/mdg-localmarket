@@ -4,6 +4,6 @@
   <a data-email>Email this!</a>
   
   {{#each featuredRecipes}}
-    <p>{{title}}</p>
+    <a href="{{pathFor 'recipe'}}">{{title}}</a>
   {{/each}}
 </template>
