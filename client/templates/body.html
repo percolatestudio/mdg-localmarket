@@ -1,0 +1,16 @@
+<template name="body">
+  <div id="container" class="{{menuOpen}} {{emailOpen}}">
+    <section id="menu" class="overthrow">
+      <a href="{{pathFor 'home'}}">Home</a>
+      <a href="{{pathFor 'categories'}}">Categories</a>
+      <a href="{{pathFor 'favorites'}}">Favorites</a>
+      <a href="{{pathFor 'about'}}">About</a>
+    </section>
+    
+    {{> emailOverlay}}
+
+    <div id="content-container">
+      {{> yield}}
+    </div>
+  </div>
+</template>
