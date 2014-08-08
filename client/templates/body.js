@@ -23,6 +23,10 @@ Template.body.events({
   'click #content-container': function() {
     Session.set(MENU_KEY, false);
   },
+  
+  'click #menu a': function() {
+    Session.set(MENU_KEY, false);
+  },
 
   'click [data-email]': function() {
     Session.set(EMAIL_KEY, true);

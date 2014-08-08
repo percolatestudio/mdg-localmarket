@@ -1,0 +1,6 @@
+<template name="categories">
+  {{#each categories}}
+    <a href="{{pathFor 'category' name=this}}">{{this}}</a>
+  {{/each}}
+</template>
+  

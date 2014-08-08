@@ -1,7 +1,7 @@
-<template name="home">
-  <h1>SOUS</h1>
+<template name="category">
+  <h1>{{name}}</h1>
   
-  {{#each featuredRecipes}}
+  {{#each recipes}}
     <a href="{{pathFor 'recipe'}}">{{title}}</a>
   {{/each}}
 </template>
