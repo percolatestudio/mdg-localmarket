@@ -15,15 +15,19 @@ Template.body.helpers({
 });
 
 Template.body.events({
-  'click #content-container': function() {
+  'click [data-menu]': function(e) {
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
-  },
-  
-  'click [data-email]': function(e) {
-    Session.set(EMAIL_KEY, true);
     e.stopImmediatePropagation();
   },
-  
+
+  'click #content-container': function() {
+    Session.set(MENU_KEY, false);
+  },
+
+  'click [data-email]': function() {
+    Session.set(EMAIL_KEY, true);
+  },
+
   'click [data-close-overlay]': function() {
     Session.set(EMAIL_KEY, false);
   }
