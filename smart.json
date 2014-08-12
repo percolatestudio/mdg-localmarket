@@ -1,5 +1,8 @@
 {
   "packages": {
-    "iron-router": {}
+    "iron-router": {},
+    "momentum": {
+      "git": "https://github.com/percolatestudio/meteor-momentum.git"
+    }
   }
 }

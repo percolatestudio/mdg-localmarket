@@ -15,7 +15,9 @@
         <a data-email>Email this!</a>
       </p>
   
-      {{> yield}}
+      {{#momentum with=transition}}
+        {{> yield}}
+      {{/momentum}}
     </div>
   </div>
 </template>

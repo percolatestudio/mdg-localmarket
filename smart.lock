@@ -2,13 +2,22 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {}
+      "iron-router": {},
+      "momentum": {
+        "git": "https://github.com/percolatestudio/meteor-momentum.git",
+        "branch": "master"
+      }
     },
     "packages": {
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.8.2",
         "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
+      },
+      "momentum": {
+        "git": "https://github.com/percolatestudio/meteor-momentum.git",
+        "branch": "master",
+        "commit": "c9b39f3e9cd0a804108a522c80fd5673d1bb4d8b"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

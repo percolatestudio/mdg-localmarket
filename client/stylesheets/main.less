@@ -33,6 +33,11 @@
   .menu-open & {
     transform: translate3d(@menu-width, 0, 0);
   }
+  
+  // XXX: change this style
+  > [data-momentum] > div {
+    .position(absolute, 40px, 0, 0, 0);
+  }
 }
 
 #email-overlay {

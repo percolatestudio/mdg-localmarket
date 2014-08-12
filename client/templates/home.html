@@ -1,7 +1,9 @@
 <template name="home">
-  <h1>SOUS</h1>
+  <div>
+    <h1>SOUS</h1>
   
-  {{#each featuredRecipes}}
-    <a href="{{pathFor 'recipe'}}">{{title}}</a>
-  {{/each}}
+    {{#each featuredRecipes}}
+      <a href="{{pathFor 'recipe'}}">{{title}}</a>
+    {{/each}}
+  </div>
 </template>

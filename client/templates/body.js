@@ -4,7 +4,38 @@ Session.setDefault(MENU_KEY, false);
 var EMAIL_KEY = 'emailOpen';
 Session.setDefault(EMAIL_KEY, false);
 
+// XXX: refactor out of here and verso
+var renderQueue = [];
+// *******************************************
+Deps.autorun(function() {
+  if (! Router.current())
+    return;
+  
+  var render = {
+    path: Router.current().path,
+    template: Router._layout.region('main').template()
+  };
+  
+  renderQueue.unshift(render);
+});
+
+var transitionWith = function(getType) {
+  return function() {
+    return function(node) {
+      return getType(renderQueue[1], renderQueue[0], node);
+    }
+  }
+}
+// *******************************************
+
 Template.body.helpers({
+  transition: transitionWith(function(from, to) {
+    if (to.path === '/')
+      return 'left-to-right';
+    else
+      return 'right-to-left';
+  }),
+  
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
   },
