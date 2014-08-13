@@ -3,6 +3,7 @@
     {{#contentFor 'title'}}Sous{{/contentFor}}
   
     {{#each featuredRecipes}}
+      <img src="{{recipeImage this}}" />
       <a href="{{pathFor 'recipe'}}">{{title}}</a>
     {{/each}}
   </div>
