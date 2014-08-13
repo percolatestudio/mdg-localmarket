@@ -42,6 +42,10 @@ Template.body.helpers({
       return 'right-to-left';
   }),
   
+  templateClass: function() {
+    return Router._layout.region('main').template();
+  },
+  
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
   },
