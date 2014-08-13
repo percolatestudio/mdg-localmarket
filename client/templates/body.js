@@ -13,7 +13,8 @@ Deps.autorun(function() {
   
   var render = {
     path: Router.current().path,
-    template: Router._layout.region('main').template()
+    template: Router._layout.region('main').template(),
+    from: Router.current().options.from
   };
   
   renderQueue.unshift(render);
@@ -30,6 +31,11 @@ var transitionWith = function(getType) {
 
 Template.body.helpers({
   transition: transitionWith(function(from, to) {
+    if (to.from === 'menu')
+      return 'none';
+    
+    // XXX: use from === 'back' for the LTR -- requires support from IR,
+    //   coming in future version
     if (to.path === '/')
       return 'left-to-right';
     else
@@ -55,8 +61,12 @@ Template.body.events({
     Session.set(MENU_KEY, false);
   },
   
-  'click #menu a': function() {
+  'click #menu a': function(e) {
     Session.set(MENU_KEY, false);
+    
+    Router.go($(e.target).attr('href'), {from: 'menu'});
+    e.stopImmediatePropagation();
+    e.preventDefault();
   },
 
   'click [data-email]': function() {
