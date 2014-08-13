@@ -1,12 +1,22 @@
 <template name="recipe">
-  <div>
-    {{> nav title=title black=true back=true}}
+  <div class="layout-recipe">
+    {{> nav black=true back=true}}
 
-    <h2>{{categoryName season}}</h2>
-    <p>{{excerpt}}</p>
-    <h3>{{cookTime}}</h3>
+    <div class="image">
+      <img src="{{recipeImage this}}" />
+    </div>
 
-    <img src="{{recipeImage this}}" />
+    <div class="attribution">
+      <h1 class="title-recipe">{{title}}</h1>
+      <p class="description-recipe">{{excerpt}}</p>
+      <a href="{{source.url}}" class="source">{{source.name}}</a>
+      <span class="time">{{cookTime}}</span>
+
+      <div class="btns-group">
+        <a class="btn-primary">Ingredients</a>
+        <a class="btn-secondary">Directions</a>
+      </div>
+    </div>
 
     <ul>
       {{#each ingredients}}

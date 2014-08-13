@@ -1,0 +1,71 @@
+.list-recipes {
+  .item-recipe {
+    display: block;
+    position: relative;
+
+    // Gradient over image to give text contrast
+    &:after {
+      content: '';
+      .position(absolute, auto, 0, 0, 0, 100%, 25%);
+      .background-image(linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.4) 100%));
+    }
+
+    .attribution {
+      .position(absolute, auto, 0, .5rem, 0);
+
+      color: @color-empty;
+      text-align: center;
+      z-index: 1;
+
+      .title-recipe {
+        .font-s2;
+        .type-bold;
+
+        font-size: 13px; //sans-serif reads smaller
+      }
+      .author-recipe {
+        font-size: 9px;
+        .type-secondary;
+
+        display: block;
+        letter-spacing: .3em;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+    }
+
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+.list-categories {
+  .item-category {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    height: 120px;
+
+    .name-category {
+      .font-m2;
+      .type-black;
+      .position(absolute, 50%, 0, auto, 0);
+      .transform(translateY(-50%));
+
+      color: @color-empty;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+    }
+    .count {
+      .font-s1;
+      .position(absolute, auto, 0, 0, 0);
+      color: rgba(255,255,255,.7);
+    }
+  }
+}

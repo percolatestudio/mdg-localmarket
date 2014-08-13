@@ -1,8 +1,34 @@
 .layout-category {
   .bg-image {
-    height: 327.5px;
-    margin-top: -48px;
+    height: 328px;
+
+    // Achieves down arrow mask effect
+    &:before,
+    &:after {
+      content: '';
+      background: @color-empty;
+      z-index: 1;
+    }
+    &:before { //right side
+      .position(absolute, auto, 0, 0, 50%, auto, .5rem);
+      margin-left: .5rem;
+    }
+    &:after { //left side
+      .position(absolute, auto, 50%, 0, 0, auto, .5rem);
+      margin-right: .5rem;
+    }
+    .count-category:after {
+      .position(absolute, auto, auto, -.5rem, 50%);
+      .transform(translateX(-50%));
+
+      border-top: .5rem solid transparent;
+      border-left: .5rem solid @color-empty;
+      border-right: .5rem solid @color-empty;
+      content: '';
+      z-index: 1;
+    }
   }
+
   .title-category {
     .font-l1;
     .type-black;
@@ -14,5 +40,19 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
+  }
+  .count-category {
+    .font-s1;
+    .position(absolute, auto, 0, .5rem, 0);
+
+    color: rgba(255,255,255,.7);
+    display: block;
+    padding-bottom: .5rem;
+    text-align: center;
+  }
+  .description-category {
+    .font-s3;
+    text-align: center;
+    padding: .5rem 1.25rem .75rem;
   }
 }

@@ -7,6 +7,10 @@ nav {
   &.scrolled {
     background: @color-empty;
   }
+  &.black {
+    color: @color-empty;
+    a { color: @color-empty; }
+  }
 
   .title-page {
     .font-s2;
@@ -34,6 +38,7 @@ nav {
     .font-m1;
     .position(absolute, 0, auto, auto, 0, 3rem, 3rem);
 
+    color: @color-full;
     display: block;
     z-index: 1;
 
@@ -49,4 +54,5 @@ nav {
     }
 
   }
+
 }

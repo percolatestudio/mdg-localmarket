@@ -1,0 +1,53 @@
+.layout-recipe {
+  .image {
+    position: relative;
+    height: 70%;
+
+    // Gradient over image to give nav contrast
+    &:after {
+      content: '';
+      .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
+      .background-image(linear-gradient(top, rgba(0,0,0,.35), rgba(0,0,0,0) 100%));
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+  .attribution {
+    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 40%, @color-empty 100%));
+    .position(absolute, auto, 0, 0, 0);
+
+    padding-top: 1.5em;
+    text-align: center;
+    .title-recipe {
+      .font-m2;
+      .type-bold;
+    }
+    .description-recipe {
+      .font-s3;
+      color: @color-well;
+      margin-bottom: .5rem;
+    }
+    .source {
+      .type-secondary;
+      .font-s1;
+
+      color: @color-medium;
+      padding-right: .5rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+    }
+    .time {
+      .font-s1;
+      color: @color-medium;
+
+      border-left: 1px solid @color-medium-rare;
+      padding-left: .5rem;
+    }
+    .btns-group {
+      padding-top: 1em;
+    }
+  }
+}

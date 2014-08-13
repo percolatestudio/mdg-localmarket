@@ -30,10 +30,13 @@
     transform: translate3d(@menu-width, 0, 0);
   }
 
-  > [data-momentum] > div {
+  //what does this do? it's messing with the layout
+  /*
+> [data-momentum] > div {
     .position(absolute, 0, 0, 0, 0);
     padding-top: 3em;
   }
+*/
 }
 
 #email-overlay {
