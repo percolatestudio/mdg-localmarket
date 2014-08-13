@@ -1,6 +1,10 @@
 {
   "packages": {
     "iron-router": {},
+    "iron-layout": {
+      "git": "https://github.com/eventedmind/iron-layout.git",
+      "branch": "hasRegion"
+    },
     "momentum": {
       "git": "https://github.com/percolatestudio/meteor-momentum.git"
     }

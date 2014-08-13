@@ -3,6 +3,10 @@
   "dependencies": {
     "basePackages": {
       "iron-router": {},
+      "iron-layout": {
+        "git": "https://github.com/eventedmind/iron-layout.git",
+        "branch": "hasRegion"
+      },
       "momentum": {
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master"
@@ -14,15 +18,15 @@
         "tag": "v0.8.2",
         "commit": "05415a8891ea87a00fb1e2388585f2ca5a38e0da"
       },
+      "iron-layout": {
+        "git": "https://github.com/eventedmind/iron-layout.git",
+        "branch": "hasRegion",
+        "commit": "0c5105ffd3d1ac44008cb1a63c049524ab90838c"
+      },
       "momentum": {
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master",
         "commit": "c9b39f3e9cd0a804108a522c80fd5673d1bb4d8b"
-      },
-      "iron-layout": {
-        "git": "https://github.com/EventedMind/iron-layout.git",
-        "tag": "v0.2.0",
-        "commit": "4a2d53e35ba036b0c189c7ceca34be494d4c6c97"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

@@ -1,5 +1,6 @@
 <template name="recipe">
   {{#contentFor 'title'}}{{title}}{{/contentFor}}
+  {{> contentFor region="leftNav" template='navBack'}}
   
   <h2>{{categoryName season}}</h2>
   <p>{{excerpt}}</p>
