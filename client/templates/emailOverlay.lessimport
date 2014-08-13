@@ -1,0 +1,38 @@
+.layout-email {
+
+  a[data-close-overlay] {
+    .position(absolute, 0, 0, auto, auto, 3em, 3em);
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+
+    .icon-cross {
+      color: @color-medium-well;
+      font-size: 1em;
+      line-height: 48px;
+    }
+  }
+
+  .title-overlay {
+    .font-l1;
+    .type-black;
+
+    color: @color-well;
+    letter-spacing: .3em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  fieldset {
+
+  }
+  .btn-primary {
+    .position(absolute, auto, 0, 0, 0, 100%);
+
+    font-size: 1rem;
+    padding-top: 1.1em;
+    padding-bottom: .9em;
+  }
+}

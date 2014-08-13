@@ -5,7 +5,7 @@
 
   /* Sizing */
   .font-s2;
-  line-height: 20px !important; //override line-height always so we can use em's to size.
+  line-height: 22px !important; //override line-height always so we can use em's to size.
   padding: 1.25em 1.25em .9em; // 48px tall
 
   color: @color-empty;

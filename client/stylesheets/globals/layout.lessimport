@@ -41,11 +41,19 @@
 
 #email-overlay {
   .position(absolute, 0, 0, 0, 0);;
-  z-index: 1;
-  background: #efefef;
+
+
+  .background-image(
+    linear-gradient(top, rgba(232, 234, 241,.97), rgba(243,243,244, .97) 100%)
+  );
 
   display: none;
+  z-index: 1;
   .email-open & {
     display: block;
   }
+}
+
+.email-open #content-container {
+  overflow: hidden; //prevents ios scrolling background when overlay is open
 }

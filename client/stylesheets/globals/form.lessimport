@@ -1,26 +1,14 @@
 /* Generic Spacing */
 /* Wrap in <fieldset> or add class .fieldset */
-fieldset,
-.fieldset {
+fieldset {
   .clearfix;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-
-  //spacing between fieldsets (can't use margins because of border)
-  & + fieldset,
-  & + .fieldset {
-    border-top: 1px solid @color-medium-rare;
-  }
 
   > input:not([type="checkbox"]):not([type="radio"]),
   > textarea,
   > label.checkbox,
   > label.radio,
-  > .a-select,
   > .input-symbol {
-    // direct descendents only, custom layouts are wrapped in .fieldset-group
     display: block;
-    margin-bottom: .5rem;
     width: 100%;
 
     &:last-child { margin-bottom: 0; }
@@ -29,21 +17,12 @@ fieldset,
     min-height: 7em;
   }
   [class^="btn-"],
-  [class*=" btn-"],
-  .a-select,
-  .a-select select {
+  [class*=" btn-"] {
     width: 100%;
   }
 
   label:not(.checkbox):not(.radio) {
     .type-bold;
-  }
-  .checkbox {
-    .font-s1;
-    margin-bottom: 1rem;
-  }
-  .fieldset-group {
-    margin-bottom: 1rem;
   }
 }
 
@@ -97,15 +76,17 @@ input:not([type="checkbox"]):not([type="radio"]) {
 input:not([type="checkbox"]):not([type="radio"]),
 textarea {
   .placeholder(@color-medium);
-  .font-s2;
-  @media screen and (min-width: 40em) { .font-s3; }
   //do not add a transition; it causes a focus bug in iOS
+
+  font-size: 1rem;
+
 
   padding: .75em 0; //total height ~48
 
   background: transparent;
-  box-shadow: rgba(0,0,0,.2) 0 -1px 0 0 inset;
-  border:none;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  border-radius: 0;
   box-sizing: border-box;
   outline: none;
 
@@ -115,11 +96,11 @@ textarea {
 
   &:active,
   &:focus {
-    box-shadow: rgba(0,0,0,.5) 0 -1px 0 0 inset;
+    border-bottom: 1px solid rgba(0,0,0,.3);
   }
   /* Alerts */
   &.alert {
-    box-shadow: @color-negative 0 -1px 0 0 inset;
+    border-bottom: 1px solid @color-negative;
   }
 }
 
@@ -134,27 +115,35 @@ textarea {
 
   //icon position and padding for input
   &.left {
-    > [class^="icon-"], > [class*=" icon-"] {
-      left: 1.4em/2;
+    > [class^="icon-"],
+    > [class*=" icon-"] {
+      left: 1rem;
     }
-    > input,
-    > .pseudo-input {
-      padding-left: 2.5em !important;
+    > input {
+      padding-left: 2.75em !important;
     }
   }
 
-  > input, > button, > .pseudo-input {
+  > input {
     width: 100%;
+    &:focus {
+      & + [class^="icon-"],
+      & + [class*=" icon-"] {
+        color: @color-well;
+      }
+    }
   }
-  > [class^="icon-"], > [class*=" icon-"] {
+  > [class^="icon-"],
+  > [class*=" icon-"] {
+    .transition( all 300ms ease-in );
     background: transparent;
     color: @color-medium;
-    font-size: 1.125em;
-    height: 1em;
+    font-size: 1rem;
+    height: 1rem;
     position: absolute;
     top: 50%;
 
-    width: 1em;
+    width: 1rem;
     .transform(translateY(-50%));
     .transition( all 100ms ease-in );
   }

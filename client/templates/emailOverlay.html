@@ -1,15 +1,25 @@
 <template name="emailOverlay">
-  <div id="email-overlay">
-    <a data-close-overlay>X</a>
-    
-    <h2>Email Recipe</h2>
-    
+  <div id="email-overlay" class="layout-email">
+    <a data-close-overlay><span class="icon-cross"></span></a>
+
+    <div class="title-overlay">Email Recipe</div>
+
     <form>
-      <input type='text' placeholder="Your Name" />
-      <input type='text' placeholder="Your Email Address" />
-      <input type='text' placeholder="Recipient's Email Address" />
-      
-      <button type='submit'>Send Recipe</button>
+      <fieldset>
+        <div class="input-symbol left">
+          <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
+          <span class="icon-user"></span>
+        </div>
+        <div class="input-symbol left">
+          <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
+          <span class="icon-email"></span>
+        </div>
+        <div class="input-symbol left">
+          <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
+          <span class="icon-email"></span>
+        </div>
+      </fieldset>
+      <button class="btn-primary" type='submit'>Send Recipe</button>
     </form>
   </div>
 </template>
