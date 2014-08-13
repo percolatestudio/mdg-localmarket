@@ -1,0 +1,10 @@
+.subtitle-categories {
+  .font-m1;
+  .type-bold;
+  display: block;
+  line-height: 1;
+  text-align: center;
+
+  padding-top: .75rem;
+  height: 3.5rem;
+}
