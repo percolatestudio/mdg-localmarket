@@ -1,6 +1,6 @@
 <template name="home">
   <div>
-    <h1>SOUS</h1>
+    {{#contentFor 'title'}}Sous{{/contentFor}}
   
     {{#each featuredRecipes}}
       <a href="{{pathFor 'recipe'}}">{{title}}</a>

@@ -4,7 +4,7 @@
   <div class="list-categories">
     {{#each categories}}
       <a href="{{pathFor 'category' name=this}}" class="bg-image-small {{this}}">
-        <span class="name-category">{{this}} Bites</span>
+        <span class="name-category">{{categoryName this}}</span>
         <span class="count">5 Recipes</span>
       </a>
     {{/each}}
