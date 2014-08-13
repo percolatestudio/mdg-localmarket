@@ -46,10 +46,27 @@
       linear-gradient(135deg, rgba(36,87,72,.7) 0%, rgba(76,85,30,.7) 100%),
       url('img/app/bg-seasons-spring-640x240.jpg')
     ;
+    .background-image(
+      linear-gradient(135deg, rgba(36,87,72,.7) 0%, rgba(76,85,30,.7) 100%),
+      url('img/app/bg-seasons-spring-640x240.jpg')
+    );
   }
   &[class*="summer"] {
-    background-image: url('img/app/bg-seasons-summer-640x240.jpg');
+    background-image:
+      linear-gradient(135deg, rgba(36,87,72,.7) 0%, rgba(76,85,30,.7) 100%),
+      url('img/app/bg-seasons-summer-640x240.jpg')
+    ;
   }
-  &[class*="fall"] { background-image: url('img/app/bg-seasons-fall-640x240.jpg'); }
-  &[class*="winter"] { background-image: url('img/app/bg-seasons-winter-640x240.jpg'); }
+  &[class*="fall"] {
+    background-image:
+      linear-gradient(135deg, rgba(35,45,85,.7) 0%, rgba(76,85,30,.7) 100%),
+      url('img/app/bg-seasons-fall-640x240.jpg')
+    ;
+  }
+  &[class*="winter"] {
+    background-image:
+      linear-gradient(135deg, rgba(36,87,72,.7) 0%, rgba(76,85,30,.7) 100%),
+      url('img/app/bg-seasons-winter-640x240.jpg')
+    ;
+  }
 }
