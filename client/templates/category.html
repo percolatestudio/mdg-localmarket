@@ -1,5 +1,5 @@
 <template name="category">
-  <h1>{{name}}</h1>
+  {{#contentFor 'title'}}{{categoryName name}}{{/contentFor}}
   
   {{#each recipes}}
     <a href="{{pathFor 'recipe'}}">{{title}}</a>
