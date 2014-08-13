@@ -10,27 +10,9 @@
     {{> emailOverlay}}
 
     <div id="content-container">
-      <nav>
-        {{#if hasRegion 'leftNav'}}
-          {{> yield region='leftNav'}}
-        {{else}}
-          <a data-menu class="nochrome"><span class="icon-menu"></span></a>
-        {{/if}}
-        
-        <div class="title-page">{{> yield region='title'}}
-        <!-- <span class="subtext-page">7 Recipes</span> -->
-        </div>
-        
-        {{> yield region='rightNav'}}
-      </nav>
-
       {{#momentum with=transition}}
         {{> yield}}
       {{/momentum}}
     </div>
   </div>
-</template>
-
-<template name="navBack">
-  <a data-back class="nochrome"><span class="icon-back"></span></a>
 </template>

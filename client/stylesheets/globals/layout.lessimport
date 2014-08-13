@@ -25,19 +25,15 @@
   -webkit-overflow-scrolling: touch;
 
   background: @color-empty;
-  padding-top: 3em;
 
   .menu-open & {
     transform: translate3d(@menu-width, 0, 0);
   }
 
-  // XXX Tom: change this style
-  // XXX Dom: What is this?
-  /*
-> [data-momentum] > div {
-    .position(absolute, 40px, 0, 0, 0);
+  > [data-momentum] > div {
+    .position(absolute, 0, 0, 0, 0);
+    padding-top: 3em;
   }
-*/
 }
 
 #email-overlay {
