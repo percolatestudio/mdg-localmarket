@@ -18,7 +18,7 @@
 @color-raw-alt: #f3f3f3;
 @color-rare: #EEE;
 @color-medium-rare: #ccc;
-@color-medium: #aaa;
+@color-medium: #AAAAAA;
 @color-medium-well: #666;
 @color-well: #555;
 @color-full: #333;

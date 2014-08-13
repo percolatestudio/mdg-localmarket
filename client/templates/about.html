@@ -1,4 +1,17 @@
 <template name="about">
-  {{#contentFor 'title'}}About{{/contentFor}}
-  
+  {{> nav title='About' black=true}}
+  <div class="layout-about">
+    <div class="bg-image about">
+      <h1 class="title-about">Meet Sous</h1>
+    </div>
+    <div class="description-about">
+      <p>The best recipes on the web hand-picked by San Francisco's top chefs. Explore recipes curated by Colin Kull of <a>Range</a>, Laurie Ellen Pellicano of <a>Tartine Bakery</a>, and Ren Rossini of <a>Fatted Calf Charcuterie</a>.</p>
+
+      <p>Sous is an open source recipe book brought to you by the next-generation web framework <a href="http://meteor.com">MeteorJS</a> and <a href="http://percolatestudio.com">Percolate Studio</a>.</p>
+    </div>
+    <div class="btns-group">
+      <a href="http://github.com/meteor/sous/" class="btn-primary">View Code</a>
+      <a href="http://meetsous.com" class="btn-tertiary" target="_blank">Learn More</a>
+    </div>
+  </div>
 </template>

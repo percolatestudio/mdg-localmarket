@@ -1,6 +1,6 @@
 // Subtitle styling used around the place, mainly in headers
 .section-subtitle (@color) {
-  .type-bold;
+  .type-black;
   text-transform: uppercase;
   letter-spacing: .3em;
   color: @color;

@@ -1,5 +1,7 @@
 .list-recipes {
   .item-recipe {
+    .transform(translate3d(0,0,0));
+
     display: block;
     position: relative;
 
@@ -7,26 +9,28 @@
     &:after {
       content: '';
       .position(absolute, auto, 0, 0, 0, 100%, 25%);
-      .background-image(linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.4) 100%));
+      .background-image(linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,.5) 100%));
     }
 
     .attribution {
-      .position(absolute, auto, 0, .5rem, 0);
+      .position(absolute, auto, 0, .75rem, 0);
 
-      color: @color-empty;
+      padding: 0 1.25rem;
       text-align: center;
       z-index: 1;
 
       .title-recipe {
-        .font-s2;
+        .font-s3;
         .type-bold;
 
-        font-size: 13px; //sans-serif reads smaller
+        color: @color-empty;
+        font-size: 13px;
       }
       .author-recipe {
-        font-size: 9px;
+        .font-s1-alt;
         .type-secondary;
 
+        color: rgba(255,255,255,.7);
         display: block;
         letter-spacing: .3em;
         text-transform: uppercase;
@@ -64,8 +68,16 @@
     }
     .count {
       .font-s1;
-      .position(absolute, auto, 0, 0, 0);
+      .position(absolute, auto, 0, .25rem, 0);
       color: rgba(255,255,255,.7);
     }
+  }
+}
+
+.list-ingredients {
+  .item-ingredient {
+    .font-s3;
+    padding: .75rem 1.25rem;
+    border-top: 1px solid @color-well;
   }
 }

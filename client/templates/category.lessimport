@@ -33,7 +33,7 @@
     .font-l1;
     .type-black;
     .position(absolute, 50%, 0, auto, 0);
-    .transform(translateY(-50%));
+    .transform(translateY(-30%));
 
     color: @color-empty;
     letter-spacing: .3em;

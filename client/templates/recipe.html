@@ -9,19 +9,22 @@
     <div class="attribution">
       <h1 class="title-recipe">{{title}}</h1>
       <p class="description-recipe">{{excerpt}}</p>
-      <a href="{{source.url}}" class="source">{{source.name}}</a>
+      <span class="source">{{source.name}}</span>
       <span class="time">{{cookTime}}</span>
-
-      <div class="btns-group">
-        <a class="btn-primary">Ingredients</a>
-        <a class="btn-secondary">Directions</a>
-      </div>
     </div>
 
-    <ul>
-      {{#each ingredients}}
-        <li>{{this}}</li>
-      {{/each}}
-    </ul>
+    <div class="btns-group">
+      <a class="btn-primary">Ingredients</a>
+      <a href="{{source.url}}/" class="btn-secondary" target="_blank">Directions</a>
+    </div>
+
+    <div class="ingredients" name="ingredients">
+      <h2 class="title-ingredients">21 Ingredients</h2>
+      <ul class="list-ingredients">
+        {{#each ingredients}}
+          <li class="item-ingredient">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
 </template>

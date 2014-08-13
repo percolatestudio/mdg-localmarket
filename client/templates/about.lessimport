@@ -1,0 +1,27 @@
+.layout-about {
+  .bg-image.about {
+    height: 12em;
+  }
+  .title-about {
+    .font-l1;
+    .type-black;
+    .position(absolute, 50%, 0, auto, 0);
+    .transform(translateY(-30%));
+
+    color: @color-empty;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  }
+  .description-about {
+    padding: 1em 1.25em;
+    color: @color-well;
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 1rem;
+    }
+  }
+
+}

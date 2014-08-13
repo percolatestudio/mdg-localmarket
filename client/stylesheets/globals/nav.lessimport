@@ -1,19 +1,30 @@
 nav {
+  .transform(translate3d(0,0,0));
   .position(absolute, 0, 0, auto, 0, 100%, 3em);
 
   text-align: center;
-  z-index: 3;
+  z-index: 10;
 
   &.scrolled {
     background: @color-empty;
   }
   &.black {
     color: @color-empty;
+
+    // Gradient over image to give nav contrast
+    &:after {
+      .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
+      .background-image(linear-gradient(top, rgba(0,0,0,.35), rgba(0,0,0,0) 100%));
+
+      content: '';
+      z-index: -1;
+    }
+
     a { color: @color-empty; }
   }
 
   .title-page {
-    .font-s2;
+    .font-s2-alt;
     .ellipsized;
     .type-secondary;
 

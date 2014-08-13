@@ -1,14 +1,10 @@
 .layout-recipe {
   .image {
+    .transform(translate3d(0,0,0));
+    overflow: hidden;
     position: relative;
     height: 70%;
-
-    // Gradient over image to give nav contrast
-    &:after {
-      content: '';
-      .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
-      .background-image(linear-gradient(top, rgba(0,0,0,.35), rgba(0,0,0,0) 100%));
-    }
+    width: 100%;
 
     img {
       height: 100%;
@@ -17,37 +13,61 @@
   }
   .attribution {
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 40%, @color-empty 100%));
-    .position(absolute, auto, 0, 0, 0);
+    .position(absolute, auto, 0, 3em, 0);
+    .transform(translate3d(0,0,0));
 
-    padding-top: 1.5em;
+    padding: 1.25em 1.25em 1em;
     text-align: center;
+
+
     .title-recipe {
       .font-m2;
       .type-bold;
+      margin-bottom: .25rem;
     }
     .description-recipe {
       .font-s3;
       color: @color-well;
-      margin-bottom: .5rem;
+      margin-bottom: .25rem;
     }
+
     .source {
-      .type-secondary;
       .font-s1;
+      .type-secondary;
 
       color: @color-medium;
-      padding-right: .5rem;
+      display: inline-block;
+      padding-right: .25rem;
       letter-spacing: .3em;
       text-transform: uppercase;
+      vertical-align: middle;
     }
     .time {
       .font-s1;
-      color: @color-medium;
+      .type-bold;
 
+
+      color: @color-medium;
+      display: inline-block;
       border-left: 1px solid @color-medium-rare;
       padding-left: .5rem;
+      vertical-align: middle;
     }
-    .btns-group {
-      padding-top: 1em;
+  }
+  .btns-group {
+    .position(absolute, auto, 0, 0, 0, 100%, 3em);
+    .transform(translate3d(0,0,0));
+  }
+  .ingredients {
+    .transform(translate3d(0,0,0));
+    background: @color-full;
+    color: @color-empty;
+    position: absolute;
+    top: 100%;
+    .title-ingredients {
+      .font-m1;
+      color: @color-primary;
+      padding: 1.25rem 1.25rem .75rem;
     }
   }
 }

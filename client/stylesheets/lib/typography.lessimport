@@ -64,15 +64,27 @@
   //this sets the baseline for the layout but gets overridden per template
   //vertical rhythm is all multiples of 4
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
 }
 
 .font-s2() {
   font-size: 12px;
-  line-height: 20px;
+  line-height: 18px;
 }
 
 .font-s1() {
   font-size: 10px;
   line-height: 16px;
+}
+
+
+// ALT to be paired to type-secondary because the typeface LORA reads larger than LATO
+.font-s2-alt() {
+  font-size: 11px;
+  line-height: 18px;
+}
+
+.font-s1-alt() {
+  font-size: 9px;
+  line-height: 18px;
 }

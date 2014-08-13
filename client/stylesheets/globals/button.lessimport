@@ -1,23 +1,21 @@
 [class^="btn-"],
 [class*=" btn-"] {
+  .type-black;
   .transition( all 200ms ease-in );
-  .section-subtitle(@color-empty);
 
   /* Sizing */
-  .font-s1;
+  .font-s2;
   line-height: 20px !important; //override line-height always so we can use em's to size.
-  padding: .57em 1.25em; //more compact buttons
-  @media screen and (min-width: 40em) {
-    .font-s3;
-    line-height: 20px !important; //override line-height always so we can use em's to size.
-    padding: .975em 1.25em .775em; //more compact buttons 8 15 yields 48px button
-  }
+  padding: 1.25em 1.25em .9em; // 48px tall
 
+  color: @color-empty;
   display: inline-block;
+  letter-spacing: .3em;
   position: relative;
   text-align: center;
   text-decoration: none !important; //prevents global link styles from applying
   text-indent:.3em; //required to balance out the extra right spacing from letter-spacing
+  text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
 
@@ -34,18 +32,18 @@
     }
   }
   &[class*="secondary"] {
-    background: @color-rare;
-    color: @color-full;
+    background: @color-secondary;
+    color: @color-empty;
     &:hover{
-      background-color: darken(@color-rare, 5%);
+      background-color: darken(@color-secondary, 5%);
     }
     &:active{
       box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
     }
   }
   &[class*="tertiary"] {
-    background-color: darken(@color-rare, 5%);
-    color: @color-full;
+    background-color: @color-rare;
+    color: @color-primary;
     &:hover{
       background-color: darken(@color-rare, 10%);
     }

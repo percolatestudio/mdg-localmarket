@@ -1,13 +1,15 @@
 <template name="categories">
-  {{#contentFor 'title'}}Categories{{/contentFor}}
-  <span class="subtitle-categories">Browse by Season</span>
+  {{> nav title='Categories'}}
+  <div class="layout-categories">
+    <span class="subtitle-categories">Browse by Season</span>
 
-  <div class="list-categories">
-    {{#each categories}}
-      <a href="{{pathFor 'category' name=this}}" class="item-category {{this}} bg-image-small">
-        <span class="name-category">{{categoryName this}}</span>
-        <span class="count">5 Recipes</span>
-      </a>
-    {{/each}}
+    <div class="list-categories">
+      {{#each categories}}
+        <a href="{{pathFor 'category' name=this}}" class="item-category {{this}} bg-image-small">
+          <span class="name-category">{{categoryName this}}</span>
+          <span class="count">5 Recipes</span>
+        </a>
+      {{/each}}
+    </div>
   </div>
 </template>

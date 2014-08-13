@@ -3,6 +3,7 @@ a, .pseudo-link {
   color: @color-primary;
   cursor: pointer;
   text-decoration: none;
+
   &:hover {
     color: darken(@color-primary, 10%);
   }
