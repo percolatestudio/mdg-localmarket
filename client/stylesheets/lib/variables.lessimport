@@ -1,0 +1,33 @@
+/* Core */
+@color-primary: #d7933b; //golden burnt sienna
+@color-secondary: #568baf; //cerulean blue
+@color-tertiary: #000; //sunburst orange
+@color-complementary: #000; //light turquoise
+
+// Other colors
+// #f3ac15 Sunburst orange
+// #f3cc71 Muted Sunburst Orange
+
+/* Alert */
+@color-negative: #ff4800; //delete, alert
+
+
+/* Greyscale */
+@color-empty: white;
+@color-raw: #f8f8f8;
+@color-raw-alt: #f3f3f3;
+@color-rare: #EEE;
+@color-medium-rare: #ccc;
+@color-medium: #aaa;
+@color-medium-well: #666;
+@color-well: #555;
+@color-full: #333;
+
+/* Social */
+@color-facebook: #3b5998;
+@color-google: #58586d;
+@color-yahoo: #9238AB;
+@color-twitter: #46c8f5;
+@color-stumble: #e2451c;
+@color-pinterest: #cc2127;
+@color-youtube: #da4337;

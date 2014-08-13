@@ -1,39 +1,36 @@
-@import 'helpers.less.import';
-
 @menu-width: 40%;
 
 
 #container {
-  .fill-with-absolute-position;
+  .position(absolute, 0, 0, 0, 0);;
 
   // hide anything offscreen .. we can never scroll the body
   overflow: hidden;
 }
 
 #menu {
-  .fill-with-absolute-position;
+  .position(absolute, 0, 0, 0, 0);;
   right: 100% - @menu-width;
-  
+
   background: #ddd;
 }
 
 #content-container {
-  .fill-with-absolute-position;
+  .position(absolute, 0, 0, 0, 0);;
+  .transition(all 200ms ease-out);
+  .transform(translate3d(0, 0, 0));
+
+
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  
-  background: #eee;
-  
-  // XXX: not sure if we are using lesshat or what?
-  // .transition(all 200ms ease-out);
-  // .transform(translate3d(0, 0, 0));
-  transition: all 200ms ease-out;
-  transform: translate3d(0, 0, 0);
-  
+
+  background: @color-empty;
+  padding-top: 3em;
+
   .menu-open & {
     transform: translate3d(@menu-width, 0, 0);
   }
-  
+
   // XXX: change this style
   > [data-momentum] > div {
     .position(absolute, 40px, 0, 0, 0);
@@ -41,10 +38,10 @@
 }
 
 #email-overlay {
-  .fill-with-absolute-position;
+  .position(absolute, 0, 0, 0, 0);;
   z-index: 1;
   background: #efefef;
-  
+
   display: none;
   .email-open & {
     display: block;

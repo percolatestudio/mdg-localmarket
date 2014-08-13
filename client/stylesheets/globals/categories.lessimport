@@ -1,0 +1,24 @@
+[class^="background-"],
+[class*=" background-"] {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  &[class*="about"] { background-image: url('img/app/bg-seasons-about-640x540.jpg'); }
+
+  // Backgrounds for categories
+  &[class*="spring"] { background-image: url('img/app/bg-seasons-spring-640x655.jpg'); }
+  &[class*="summer"] { background-image: url('img/app/bg-seasons-summer-640x655.jpg'); }
+  &[class*="fall"] { background-image: url('img/app/bg-seasons-fall-640x655.jpg'); }
+  &[class*="winter"] { background-image: url('img/app/bg-seasons-winter-640x655.jpg'); }
+
+  // Backgrounds for categories that are small
+  //More specificity to override previous image declarations
+  &[class*="small"] {
+    &[class*="spring"] { background-image: url('img/app/bg-seasons-spring-640x240.jpg'); }
+    &[class*="summer"] { background-image: url('img/app/bg-seasons-summer-640x240.jpg'); }
+    &[class*="fall"] { background-image: url('img/app/bg-seasons-fall-640x240.jpg'); }
+    &[class*="winter"] { background-image: url('img/app/bg-seasons-winter-640x240.jpg'); }
+  }
+}

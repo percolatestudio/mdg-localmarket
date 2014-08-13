@@ -1,0 +1,78 @@
+.type-regular() {
+  font-family: 'latoregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.type-italic() {
+  font-family: 'latoitalic', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+
+.type-bold() {
+  font-family: 'latobold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.type-black() {
+  font-family: 'latoblack', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+}
+
+.type-secondary() {
+  font-family: 'lorabold', TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-style: normal;
+}
+
+
+/* Large fonts */
+
+.font-l3() {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.font-l2() {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.font-l1() {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+/* Medium fonts */
+
+.font-m3() {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.font-m2() {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.font-m1() {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+/* Small fonts */
+
+.font-s3() {
+  //this sets the baseline for the layout but gets overridden per template
+  //vertical rhythm is all multiples of 4
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.font-s2() {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.font-s1() {
+  font-size: 10px;
+  line-height: 16px;
+}

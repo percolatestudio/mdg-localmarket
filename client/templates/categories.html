@@ -1,6 +1,10 @@
 <template name="categories">
+  <span class="subtitle-categories">Browse by Season</span>
+
   {{#each categories}}
-    <a href="{{pathFor 'category' name=this}}">{{this}}</a>
+    <a href="{{pathFor 'category' name=this}}" class="categories-{{this}}">
+      <span class="name-category">{{this}} Bites</span>
+      <span class="count">5 Recipes</span>
+    </a>
   {{/each}}
 </template>
-  

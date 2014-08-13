@@ -801,5 +801,122 @@
     "1 1/2 ounces Mexican chocolate, chopped"
   ],
   "imageName": "spring-chicken-in-mole.jpg"
+},
+{
+  "season": "spring",
+  "title": "Fatted Calf's Meatlof",
+  "featured": true,
+  "excerpt": "It is a thing of beauty, shaped into a large oval loaf and glazed with tangy cocktail sauce",
+  "source": {
+    "name": "Food52",
+    "url": "http://food52.com/recipes/24302-fatted-calf-s-meatloaf"
+  },
+  "cookTime": "1 hr 30 min",
+  "ingredients": [
+    "3/4 teaspoons black peppercorns",
+    "2 allspice berries",
+    "2 teaspoons fennel seed",
+    "1 teaspoon chile flakes",
+    "1 whole clove",
+    "1 1/4 pound boneless lean beef from eye of round or sirloin, cut into 1-inch cubes",
+    "1 pound boneless pork picnic, cut into 1-inch cubes",
+    "4 ounces pork back fat, cut into 1-inch cubes",
+    "Sea salt",
+    "2 teaspoons chopped garlic",
+    "4 ounces chopped bacon",
+    "2 cups diced yellow onion",
+    "2 tablespoons unsalted butter",
+    "6 tablespoons fresh breadcrumbs",
+    "1 egg lightly beaten",
+    "1/2 cup ketchup",
+    "1 1/2 teaspoon Tabasco sauce",
+    "1 1/4 teaspoon Worcestershire sauce",
+    "1 teaspoon grated fresh horseradish",
+    "1/4 cup chopped parsley",
+    "2 tablespoons chopped oregano",
+    "1 tablespoon chopped thyme",
+    "1 tablespoon chopped sage",
+    "1/4 cup ketchup",
+    "1/4 teaspoon sea salt",
+    "1/4 teaspoon freshly ground black pepper",
+    "1 1/2 teaspoon grated fresh horseradish",
+    "1/2 teaspoon Worcestershire sauce",
+    "1/2 teaspoon Tabasco sauce"
+  ],
+  "imageName": "spring-meatloaf.jpg"
+},
+{
+  "season": "summer",
+  "title": "Spaghetti with Lemon & Olive Oil",
+  "featured": false,
+  "excerpt": "This is one of those recipes that are almost better off without one",
+  "source": {
+    "name": "Smitten Kitchen",
+    "url": "http://smittenkitchen.com/blog/2011/02/spaghetti-with-lemon-and-olive-oil-al-limone/"
+  },
+  "cookTime": "20 min",
+  "ingredients": [
+    "1 pound spaghetti or linguine",
+    "Salt",
+    "3 lemons",
+    "1/4 cup extra virgin olive oil , plus additional for serving",
+    "1/4 cup heavy cream",
+    "1 ounce finely grated Parmesan cheese (about 1/2 cup), plus additional for serving",
+    "Ground black pepper",
+    "Small handful fresh basil or arugula leaves, shredded"
+  ],
+  "imageName": "summer-spaghetti-lemon-olive.jpg"
+},
+{
+  "season": "winter",
+  "title": "Italian Red-Wine Braised Duck with Olive Gremolata",
+  "featured": true,
+  "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
+  "source": {
+    "name": "NY Times",
+    "url": "http://www.nytimes.com/recipes/1014424/italian-red-wine-braised-duck-with-olive-gremolata.html"
+  },
+  "cookTime": "2 hr 30 min",
+  "ingredients": [
+    "4 Muscovy duck legs (about 4 pounds), untrimmed",
+    "Salt and pepper",
+    "1/2 teaspoon coriander seed, toasted and coarsely ground",
+    "1/2 teaspoon fennel seed, toasted and coarsely ground",
+    "2 tablespoons olive oil",
+    "2 cups finely diced onion",
+    "3/4 cup finely diced carrot",
+    "3/4 cup finely diced celery",
+    "1 large thyme sprig",
+    "1 bay leaf",
+    "1 4-inch strip of orange peel, pith removed",
+    "4 garlic cloves, minced",
+    "2 tablespoons tomato paste",
+    "1 cup chopped canned or fresh tomatoes",
+    "1 cup dry red wine",
+    "3 cups chicken broth",
+    "Pinch cayenne or red pepper, optional",
+    "Olive gremolata for garnish"
+  ],
+  "imageName": "winter-braised-duck.jpg"
+},
+{
+  "season": "summer",
+  "title": "Diner Style Hamburgers",
+  "featured": false,
+  "excerpt": "This is the traditional, griddled hamburger of diners and takeaway spots, smashed thin and cooked crisp on its edges",
+  "source": {
+    "name": "NY Times",
+    "url": "http://www.nytimes.com/recipes/1016595/hamburgers-diner-style.html"
+  },
+  "cookTime": "20 min",
+  "ingredients": [
+    "1/2 teaspoon neutral oil, like canola, or a pat of unsalted butter",
+    "2 pounds ground chuck, at least 20 percent fat",
+    "Kosher salt and black pepper to taste",
+    "8 slices cheese (optional)",
+    "8 soft hamburger buns, lightly toasted",
+    "Lettuce leaves, sliced tomatoes and condiments"
+  ],
+  "imageName": "summer-hamburger.jpg"
 }
 ]
