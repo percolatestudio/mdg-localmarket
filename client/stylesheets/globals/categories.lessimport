@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  position: relative;
 
   &[class*="about"] { background-image: url('img/app/bg-seasons-about-640x540.jpg'); }
 

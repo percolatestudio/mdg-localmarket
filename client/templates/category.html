@@ -1,8 +1,10 @@
 <template name="category">
-  <div class="category">
-    <h1>{{#contentFor 'title'}}{{categoryName name}}{{/contentFor}}</h1>
+  {{#contentFor 'title'}}Category{{/contentFor}}
+  <div class="layout-category">
+    <div class="bg-image fall">
+      <h1 class="title-category">{{categoryName name}}</h1>
+    </div>
   </div>
-
   {{#each recipes}}
     <a href="{{pathFor 'recipe'}}">{{title}}</a>
   {{/each}}

@@ -1,0 +1,18 @@
+.layout-category {
+  .bg-image {
+    height: 327.5px;
+    margin-top: -48px;
+  }
+  .title-category {
+    .font-l1;
+    .type-black;
+    .position(absolute, 50%, 0, auto, 0);
+    .transform(translateY(-50%));
+
+    color: @color-empty;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+  }
+}
