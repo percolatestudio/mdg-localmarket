@@ -1,8 +1,9 @@
 <template name="home">
   <div>
-    {{#contentFor 'title'}}Sous{{/contentFor}}
+    {{> nav title='Sous' black=true}}
   
     {{#each featuredRecipes}}
+      <img src="{{recipeImage this}}" />
       <a href="{{pathFor 'recipe'}}">{{title}}</a>
     {{/each}}
   </div>

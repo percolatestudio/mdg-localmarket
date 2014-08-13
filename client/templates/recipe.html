@@ -1,15 +1,17 @@
 <template name="recipe">
-  {{> contentFor region="leftNav" template='navBack'}}
+  <div>
+    {{> nav title=title black=true back=true}}
 
-  <h2>{{categoryName season}}</h2>
-  <p>{{excerpt}}</p>
-  <h3>{{cookTime}}</h3>
+    <h2>{{categoryName season}}</h2>
+    <p>{{excerpt}}</p>
+    <h3>{{cookTime}}</h3>
 
-  <img src="/img/recipes/{{imageName}}" />
+    <img src="{{recipeImage this}}" />
 
-  <ul>
-    {{#each ingredients}}
-      <li>{{this}}</li>
-    {{/each}}
-  </ul>
+    <ul>
+      {{#each ingredients}}
+        <li>{{this}}</li>
+      {{/each}}
+    </ul>
+  </div>
 </template>
