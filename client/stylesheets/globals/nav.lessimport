@@ -4,7 +4,6 @@ nav {
   text-align: center;
   z-index: 3;
 
-  background: @color-empty;
   &.scrolled {
     background: @color-empty;
   }

@@ -31,10 +31,13 @@
     transform: translate3d(@menu-width, 0, 0);
   }
 
-  // XXX: change this style
-  > [data-momentum] > div {
+  // XXX Tom: change this style
+  // XXX Dom: What is this?
+  /*
+> [data-momentum] > div {
     .position(absolute, 40px, 0, 0, 0);
   }
+*/
 }
 
 #email-overlay {

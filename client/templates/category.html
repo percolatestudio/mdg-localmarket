@@ -1,6 +1,7 @@
 <template name="category">
-  <h1>{{name}}</h1>
-  
+  <div class="category">
+    <h1>{{name}} Bites</h1>
+  </div>
   {{#each recipes}}
     <a href="{{pathFor 'recipe'}}">{{title}}</a>
   {{/each}}
