@@ -46,23 +46,24 @@ nav {
   }
   a {
     .font-m1;
-    .position(absolute, 0, auto, auto, 0, 3rem, 3rem);
-
     color: @color-full;
-    display: block;
-    z-index: 1;
-
-    &.right {
-      left: auto;
-      right: 0;
-    }
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
 
     [class^="icon-"],
     [class*=" icon-"] {
       line-height: 3rem;
       vertical-align: middle;
     }
-
   }
+  .nav-group {
+    .position(absolute, 0, auto, auto, 0);
+    z-index: 1;
 
+    &.right {
+      left: auto;
+      right: 0;
+    }
+  }
 }

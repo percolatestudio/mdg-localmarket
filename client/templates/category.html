@@ -1,25 +1,27 @@
 <template name="category">
   {{> nav title='category' black=true back=true}}
-  <div class="layout-category">
 
-    <div class="bg-image {{name}}">
-      <h1 class="title-category">{{categoryName name}}</h1>
-      <span class="count-category">5 Recipes</span>
-    </div>
+  {{#contentFor 'rightNav'}}
+    <a data-email><span class="icon-share"></span></a>
+  {{/contentFor}}
 
-    <p class="description-category">Rich flavorful recipes perfect for those brisk autumnal days</p>
-
-    <div class="list-recipes">
-    {{#each recipes}}
-      <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
-        <span class="attribution">
-          <span class="title-recipe">{{title}}</span>
-          <span class="author-recipe">{{source.name}}</span>
-        </span>
-        <img src="{{recipeImage recipe=this}}" />
-      </a>
-    {{/each}}
-    </div>
-
+  <div class="bg-image {{name}}">
+    <h1 class="title-category">{{categoryName name}}</h1>
+    <span class="count-category">5 Recipes</span>
   </div>
+
+  <p class="description-category">Rich flavorful recipes perfect for those brisk autumnal days</p>
+
+  <div class="list-recipes">
+  {{#each recipes}}
+    <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
+      <span class="attribution">
+        <span class="title-recipe">{{title}}</span>
+        <span class="author-recipe">{{source.name}}</span>
+      </span>
+      <img src="{{recipeImage recipe=this}}" />
+    </a>
+  {{/each}}
+  </div>
+
 </template>

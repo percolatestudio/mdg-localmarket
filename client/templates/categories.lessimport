@@ -1,5 +1,8 @@
-.layout-categories {
-  padding-top: 3em;
+#container.categories {
+  .pane {
+    padding-top: 3em;
+  }
+
   .subtitle-categories {
     .font-m1;
     .type-bold;

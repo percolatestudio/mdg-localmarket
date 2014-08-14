@@ -1,17 +1,15 @@
 <template name="home">
-  <div>
-    {{> nav title='Sous' black=true}}
+  {{> nav title='Sous' black=true}}
 
-    <div class="list-recipes">
-      {{#each featuredRecipes}}
-        <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
-          <span class="attribution">
-            <span class="title-recipe">{{title}}</span>
-            <span class="author-recipe">{{source.name}}</span>
-          </span>
-          <img src="{{recipeImage recipe=this}}" />
-        </a>
-      {{/each}}
-    </div>
+  <div class="list-recipes">
+    {{#each featuredRecipes}}
+      <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
+        <span class="attribution">
+          <span class="title-recipe">{{title}}</span>
+          <span class="author-recipe">{{source.name}}</span>
+        </span>
+        <img src="{{recipeImage recipe=this}}" />
+      </a>
+    {{/each}}
   </div>
 </template>

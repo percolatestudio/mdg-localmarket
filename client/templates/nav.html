@@ -1,15 +1,20 @@
 <template name="nav">
   <nav class="{{#if black}}black{{/if}}">
-    {{#if back}}
-      <a data-back><span class="icon-arrow-left-alt"></span></a>
-    {{else}}
-      <a data-menu><span class="icon-menu"></span></a>
-    {{/if}}
-
-    <div class="title-page">{{title}}
-    <!-- <span class="subtext-page">7 Recipes</span> -->
+    <div class="nav-group">
+      {{#if back}}
+        <a data-back><span class="icon-arrow-left-alt"></span></a>
+      {{else}}
+        <a data-menu><span class="icon-menu"></span></a>
+      {{/if}}
     </div>
 
-    {{> yield region='rightNav'}}
+    <div class="title-page">
+      {{title}}
+      <span class="subtext-page">{{subtext}}</span>
+    </div>
+
+    <div class="nav-group right">
+      {{> yield region='rightNav'}}
+    </div>
   </nav>
 </template>

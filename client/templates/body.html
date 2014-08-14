@@ -1,17 +1,31 @@
 <template name="body">
   <div id="container" class="{{templateClass}} {{menuOpen}} {{emailOpen}}">
     <section id="menu" class="overthrow">
-      <a href="{{pathFor 'home'}}" class="{{activePage 'home'}}"><span class="icon-home"></span>Home</a>
-      <a href="{{pathFor 'categories'}}" class="{{activePage 'categories' 'category' 'recipe'}}"><span class="icon-category"></span>Categories</a>
-      <a href="{{pathFor 'favorites'}}" class="{{activePage 'favorites'}}"><span class="icon-heart-hollow"></span>Favorites</a>
-      <a href="{{pathFor 'about'}}" class="{{activePage 'about'}}"><span class="icon-question"></span>About</a>
+      <a href="{{pathFor 'home'}}" class="{{activePage 'home'}}">
+        <span class="icon-home"></span>
+        <span class="title-menu">Home</span>
+      </a>
+      <a href="{{pathFor 'categories'}}" class="{{activePage 'categories' 'category' 'recipe'}}">
+        <span class="icon-category"></span>
+        <span class="title-menu">Categories</span>
+      </a>
+      <a href="{{pathFor 'favorites'}}" class="{{activePage 'favorites'}}">
+        <span class="icon-heart-hollow"></span>
+        <span class="title-menu">Favorites</span>
+      </a>
+      <a href="{{pathFor 'about'}}" class="{{activePage 'about'}}">
+        <span class="icon-question"></span>
+        <span class="title-menu">About</span>
+      </a>
     </section>
 
     {{> emailOverlay}}
 
     <div id="content-container">
       {{#momentum with='route-transitioner' options=transitionOptions}}
-        {{> yield}}
+        <div class="pane">
+          {{> yield}}
+        </div>
       {{/momentum}}
     </div>
   </div>

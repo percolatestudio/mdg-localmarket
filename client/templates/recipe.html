@@ -1,34 +1,33 @@
 <template name="recipe">
-  <div class="layout-recipe">
-    {{> nav black=true back=true}}
-    {{#contentFor 'rightNav'}}
-      <a data-email><span class="icon-email"></span>EMAIL</a>
-      <a data-favorite><span class="icon-favorite"></span>FAVORITE</a>
-    {{/contentFor}}
+  {{> nav black=true back=true}}
 
-    <div class="image">
-      <img src="{{recipeImage recipe=this}}" />
-    </div>
+  {{#contentFor 'rightNav'}}
+    <a data-favorite><span class="icon-heart-hollow"></span></a>
+    <a data-email><span class="icon-share"></span></a>
+  {{/contentFor}}
 
-    <div class="attribution">
-      <h1 class="title-recipe">{{title}}</h1>
-      <p class="description-recipe">{{excerpt}}</p>
-      <span class="source">{{source.name}}</span>
-      <span class="time">{{cookTime}}</span>
-    </div>
+  <div class="image">
+    <img src="{{recipeImage recipe=this}}" />
+  </div>
 
-    <div class="btns-group">
-      <a class="btn-primary" data-ingredients-trigger>Ingredients</a>
-      <a href="{{source.url}}/" class="btn-secondary" target="_blank">Directions</a>
-    </div>
+  <div class="attribution">
+    <h1 class="title-recipe">{{title}}</h1>
+    <p class="description-recipe">{{excerpt}}</p>
+    <span class="source">{{source.name}}</span>
+    <span class="time">{{cookTime}}</span>
+  </div>
 
-    <div class="ingredients" name="ingredients" data-ingredients>
-      <h2 class="title-ingredients">21 Ingredients</h2>
-      <ul class="list-ingredients">
-        {{#each ingredients}}
-          <li class="item-ingredient">{{this}}</li>
-        {{/each}}
-      </ul>
-    </div>
+  <div class="btns-group">
+    <a class="btn-primary" data-ingredients-trigger>Ingredients</a>
+    <a href="{{source.url}}/" class="btn-secondary" target="_blank">Directions</a>
+  </div>
+
+  <div class="ingredients" name="ingredients" data-ingredients>
+    <h2 class="title-ingredients">21 Ingredients</h2>
+    <ul class="list-ingredients">
+      {{#each ingredients}}
+        <li class="item-ingredient">{{this}}</li>
+      {{/each}}
+    </ul>
   </div>
 </template>

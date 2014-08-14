@@ -1,4 +1,4 @@
-.layout-about {
+#container.about {
   .bg-image.about {
     height: 12em;
   }
