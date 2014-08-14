@@ -1,5 +1,5 @@
 #container.categories {
-  .pane {
+  .page {
     padding-top: 3em;
   }
 
@@ -26,13 +26,14 @@
       .name-category {
         .font-m2;
         .type-black;
+        .title-caps;
         .position(absolute, 50%, 0, auto, 0);
         .transform(translateY(-50%));
 
         color: @color-empty;
         line-height: 1;
-        text-transform: uppercase;
-        letter-spacing: .3em;
+
+
       }
       .count {
         .font-s1;

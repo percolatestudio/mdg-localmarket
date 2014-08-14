@@ -1,5 +1,5 @@
 #container.favorites {
-  .pane {
+  .page {
     padding-top: 3em;
   }
 }

@@ -27,7 +27,7 @@
     .transform(translate3d(@menu-width, 0, 0));
   }
 
-  > [data-momentum] > div.pane {
+  > [data-momentum] > div.page {
     .position(absolute, 0, 0, 0, 0);
   }
 }
