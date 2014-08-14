@@ -1,8 +1,14 @@
 @menu-width: 45%;
 
+body {
+  background: @color-rare;
+}
 
 #container {
   .position(absolute, 0, 0, 0, 0);
+
+  max-width: 500px;
+  max-height: 600px;
 
   // hide anything offscreen .. we can never scroll the body
   overflow: hidden;
