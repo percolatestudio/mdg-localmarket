@@ -8,7 +8,7 @@ Template.body.helpers({
   transitionOptions: function() { return function(from, to, node) {
     if (to.initiator === 'menu')
       return 'none';
-    
+
     // XXX: use initiator === 'back' for the LTR -- requires support from IR,
     //   coming in near future version
     if (to.path === '/')
@@ -16,15 +16,15 @@ Template.body.helpers({
     else
       return 'right-to-left';
   }},
-  
+
   templateClass: function() {
     return Router._layout.region('main').template();
   },
-  
+
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
   },
-  
+
   emailOpen: function() {
     return Session.get(EMAIL_KEY) && 'email-open';
   }
@@ -41,14 +41,14 @@ Template.body.events({
     history.back();
     e.stopImmediatePropagation();
   },
-  
-  'click #content-container': function() {
+
+  'click .content-overlay': function() {
     Session.set(MENU_KEY, false);
   },
-  
+
   'click #menu a': function(e) {
     Session.set(MENU_KEY, false);
-    
+
     Router.go($(e.target).attr('href'), {initiator: 'menu'});
     e.stopImmediatePropagation();
     e.preventDefault();

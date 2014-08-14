@@ -1,13 +1,14 @@
 #container.about {
   .bg-image.about {
-    height: 12em;
+    height: 15em;
+    z-index: -1;
   }
   .title-about {
     .font-l1;
     .type-black;
     .title-caps;
     .position(absolute, 50%, 0, auto, 0);
-    .transform(translateY(-30%));
+    .transform(translateY(-80%));
 
     color: @color-empty;
     line-height: 1;
@@ -15,8 +16,13 @@
   }
 
   .description-about {
+    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 40%, @color-empty 100%));
     color: @color-well;
+    margin-top: -3em;
     padding: 1em 1.25em;
+    position: relative;
+
+
     p {
       .font-s3;
       margin-bottom: 1em;

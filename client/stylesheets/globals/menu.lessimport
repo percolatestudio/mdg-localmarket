@@ -3,6 +3,8 @@
     linear-gradient(top, rgba(85,134,223,.1), rgba(0,0,0,0) 100%),
     url('img/app/bg-menu-640x1136.jpg')
   );
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   a {
     .font-s2;
@@ -10,7 +12,7 @@
 
     color: rgba(255,255,255,.4);
     display: block;
-    height: 144px;
+    height: 142px;
     padding-top: 3rem;
     text-align: center;
 

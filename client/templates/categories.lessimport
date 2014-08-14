@@ -13,4 +13,32 @@
     padding-top: .75rem;
     height: 3.5rem;
   }
+
+  .list-categories {
+    .item-category {
+      display: block;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+
+      height: 7.25rem;
+
+      .name-category {
+        .font-m2;
+        .type-black;
+        .position(absolute, 50%, 0, auto, 0);
+        .transform(translateY(-50%));
+
+        color: @color-empty;
+        line-height: 1;
+        text-transform: uppercase;
+        letter-spacing: .3em;
+      }
+      .count {
+        .font-s1;
+        .position(absolute, auto, 0, .25rem, 0);
+        color: rgba(255,255,255,.7);
+      }
+    }
+  }
 }

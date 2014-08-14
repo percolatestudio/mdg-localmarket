@@ -1,0 +1,5 @@
+#container.home {
+  nav .title-page {
+    font-size: .95rem;
+  }
+}

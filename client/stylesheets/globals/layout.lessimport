@@ -2,14 +2,14 @@
 
 
 #container {
-  .position(absolute, 0, 0, 0, 0);;
+  .position(absolute, 0, 0, 0, 0);
 
   // hide anything offscreen .. we can never scroll the body
   overflow: hidden;
 }
 
 #menu {
-  .position(absolute, 0, 0, 0, 0);;
+  .position(absolute, 0, 0, 0, 0);
   right: 100% - @menu-width;
 }
 
@@ -24,16 +24,22 @@
   background: @color-empty;
 
   .menu-open & {
-    transform: translate3d(@menu-width, 0, 0);
+    .transform(translate3d(@menu-width, 0, 0));
   }
 
-  //what does this do? it's messing with the layout
-  /*
-> [data-momentum] > div {
+  > [data-momentum] > div.pane {
     .position(absolute, 0, 0, 0, 0);
-    padding-top: 3em;
   }
-*/
+}
+
+.content-overlay {
+  .position(absolute, 0, 0, 0, 0);
+  cursor: pointer;
+
+  .menu-open & {
+    .transform(translate3d(@menu-width, 0, 0));
+    z-index: 1;
+  }
 }
 
 #email-overlay {
