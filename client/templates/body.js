@@ -61,6 +61,12 @@ Template.body.events({
     e.stopImmediatePropagation();
   },
 
+  'click [data-back]': function(e) {
+    // XXX: set the back transition via Location.back()
+    history.back();
+    e.stopImmediatePropagation();
+  },
+  
   'click #content-container': function() {
     Session.set(MENU_KEY, false);
   },
