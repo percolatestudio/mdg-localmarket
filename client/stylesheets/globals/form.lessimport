@@ -148,25 +148,3 @@ textarea {
     .transition( all 100ms ease-in );
   }
 }
-
-
-
-
-// a form input with no chrome at all (ie. appears just as text)
-// search overlay page
-input[type="text"],
-input[type="search"],
-input[type="email"],
-textarea {
-  &.nochrome {
-    padding: 0;
-    border: none;
-    box-shadow: none;
-    background: none;
-    outline: none;
-    &:focus, &:active, &:hover {
-      box-shadow: none;
-    }
-  }
-
-}

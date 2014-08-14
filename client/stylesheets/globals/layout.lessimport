@@ -1,4 +1,4 @@
-@menu-width: 40%;
+@menu-width: 45%;
 
 
 #container {
@@ -11,8 +11,6 @@
 #menu {
   .position(absolute, 0, 0, 0, 0);;
   right: 100% - @menu-width;
-
-  background: #ddd;
 }
 
 #content-container {
