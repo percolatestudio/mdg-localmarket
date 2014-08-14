@@ -1,6 +1,7 @@
 [class^="btn-"],
 [class*=" btn-"] {
   .type-black;
+  .title-caps;
   .transition( all 200ms ease-in );
 
   /* Sizing */
@@ -10,16 +11,11 @@
 
   color: @color-empty;
   display: inline-block;
-  letter-spacing: .3em;
   position: relative;
   text-align: center;
   text-decoration: none !important; //prevents global link styles from applying
-  text-indent:.3em; //required to balance out the extra right spacing from letter-spacing
-  text-transform: uppercase;
   vertical-align: middle;
   white-space: nowrap;
-
-
 
   &[class*="primary"] {
     background-color: @color-primary;
@@ -54,7 +50,7 @@
   &[disabled] {
     opacity: .5;
   }
-}//end btn
+}
 
 .btns-group {
   .display(flex);

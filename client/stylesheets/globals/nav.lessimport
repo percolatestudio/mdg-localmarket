@@ -25,15 +25,14 @@ nav {
 
   .title-page {
     .font-s2-alt;
-    .ellipsized;
     .type-secondary;
+    .title-caps;
+    .ellipsized;
 
     .position(absolute, 50%, 0, auto, 0);
     .transform(translateY(-50%));
 
     line-height: 1;
-    letter-spacing: .3em;
-    text-transform: uppercase;
 
     .subtext-page {
       .font-s1;

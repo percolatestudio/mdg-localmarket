@@ -32,15 +32,22 @@
   .title-category {
     .font-l1;
     .type-black;
+    .title-caps;
     .position(absolute, 50%, 0, auto, 0);
     .transform(translateY(-30%));
 
     color: @color-empty;
-    letter-spacing: .3em;
-    text-transform: uppercase;
+
     text-align: center;
     line-height: 1;
   }
+
+  .description-category {
+    .font-s3;
+    text-align: center;
+    padding: .5rem 1.25rem .75rem;
+  }
+
   .count-category {
     .font-s1;
     .position(absolute, auto, 0, .5rem, 0);
@@ -49,10 +56,5 @@
     display: block;
     padding-bottom: .5rem;
     text-align: center;
-  }
-  .description-category {
-    .font-s3;
-    text-align: center;
-    padding: .5rem 1.25rem .75rem;
   }
 }

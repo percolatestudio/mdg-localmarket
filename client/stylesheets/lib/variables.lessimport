@@ -22,12 +22,3 @@
 @color-medium-well: #666;
 @color-well: #555;
 @color-full: #333;
-
-/* Social */
-@color-facebook: #3b5998;
-@color-google: #58586d;
-@color-yahoo: #9238AB;
-@color-twitter: #46c8f5;
-@color-stumble: #e2451c;
-@color-pinterest: #cc2127;
-@color-youtube: #da4337;

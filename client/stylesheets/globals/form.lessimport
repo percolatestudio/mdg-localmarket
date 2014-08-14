@@ -1,61 +1,9 @@
-/* Generic Spacing */
-/* Wrap in <fieldset> or add class .fieldset */
-fieldset {
-  .clearfix;
-
-  > input:not([type="checkbox"]):not([type="radio"]),
-  > textarea,
-  > label.checkbox,
-  > label.radio,
-  > .input-symbol {
-    display: block;
-    width: 100%;
-
-    &:last-child { margin-bottom: 0; }
-  }
-  textarea {
-    min-height: 7em;
-  }
-  [class^="btn-"],
-  [class*=" btn-"] {
-    width: 100%;
-  }
-
-  label:not(.checkbox):not(.radio) {
-    .type-bold;
-  }
-}
-
-
 /* Generic */
-legend {
-  .font-s2;
-  .section-subtitle(@color-well);
-  float: left;
-  margin-bottom: 1em;
-  width: 100%; //needed due to special browser rendering of this element
-}
-
 label {
   .font-s2;
   clear: both;
   display: block;
   margin-bottom: .5em;
-  &.checkbox,
-  &.radio {
-    cursor: pointer;
-    min-height: 1em;
-    position: relative; //necessary for special styling
-    & + button {
-      /* accounts for 4px margin bottom to = 16px */
-      margin-top: 12px;
-    }
-  }
-  &.checkbox.empty {
-    //when the checkbox has no accompanying text
-    display: inline-block;
-    line-height: 1em + .3em; //.3em is due to inherited top positioning
-  }
   >.alert,
   >.error {
     .type-regular;
@@ -79,9 +27,8 @@ textarea {
   //do not add a transition; it causes a focus bug in iOS
 
   font-size: 1rem;
-
-
   padding: .75em 0; //total height ~48
+
 
   background: transparent;
   border: none;
@@ -91,7 +38,7 @@ textarea {
   outline: none;
 
   &[disabled] {
-  	background: rgba(255,255,255,.5);
+  	opacity: .5;
 	}
 
   &:active,
@@ -109,10 +56,6 @@ textarea {
   display: inline-block;
   position: relative;
 
-  //need to replicate sizing from std inputs to ensure accurate spacing for icons
-  .font-s2;
-  @media screen and (min-width: 40em) { .font-s3; }
-
   //icon position and padding for input
   &.left {
     > [class^="icon-"],
@@ -124,7 +67,7 @@ textarea {
     }
   }
 
-  > input {
+  input {
     width: 100%;
     &:focus {
       & + [class^="icon-"],
@@ -133,8 +76,8 @@ textarea {
       }
     }
   }
-  > [class^="icon-"],
-  > [class*=" icon-"] {
+  [class^="icon-"],
+  [class*=" icon-"] {
     .transition( all 300ms ease-in );
     background: transparent;
     color: @color-medium;

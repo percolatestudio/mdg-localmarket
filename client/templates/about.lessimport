@@ -5,23 +5,26 @@
   .title-about {
     .font-l1;
     .type-black;
+    .title-caps;
     .position(absolute, 50%, 0, auto, 0);
     .transform(translateY(-30%));
 
     color: @color-empty;
-    letter-spacing: .3em;
-    text-transform: uppercase;
-    text-align: center;
     line-height: 1;
+    text-align: center;
   }
+
   .description-about {
-    padding: 1em 1.25em;
     color: @color-well;
+    padding: 1em 1.25em;
     p {
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 1rem;
+      .font-s3;
+      margin-bottom: 1em;
     }
   }
 
+  .btns-group {
+    .position(absolute, auto, 0, 0, 0, 100%, 3em);
+    .transform(translate3d(0,0,0));//gpu rendering
+  }
 }

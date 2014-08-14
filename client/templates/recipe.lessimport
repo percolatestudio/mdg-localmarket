@@ -1,9 +1,9 @@
 .layout-recipe {
   .image {
-    .transform(translate3d(0,0,0));
+    .transform(translate3d(0,0,0));//gpu rendering
+    height: 70%;
     overflow: hidden;
     position: relative;
-    height: 70%;
     width: 100%;
 
     img {
@@ -14,56 +14,57 @@
   .attribution {
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 40%, @color-empty 100%));
     .position(absolute, auto, 0, 3em, 0);
-    .transform(translate3d(0,0,0));
+    .transform(translate3d(0,0,0));//gpu rendering
 
     padding: 1.25em 1.25em 1em;
     text-align: center;
-
 
     .title-recipe {
       .font-m2;
       .type-bold;
       margin-bottom: .25rem;
     }
+
     .description-recipe {
       .font-s3;
       color: @color-well;
       margin-bottom: .25rem;
     }
 
-    .source {
-      .font-s1;
-      .type-secondary;
-
-      color: @color-medium;
-      display: inline-block;
-      padding-right: .25rem;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      vertical-align: middle;
-    }
+    .source,
     .time {
       .font-s1;
-      .type-bold;
-
-
       color: @color-medium;
       display: inline-block;
-      border-left: 1px solid @color-medium-rare;
-      padding-left: .5rem;
       vertical-align: middle;
     }
+
+    .source {
+      .type-secondary;
+      .title-caps;
+      padding-right: .25rem;
+    }
+
+    .time {
+      .type-bold;
+      border-left: 1px solid @color-medium-rare;
+      padding-left: .5rem;
+    }
+
   }
+
   .btns-group {
     .position(absolute, auto, 0, 0, 0, 100%, 3em);
-    .transform(translate3d(0,0,0));
+    .transform(translate3d(0,0,0));//gpu rendering
   }
+
   .ingredients {
-    .transform(translate3d(0,0,0));
+    .transform(translate3d(0,0,0));//gpu rendering
     background: @color-full;
     color: @color-empty;
     position: absolute;
     top: 100%;
+
     .title-ingredients {
       .font-m1;
       color: @color-primary;

@@ -1,6 +1,6 @@
 .layout-email {
 
-  a[data-close-overlay] {
+  [data-close-overlay] {
     .position(absolute, 0, 0, auto, auto, 3em, 3em);
     text-align: center;
     text-decoration: none;
@@ -16,23 +16,22 @@
   .title-overlay {
     .font-l1;
     .type-black;
+    .title-caps;
 
     color: @color-well;
-    letter-spacing: .3em;
     line-height: 1;
-    text-transform: uppercase;
     text-align: center;
+    text-indent: 0; //realign due to line break
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-  fieldset {
 
+  .input-symbol {
+    width: 100%;
   }
+
   .btn-primary {
     .position(absolute, auto, 0, 0, 0, 100%);
-
-    font-size: 1rem;
-    padding-top: 1.1em;
-    padding-bottom: .9em;
   }
+
 }
