@@ -1,4 +1,4 @@
-#page.recipe {
+.page.recipe {
   .image {
     .transform(translate3d(0,0,0));//gpu rendering
     height: 70%;
