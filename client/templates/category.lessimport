@@ -1,4 +1,4 @@
-#container.category {
+.page.category {
   .bg-image {
     height: 328px;
 

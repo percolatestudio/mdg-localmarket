@@ -1,4 +1,4 @@
-#container.favorites {
+#page.favorites {
   .page {
     padding-top: 3em;
   }

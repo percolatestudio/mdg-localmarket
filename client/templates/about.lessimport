@@ -1,4 +1,4 @@
-#container.about {
+#page.about {
   .bg-image.about {
     height: 15em;
     z-index: -1;
