@@ -29,6 +29,9 @@
       .font-s3;
       color: @color-well;
       margin-bottom: .25rem;
+      &:after {
+        content: '\2026';
+      }
     }
 
     .source,
