@@ -10,7 +10,7 @@
     {{> emailOverlay}}
 
     <div id="content-container">
-      {{#momentum with=transition}}
+      {{#momentum with='route-transitioner' options=transitionOptions}}
         {{> yield}}
       {{/momentum}}
     </div>

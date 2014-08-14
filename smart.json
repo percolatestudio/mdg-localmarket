@@ -8,6 +8,9 @@
     "momentum": {
       "git": "https://github.com/percolatestudio/meteor-momentum.git"
     },
+    "momentum-transitioner": {
+      "git": "https://github.com/percolatestudio/meteor-momentum-transitioner.git"
+    },
     "fastclick": {}
   }
 }

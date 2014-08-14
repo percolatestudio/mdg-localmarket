@@ -4,43 +4,18 @@ Session.setDefault(MENU_KEY, false);
 var EMAIL_KEY = 'emailOpen';
 Session.setDefault(EMAIL_KEY, false);
 
-// XXX: refactor out of here and verso
-var renderQueue = [];
-// *******************************************
-Deps.autorun(function() {
-  if (! Router.current())
-    return;
-  
-  var render = {
-    path: Router.current().path,
-    template: Router._layout.region('main').template(),
-    initiator: Router.current().options.initiator
-  };
-  
-  renderQueue.unshift(render);
-});
-
-var transitionWith = function(getType) {
-  return function() {
-    return function(node) {
-      return getType(renderQueue[1], renderQueue[0], node);
-    }
-  }
-}
-// *******************************************
-
 Template.body.helpers({
-  transition: transitionWith(function(from, to) {
+  transitionOptions: function() { return function(from, to, node) {
     if (to.initiator === 'menu')
       return 'none';
     
     // XXX: use initiator === 'back' for the LTR -- requires support from IR,
-    //   coming in future version
+    //   coming in near future version
     if (to.path === '/')
       return 'left-to-right';
     else
       return 'right-to-left';
-  }),
+  }},
   
   templateClass: function() {
     return Router._layout.region('main').template();

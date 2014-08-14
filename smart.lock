@@ -10,7 +10,12 @@
       "momentum": {
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master"
-      }
+      },
+      "momentum-transitioner": {
+        "git": "https://github.com/percolatestudio/meteor-momentum-transitioner.git",
+        "branch": "master"
+      },
+      "fastclick": {}
     },
     "packages": {
       "iron-router": {
@@ -26,7 +31,17 @@
       "momentum": {
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master",
-        "commit": "c9b39f3e9cd0a804108a522c80fd5673d1bb4d8b"
+        "commit": "05399097166f40d58df1fe182e2081864147a978"
+      },
+      "momentum-transitioner": {
+        "git": "https://github.com/percolatestudio/meteor-momentum-transitioner.git",
+        "branch": "master",
+        "commit": "40e538261c240858675493bc09b81155489bb98e"
+      },
+      "fastclick": {
+        "git": "https://github.com/percolatestudio/meteor-fastclick",
+        "tag": "v0.6.7",
+        "commit": "fcb3bfd34d9f6874e626b4e24e8f54107938db41"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
