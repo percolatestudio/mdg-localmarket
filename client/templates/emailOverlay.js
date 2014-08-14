@@ -10,17 +10,15 @@ Template.emailOverlay.events({
   'submit': function(e, template) {
     e.preventDefault();
     
-    var name = template.$('[name=name]').val();
-    var sender = template.$('[name=sender]').val();
-    var recipient = template.$('[name=recipient]').val();
+    var errors = {}
     
-    var errors = {};
-    if (! name)
-      errors.name = 'is required';
-    if (! sender)
-      errors.sender = 'is required';
-    if (! recipient)
-      errors.recipient = 'is required';
+    _.each(['name', 'sender', 'recipient'], function(field) {
+      var value = template.$('[name=' + field + ']').val();
+
+      if (! value)
+        errors[field] = 'is required';
+    });
+
     Session.set('emailErrors', errors);
   }
 });
