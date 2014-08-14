@@ -3,8 +3,8 @@ UI.registerHelper('categoryName', function(shortName) {
 });
 
 UI.registerHelper('recipeImage', function(options) {
-  var size = options.hash.size || '';
-  return '/img/recipes/' + options.hash.recipe.imageName;
+  if (options.hash.recipe)
+    return '/img/recipes/' + options.hash.recipe.imageName;
 });
 
 Handlebars.registerHelper('activePage', function() {
