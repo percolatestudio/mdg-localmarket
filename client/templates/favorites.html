@@ -1,0 +1,17 @@
+<template name="favorites">
+  <div>
+    {{> nav title='Sous' black=true}}
+    
+    <div class="list-recipes">
+      {{#each favoriteRecipes}}
+        <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
+          <span class="attribution">
+            <span class="title-recipe">{{title}}</span>
+            <span class="author-recipe">{{source.name}}</span>
+          </span>
+          <img src="{{recipeImage this}}" />
+        </a>
+      {{/each}}
+    </div>
+  </div>
+</template>

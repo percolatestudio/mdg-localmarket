@@ -2,6 +2,10 @@ Meteor.publish('featuredRecipes', function() {
   return Recipes.featured();
 });
 
+Meteor.publish('favoriteRecipes', function() {
+  return Recipes.favorite();
+});
+
 Meteor.publish('seasonRecipes', function(name) {
   check(name, String);
   return Recipes.forSeason(name);
