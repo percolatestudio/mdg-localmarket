@@ -6,14 +6,17 @@
 
     <form>
       <div class="input-symbol left">
+        <p>{{error 'name'}}</p>
         <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
         <span class="icon-user"></span>
       </div>
       <div class="input-symbol left">
+        <p>{{error 'sender'}}</p>
         <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
         <span class="icon-email"></span>
       </div>
       <div class="input-symbol left">
+        <p>{{error 'recipient'}}</p>
         <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
         <span class="icon-email"></span>
       </div>
