@@ -2,8 +2,9 @@
   .item-recipe {
     .transform(translate3d(0,0,0));
 
-    display: block;
     position: relative;
+    width: 50%;
+    float: left;
 
     // Gradient over image to give text contrast
     &:after {
@@ -44,7 +45,10 @@
       height: auto;
       width: 100%;
     }
-  }
+    &.highlighted {
+      width: 100%;
+    }
+  }//item-recipe
 }
 .list-ingredients {
   .item-ingredient {

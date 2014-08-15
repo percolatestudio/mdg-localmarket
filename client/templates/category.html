@@ -16,7 +16,7 @@
 
     <div class="list-recipes">
     {{#each recipes}}
-      <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
+      <a class="item-recipe {{#if highlighted}}highlighted{{/if}}" href="{{pathFor 'recipe'}}">
         <span class="attribution">
           <span class="title-recipe">{{title}}</span>
           <span class="author-recipe">{{source.name}}</span>
