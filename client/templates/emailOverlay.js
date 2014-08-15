@@ -2,7 +2,8 @@ Session.setDefault('emailErrors', {});
 
 Template.emailOverlay.helpers({
   recipeIds: function() {
-    return Router.current().recipeIds();
+    if (_.isFunction(Router.current().recipeIds))
+      return Router.current().recipeIds();
   },
   
   errorClass: function(name) {
