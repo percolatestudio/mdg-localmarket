@@ -434,7 +434,7 @@
     "2 Cups 00 Flour or 4 cups All-Purpose Flour",
     "4 large Eggs"
   ],
-  "imageName": "summer-homemade-pasta-dough.png"
+  "imageName": "summer-homemade-pasta-dough.jpg"
 },
 {
   "season": "summer",
@@ -766,6 +766,7 @@
   "season": "winter",
   "title": "Italian Red-Wine Braised Duck with Olive Gremolata",
   "featured": true,
+  "highlighted": true,
   "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
   "source": {
     "name": "NY Times",
@@ -878,7 +879,6 @@
   "season": "winter",
   "title": "Marlowe's Baked Oysters with New England-Style Chowder in the Shell",
   "featured": true,
-  "highlighted": true,
   "excerpt": "These go very well with a glass of brut Champagne!",
   "source": {
     "name": "SF Weekly",
