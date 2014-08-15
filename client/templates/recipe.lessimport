@@ -7,12 +7,12 @@
     width: 100%;
 
     img {
-      height: 100%;
-      width: auto;
+      height: auto;
+      width: 100%;
     }
   }
   .attribution {
-    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 30%, @color-empty 100%));
+    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 20%, @color-empty 100%));
     .position(absolute, auto, 0, 3em, 0);
     .transform(translate3d(0,0,0));//gpu rendering
 
