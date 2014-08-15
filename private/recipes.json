@@ -2,7 +2,7 @@
   "season": "spring",
   "title": "Lahmacun - Turkish Pizza w/ Spicy Minced Beef & Salad Topping",
   "featured": false,
-  "large": true,
+  "highlighted": true,
   "excerpt": "",
   "source": {
     "name": "Ottolenghi",
@@ -235,7 +235,7 @@
   "season": "spring",
   "title": "Classic Ragu Bolognese",
   "featured": true,
-  "large": true,
+  "highlighted": true,
   "excerpt": "A certain magic happens as the beef and aromatic vegetables slowly cook down with wine, tomato paste, and broth",
   "source": {
     "name": "Bon Appétit",
@@ -333,7 +333,7 @@
   "season": "summer",
   "title": "Apricots Honey Panna Cotta",
   "featured": false,
-  "large": true,
+  "highlighted": true,
   "excerpt": "Juicy, fragrant, perfectly textured for a little fire action",
   "source": {
     "name": "Tartelette",
@@ -375,7 +375,7 @@
   "season": "summer",
   "title": "Bavarian-style Soft Pretzel",
   "featured": false,
-  "large": true,
+  "highlighted": true,
   "excerpt": "",
   "source": {
     "name": "NY Times",
@@ -415,7 +415,7 @@
   "season": "summer",
   "title": "Grits Praline & Brown Butter Ice Cream",
   "featured": true,
-  "large": true,
+  "highlighted": true,
   "excerpt": "\"Decadent\" isn’t a word we throw around lightly",
   "source": {
     "name": "Anson Mills",
@@ -441,7 +441,7 @@
   "season": "summer",
   "title": "Slanted Door's Shaking Beef",
   "featured": true,
-  "large": true,
+  "highlighted": true,
   "excerpt": "Cubes of tender filet mignon are sautéed with red onions and a vinaigrette",
   "source": {
     "name": "7x7 magazine",
