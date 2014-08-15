@@ -24,7 +24,8 @@
         .type-bold;
 
         color: @color-empty;
-        font-size: 13px;
+        display: inline-block;
+        margin-bottom: .25rem;
       }
       .author-recipe {
         .font-s1-alt;
