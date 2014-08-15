@@ -1,7 +1,6 @@
 .page.recipe {
   .image {
     .transform(translate3d(0,0,0));//gpu rendering
-    height: 70%;
     overflow: hidden;
     position: relative;
     width: 100%;
