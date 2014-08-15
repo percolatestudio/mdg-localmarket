@@ -8,8 +8,8 @@
     "momentum": {
       "git": "https://github.com/percolatestudio/meteor-momentum.git"
     },
-    "momentum-transitioner": {
-      "git": "https://github.com/percolatestudio/meteor-momentum-transitioner.git"
+    "momentum-iron-router": {
+      "git": "https://github.com/percolatestudio/momentum-iron-router.git"
     },
     "fastclick": {}
   }

@@ -11,8 +11,8 @@
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master"
       },
-      "momentum-transitioner": {
-        "git": "https://github.com/percolatestudio/meteor-momentum-transitioner.git",
+      "momentum-iron-router": {
+        "git": "https://github.com/percolatestudio/momentum-iron-router.git",
         "branch": "master"
       },
       "fastclick": {}
@@ -31,12 +31,12 @@
       "momentum": {
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master",
-        "commit": "05399097166f40d58df1fe182e2081864147a978"
+        "commit": "4e52991040f29ce4be151ce58dcce9e41c074dab"
       },
-      "momentum-transitioner": {
-        "git": "https://github.com/percolatestudio/meteor-momentum-transitioner.git",
+      "momentum-iron-router": {
+        "git": "https://github.com/percolatestudio/momentum-iron-router.git",
         "branch": "master",
-        "commit": "40e538261c240858675493bc09b81155489bb98e"
+        "commit": "91763801e986f2046d0b100606cf0a7e2779650f"
       },
       "fastclick": {
         "git": "https://github.com/percolatestudio/meteor-fastclick",
