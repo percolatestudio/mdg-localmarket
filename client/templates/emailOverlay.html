@@ -5,18 +5,15 @@
     <div class="title-overlay">Email Recipe</div>
 
     <form>
-      <div class="input-symbol left">
-        <p>{{error 'name'}}</p>
+      <div class="input-symbol left {{errorClass 'name'}}">
         <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
         <span class="icon-user"></span>
       </div>
-      <div class="input-symbol left">
-        <p>{{error 'sender'}}</p>
+      <div class="input-symbol left {{errorClass 'sender'}}">
         <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
         <span class="icon-email"></span>
       </div>
-      <div class="input-symbol left">
-        <p>{{error 'recipient'}}</p>
+      <div class="input-symbol left {{errorClass 'recipient'}}">
         <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
         <span class="icon-email"></span>
       </div>

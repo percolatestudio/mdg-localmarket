@@ -1,8 +1,8 @@
 Session.setDefault('emailErrors', {});
 
 Template.emailOverlay.helpers({
-  error: function(name) {
-    return name + ' ' + Session.get('emailErrors')[name];
+  errorClass: function(name) {
+    return Session.get('emailErrors')[name] && 'error';
   }
 });
 
@@ -16,7 +16,7 @@ Template.emailOverlay.events({
       var value = template.$('[name=' + field + ']').val();
 
       if (! value)
-        errors[field] = 'is required';
+        errors[field] = true;
     });
 
     Session.set('emailErrors', errors);
