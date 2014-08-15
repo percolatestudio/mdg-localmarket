@@ -45,7 +45,7 @@ Template.body.events({
   'click #menu a': function(e) {
     Session.set(MENU_KEY, false);
 
-    Router.go($(e.target).attr('href'), {initiator: 'menu'});
+    Router.go($(e.target).closest('a').attr('href'), {initiator: 'menu'});
     e.stopImmediatePropagation();
     e.preventDefault();
   },
