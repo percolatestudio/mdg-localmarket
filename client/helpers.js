@@ -1,3 +1,23 @@
+pluralize = function(n, thing) {
+  var plural = thing;
+  if (_.isUndefined(n)) {
+    return thing;
+  } else if (n !== 1) {
+    if (thing.slice(-1) === 's')
+      plural = thing + 'es';
+    else
+      plural = thing + 's';
+  }
+
+  return n + ' ' + plural;
+}
+
+Handlebars.registerHelper('pluralize', pluralize);
+
+UI.registerHelper('categoryName', function(shortName) {
+  return Recipes.SEASON_NAMES[shortName];
+});
+
 UI.registerHelper('categoryName', function(shortName) {
   return Recipes.SEASON_NAMES[shortName];
 });

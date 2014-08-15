@@ -1,5 +1,5 @@
 <template name="favorites">
-  {{> nav title='Favorites' subtext='7 Recipes'}}
+  {{> nav title='Favorites' subtext=recipeCount}}
 
   {{#contentFor 'rightNav'}}
     <a data-email><span class="icon-share"></span></a>
@@ -15,7 +15,14 @@
           </span>
           <img src="{{recipeImage recipe=this size='640x480'}}" />
         </a>
+      {{else}}
+        {{! XXX: DOM this is one way to do "if not"}}
       {{/each}}
     </div>
   </div>
+  
+  {{#unless favoriteRecipes.count}}
+    {{! XXX: DOM this is the other}}
+    NO RECIPES!
+  {{/unless}}
 </template>
