@@ -16,6 +16,7 @@
     .position(absolute, auto, 0, 3em, 0);
     .transform(translate3d(0,0,0));//gpu rendering
 
+    min-height: 9em;
     padding: 1.25em 1.25em 1em;
     text-align: center;
 
@@ -31,6 +32,9 @@
       margin-bottom: .25rem;
       &:after {
         content: '\2026';
+      }
+      &:empty {
+        display: none;
       }
     }
 
