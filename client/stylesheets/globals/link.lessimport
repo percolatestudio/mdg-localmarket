@@ -11,12 +11,6 @@ a {
 
   //links that look like standard text
   &.nochrome { color: @color-well; }
-  //links that are monocrhome
+  //links that are monochrome
   &.monochrome { color: @color-medium; }
-}
-
-a.inverse {
-  color: @color-empty;
-  &:hover { color: @color-rare; }
-  &:active { color: @color-medium-rare; }
 }

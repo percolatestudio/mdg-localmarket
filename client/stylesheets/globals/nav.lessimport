@@ -49,7 +49,7 @@ nav {
     color: @color-full;
     display: inline-block;
     height: 3rem;
-    width: 3rem;
+    width: 2rem;
 
     [class^="icon-"],
     [class*=" icon-"] {
@@ -58,12 +58,12 @@ nav {
     }
   }
   .nav-group {
-    .position(absolute, 0, auto, auto, 0);
+    .position(absolute, 0, auto, auto, .5rem);
     z-index: 1;
 
     &.right {
       left: auto;
-      right: 0;
+      right: .5rem;
     }
   }
 }
