@@ -25,7 +25,7 @@
 {
   "season": "spring",
   "title": "Classic Ragu Bolognese",
-  "featured": true,
+  "featured": false,
   "excerpt": "A certain magic happens as the beef and aromatic vegetables slowly cook down with wine, tomato paste, and broth",
   "source": {
     "name": "Bon Appétit",
@@ -76,7 +76,7 @@
 {
   "season": "spring",
   "title": "Chicken in Mole",
-  "featured": true,
+  "featured": false,
   "excerpt": "If there is one dish that could be considered Mexican haute cuisine, then Mole Poblano is surely it",
   "source": {
     "name": "Epicurious",
@@ -205,7 +205,7 @@
 {
   "season": "spring",
   "title": "Lahmacun - Turkish Pizza w/ Spicy Minced Beef & Salad Topping",
-  "featured": false,
+  "featured": true,
   "excerpt": "",
   "source": {
     "name": "Ottolenghi",
@@ -264,7 +264,7 @@
 {
   "season": "spring",
   "title": "Easiest Spaghetti & Meatballs",
-  "featured": false,
+  "featured": true,
   "excerpt": "No pasta's more iconic than spaghetti and meatballs",
   "source": {
     "name": "Martha Stewart",
@@ -336,7 +336,7 @@
 {
   "season": "summer",
   "title": "Bavarian-style Soft Pretzel",
-  "featured": false,
+  "featured": true,
   "excerpt": "",
   "source": {
     "name": "NY Times",
@@ -397,7 +397,7 @@
 {
   "season": "summer",
   "title": "Blondies",
-  "featured": false,
+  "featured": true,
   "highlighted": true,
   "excerpt": "",
   "source": {
@@ -439,7 +439,7 @@
 {
   "season": "summer",
   "title": "Diner Style Hamburgers",
-  "featured": false,
+  "featured": true,
   "excerpt": "This is the traditional, griddled hamburger of diners and takeaway spots, smashed thin and cooked crisp on its edges",
   "source": {
     "name": "NY Times",
@@ -565,7 +565,7 @@
 {
   "season": "fall",
   "title": "Bucatini all' Amatriciana",
-  "featured": false,
+  "featured": true,
   "excerpt": "This dish is named for the town of Amatrice...considered by many Italians to be birthplace of the best cooks on the peninsula",
   "source": {
     "name": "Mario Batali",
@@ -622,7 +622,7 @@
 {
   "season": "fall",
   "title": "Chocolate Chai Spice Cupcake",
-  "featured": false,
+  "featured": true,
   "excerpt": "The moist chocolatey goodness of the cake can live on its own",
   "source": {
     "name": "Cupcake Bakeshop",
@@ -697,7 +697,7 @@
 {
   "season": "fall",
   "title": "Whole Wheat Goldfish Crackers",
-  "featured": false,
+  "featured": true,
   "excerpt": "",
   "source": {
     "name": "Smitten Kitchen",
@@ -740,7 +740,7 @@
 {
   "season": "fall",
   "title": "Sage Buttermilk Biscuits with Sausage & Cheddar",
-  "featured": false,
+  "featured": true,
   "excerpt": "",
   "source": {
     "name": "Epicurious",
@@ -953,7 +953,7 @@
 {
   "season": "winter",
   "title": "Hearty Beef Stew",
-  "featured": false,
+  "featured": true,
   "excerpt": "The result is comfort food, grandmother style",
   "source": {
     "name": "Williams-Sonoma",
@@ -984,7 +984,7 @@
 {
   "season": "winter",
   "title": "Cashew Gateau with Coffe Cardamom Mousse",
-  "featured": false,
+  "featured": true,
   "excerpt": "The inspiration for the caramel stained \"glass\" panel comes from my grandmother",
   "source": {
     "name": "Tartelette",
