@@ -1,6 +1,6 @@
 <template name="home">
-  {{> nav title='Sous' black=true}}
   <div class="page home">
+    {{> nav title='Sous' black=true}}
     <div class="list-recipes">
       {{#each featuredRecipes}}
         <a class="item-recipe {{#if highlighted}}highlighted{{/if}}" href="{{pathFor 'recipe'}}">

@@ -1,11 +1,11 @@
 <template name="favorites">
-  {{> nav title='Favorites' subtext=recipeCount}}
-
-  {{#contentFor 'rightNav'}}
-    <a data-email><span class="icon-share"></span></a>
-  {{/contentFor}}
-
   <div class="page favorites">
+    {{> nav title='Favorites' subtext=recipeCount}}
+
+    {{#contentFor 'rightNav'}}
+      <a data-email><span class="icon-share"></span></a>
+    {{/contentFor}}
+
     <div class="list-recipes">
       {{#each favoriteRecipes}}
         <a class="item-recipe inverse" href="{{pathFor 'recipe'}}">
@@ -20,7 +20,7 @@
       {{/each}}
     </div>
   </div>
-  
+
   {{#unless favoriteRecipes.count}}
     {{! XXX: DOM this is the other}}
     NO RECIPES!

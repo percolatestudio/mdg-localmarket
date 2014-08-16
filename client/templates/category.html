@@ -1,11 +1,10 @@
 <template name="category">
-  {{> nav title='category' black=true back=true}}
-
-  {{#contentFor 'rightNav'}}
-    <a data-email><span class="icon-share"></span></a>
-  {{/contentFor}}
-
   <div class="page category">
+    {{> nav title='category' black=true back=true}}
+
+    {{#contentFor 'rightNav'}}
+      <a data-email><span class="icon-share"></span></a>
+    {{/contentFor}}
 
     <div class="bg-image {{name}}">
       <h1 class="title-category">{{categoryName name}}</h1>
