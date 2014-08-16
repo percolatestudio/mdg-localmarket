@@ -5,6 +5,7 @@
   .list-recipes {
     .item-recipe:first-child {
       height: 400px;
+      overflow-x: hidden;
 
       .attribution {
         .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 50%, @color-empty 100%));
@@ -38,9 +39,8 @@
         }
       }
       img {
-        height: 100%;
-        width: auto;
-        .transform(translateX(-5%));
+        .position(absolute, auto, auto, auto, 50%, auto, 100%);
+        .transform(translateX(-50%));
       }
     }
   }
