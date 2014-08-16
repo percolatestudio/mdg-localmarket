@@ -4,11 +4,11 @@
 
     {{#contentFor 'rightNav'}}
       {{#if favorite}}
-        <a data-unfavorite><span class="icon-heart"></span></a>
+        <div class="nav-item" data-unfavorite><span class="icon-heart"></span></div>
       {{else}}
-        <a data-favorite><span class="icon-heart-hollow"></span></a>
+        <div class="nav-item" data-favorite><span class="icon-heart-hollow"></span></div>
       {{/if}}
-      <a data-email><span class="icon-share"></span></a>
+      <div class="nav-item" data-email><span class="icon-share"></span></div>
     {{/contentFor}}
 
     <div class="image" style="background-image: url('{{recipeImage recipe=this size='640x800'}}')"></div>

@@ -11,6 +11,8 @@ nav {
   &.black {
     color: @color-empty;
 
+    .nav-item { color: @color-empty; }
+
     // Gradient over image to give nav contrast
     &:after {
       .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
@@ -19,8 +21,6 @@ nav {
       content: '';
       z-index: -1;
     }
-
-    a { color: @color-empty; }
   }
 
   .title-page {
@@ -44,7 +44,7 @@ nav {
       text-transform: none;
     }
   }
-  a {
+  .nav-item {
     .font-m1;
     color: @color-full;
     display: inline-block;

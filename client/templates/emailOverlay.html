@@ -1,7 +1,7 @@
 <template name="emailOverlay">
   <div id="email-overlay">
     {{#with recipeIds=recipeIds}}
-      <a data-close-overlay><span class="icon-cross"></span></a>
+      <div data-close-overlay><span class="icon-cross"></span></div>
 
       <div class="title-overlay">Email {{pluralize recipeIds.length 'recipe'}}</div>
 
