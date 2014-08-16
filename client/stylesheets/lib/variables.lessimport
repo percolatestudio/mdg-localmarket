@@ -4,13 +4,12 @@
 @color-tertiary: #000; //sunburst orange
 @color-complementary: #000; //light turquoise
 
-// Other colors
-// #f3ac15 Sunburst orange
-// #f3cc71 Muted Sunburst Orange
+/* Brand Colors */
+@color-brand: #f3ac15;//sunburst orange
+@color-brand-alt: #f3cc71;//muted sunburst orange
 
 /* Alert */
 @color-negative: #ff4800; //delete, alert
-
 
 /* Greyscale */
 @color-empty: white;
