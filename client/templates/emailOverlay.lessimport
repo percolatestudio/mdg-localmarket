@@ -22,8 +22,8 @@
     line-height: 1;
     text-align: center;
     text-indent: 0; //realign due to line break
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
   }
 
   .input-symbol {
