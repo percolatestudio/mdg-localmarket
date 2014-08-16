@@ -19,17 +19,12 @@
 
     color: @color-well;
     line-height: 1;
-    text-align: center;
-    text-indent: 0; //realign due to line break
     padding-top: 6rem;
     padding-bottom: 4rem;
+    text-align: center;
+    text-indent: 0; //realign due to line break
   }
 
-  .input-symbol {
-    width: 100%;
-  }
-
-  .btn-primary {
-    .position(absolute, auto, 0, 0, 0, 100%);
-  }
+  .input-symbol { width: 100%; }
+  .btn-primary { .position(absolute, auto, 0, 0, 0, 100%); }
 }

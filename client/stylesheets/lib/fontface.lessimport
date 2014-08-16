@@ -1,6 +1,6 @@
 //Typography for Sous
 
-@font-face {
+@font-face { //Note: this is an all-caps subset of Lora; will not work with lowercase
   font-family: 'lorabold';
   src: url('font/lora-bold-subset.eot');
   src: url('font/lora-bold-subset.eot?#iefix') format('embedded-opentype'),
@@ -50,4 +50,3 @@
   font-weight: normal;
   font-style: normal;
 }
-

@@ -20,36 +20,25 @@
   &[class*="primary"] {
     background-color: @color-primary;
     color: @color-empty;
-    &:hover{
-      background-color: darken(@color-primary, 5%);
-    }
-    &:active {
-      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
-    }
+    &:hover { background-color: darken(@color-primary, 5%); }
+    &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
+
   &[class*="secondary"] {
     background: @color-secondary;
     color: @color-empty;
-    &:hover{
-      background-color: darken(@color-secondary, 5%);
-    }
-    &:active{
-      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
-    }
+    &:hover{ background-color: darken(@color-secondary, 5%); }
+    &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
+
   &[class*="tertiary"] {
     background-color: @color-rare;
     color: @color-primary;
-    &:hover{
-      background-color: darken(@color-rare, 10%);
-    }
-    &:active{
-      box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset;
-    }
+    &:hover{ background-color: darken(@color-rare, 10%); }
+    &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
-  &[disabled] {
-    opacity: .5;
-  }
+
+  &[disabled] { opacity: .5; }
 }
 
 .btns-group {

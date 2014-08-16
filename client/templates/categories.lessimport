@@ -5,11 +5,10 @@
     .font-m1;
     .type-bold;
     display: block;
-    line-height: 1;
-    text-align: center;
-
-    padding-top: .75rem;
     height: 3.5rem;
+    line-height: 1;
+    padding-top: .75rem;
+    text-align: center;
   }
 
   .list-categories {
@@ -17,11 +16,10 @@
       .transform(translate3d(0,0,0));
 
       display: block;
+      height: 7.25rem;
       overflow: hidden;
       position: relative;
       text-align: center;
-
-      height: 7.25rem;
 
       .name-category {
         .font-m2;
@@ -32,9 +30,8 @@
 
         color: @color-empty;
         line-height: 1;
-
-
       }
+
       .count {
         .font-s1;
         .position(absolute, auto, 0, .25rem, 0);

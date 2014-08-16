@@ -3,6 +3,7 @@
     height: 15em;
     z-index: -1;
   }
+
   .title-about {
     .font-l1;
     .type-black;
@@ -21,7 +22,6 @@
     margin-top: -3em;
     padding: 1em 1.25em;
     position: relative;
-
 
     p {
       .font-s3;

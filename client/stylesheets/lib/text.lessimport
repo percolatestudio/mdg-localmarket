@@ -5,6 +5,7 @@
   text-transform: uppercase;
 }
 
+// Adds an ellipses at the end of overflowing strings
 .ellipsized() {
   overflow: hidden;
   text-overflow: ellipsis;
