@@ -22,7 +22,6 @@ textarea {
   }
 
   &[disabled] { opacity: .5; }
-  &.alert { border-bottom: 1px solid @color-negative; }
 }
 
 // input with an icon
@@ -30,14 +29,21 @@ textarea {
   display: inline-block;
   position: relative;
 
+  &.error {
+    input { border-bottom: 1px solid @color-negative; }
+    [class^="icon-"],
+    [class*=" icon-"] {
+      color: @color-negative;
+    }
+  }
+
   //icon position, input padding
-  > [class^="icon-"],
-  > [class*=" icon-"] {
+  [class^="icon-"],
+  [class*=" icon-"] {
     left: 1rem;
   }
-  > input {
-    padding-left: 2.75em !important;
-  }
+
+  input { padding-left: 2.75em !important; }
 
   //icon & input styling
   input {
