@@ -1,4 +1,7 @@
 .page.recipe {
+  nav {
+    [data-unfavorite] { color: @color-brand; }
+  }
   .image {
     .transform(translate3d(0,0,0));//gpu rendering
     overflow: hidden;
@@ -22,13 +25,13 @@
     .title-recipe {
       .font-m2;
       .type-bold;
-      margin-bottom: .25rem;
+      margin-bottom: .5rem;
     }
 
     .description-recipe {
       .font-s3;
       color: @color-well;
-      margin-bottom: .25rem;
+      margin-bottom: .5rem;
       &:after {
         content: '\2026';
       }
