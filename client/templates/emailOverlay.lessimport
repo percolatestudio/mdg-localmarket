@@ -1,5 +1,4 @@
 #email-overlay {
-
   [data-close-overlay] {
     .position(absolute, 0, 0, auto, auto, 3em, 3em);
     text-align: center;
@@ -33,5 +32,4 @@
   .btn-primary {
     .position(absolute, auto, 0, 0, 0, 100%);
   }
-
 }

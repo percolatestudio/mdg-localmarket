@@ -5,19 +5,19 @@
 @color-complementary: #000; //light turquoise
 
 /* Brand Colors */
-@color-brand: #f3ac15;//sunburst orange
-@color-brand-alt: #f3cc71;//muted sunburst orange
+@color-brand: #f3ac15; //sunburst orange
+@color-brand-alt: #f3cc71; //muted sunburst orange
 
 /* Alert */
-@color-negative: #ff4800; //delete, alert
+@color-negative: #ff6622; //error, alert
 
 /* Greyscale */
 @color-empty: white;
 @color-raw: #f8f8f8;
-@color-raw-alt: #f3f3f3;
-@color-rare: #EEE;
+@color-raw-alt: #f2f2f2;
+@color-rare: #eee;
 @color-medium-rare: #ccc;
-@color-medium: #AAAAAA;
+@color-medium: #aaa;
 @color-medium-well: #666;
 @color-well: #555;
 @color-full: #333;

@@ -6,15 +6,15 @@
       <div class="title-overlay">Email {{pluralize recipeIds.length 'recipe'}}</div>
 
       <form>
-        <div class="input-symbol left {{errorClass 'name'}}">
+        <div class="input-symbol {{errorClass 'name'}}">
           <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
           <span class="icon-user"></span>
         </div>
-        <div class="input-symbol left {{errorClass 'sender'}}">
+        <div class="input-symbol {{errorClass 'sender'}}">
           <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
           <span class="icon-email"></span>
         </div>
-        <div class="input-symbol left {{errorClass 'recipient'}}">
+        <div class="input-symbol {{errorClass 'recipient'}}">
           <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
           <span class="icon-email"></span>
         </div>
