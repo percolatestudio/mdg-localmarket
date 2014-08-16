@@ -8,7 +8,7 @@
     .type-black;
     .title-caps;
     .position(absolute, 50%, 0, auto, 0);
-    .transform(translateY(-80%));
+    .transform(translate3d(0,-80%,0));
 
     color: @color-empty;
     line-height: 1;

@@ -19,7 +19,7 @@
     }
     .count-category:after {
       .position(absolute, auto, auto, -.5rem, 50%);
-      .transform(translateX(-50%));
+      .transform(translate3d(-50%,0,0));
 
       border-top: .5rem solid transparent;
       border-left: .5rem solid @color-empty;
@@ -34,7 +34,7 @@
     .type-black;
     .title-caps;
     .position(absolute, 50%, 0, auto, 0);
-    .transform(translateY(-30%));
+    .transform(translate3d(0,-30%,0));
 
     color: @color-empty;
 

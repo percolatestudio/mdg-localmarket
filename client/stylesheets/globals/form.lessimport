@@ -52,7 +52,7 @@ textarea {
   [class^="icon-"],
   [class*=" icon-"] {
     .transition( all 300ms ease-in );
-    .transform(translateY(-50%));
+    .transform(translate3d(0,-50%,0));
 
     background: transparent;
     color: @color-medium;
