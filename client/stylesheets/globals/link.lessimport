@@ -4,13 +4,6 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  &:hover {
-    color: darken(@color-primary, 10%);
-  }
+  &:hover { color: darken(@color-primary, 10%); }
   &:active { color: @color-well; }
-
-  //links that look like standard text
-  &.nochrome { color: @color-well; }
-  //links that are monochrome
-  &.monochrome { color: @color-medium; }
 }
