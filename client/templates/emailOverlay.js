@@ -24,7 +24,7 @@ Template.emailOverlay.events({
 
     Session.set('emailErrors', errors);
 
-    if (errors !== {}) {
+    if (_.all(errors, function(e) { return ! e; })) {
       // XXX: sending state?
       Meteor.call('emailRecipes', this.recipeIds, options, function() {
         Session.set('emailOpen', false);
