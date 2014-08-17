@@ -1,4 +1,4 @@
-pluralize = function(n, thing) {
+pluralize = function(n, thing, options) {
   var plural = thing;
   if (_.isUndefined(n)) {
     return thing;
@@ -9,7 +9,10 @@ pluralize = function(n, thing) {
       plural = thing + 's';
   }
 
-  return n + ' ' + plural;
+  if (options && options.hash && options.hash.wordOnly)
+    return plural;
+  else
+    return n + ' ' + plural;
 }
 
 Handlebars.registerHelper('pluralize', pluralize);

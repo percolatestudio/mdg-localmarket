@@ -3,7 +3,7 @@
     {{#with recipeIds=recipeIds}}
       <div data-close-overlay><span class="icon-cross"></span></div>
 
-      <div class="title-overlay">Email {{pluralize recipeIds.length 'recipe'}}</div>
+      <div class="title-overlay">Email {{pluralize recipeIds.length 'recipe' wordOnly=true}}</div>
 
       <form>
         <div class="input-symbol {{errorClass 'name'}}">
