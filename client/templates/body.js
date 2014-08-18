@@ -30,16 +30,19 @@ Template.body.events({
   'click [data-menu]': function(e) {
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
     e.stopImmediatePropagation();
+    e.preventDefault();
   },
 
   'click [data-back]': function(e) {
     // XXX: set the back transition via Location.back()
     history.back();
     e.stopImmediatePropagation();
+    e.preventDefault();
   },
 
   'click .content-overlay': function() {
     Session.set(MENU_KEY, false);
+    e.preventDefault();
   },
 
   'click #menu a': function(e) {
