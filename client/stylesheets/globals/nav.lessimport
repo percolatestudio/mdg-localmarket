@@ -11,7 +11,9 @@ nav {
   &.black {
     color: @color-empty;
 
-    .nav-item { color: @color-empty; }
+    .nav-item {
+      color: @color-empty;
+    }
 
     // Gradient over image to give nav contrast
     &:after {
@@ -50,6 +52,8 @@ nav {
     display: inline-block;
     height: 3rem;
     width: 2rem;
+
+    &:active { opacity: .5; }
 
     [class^="icon-"],
     [class*=" icon-"] {
