@@ -1,6 +1,10 @@
 Session.setDefault('emailErrors', {});
 
 Template.emailOverlay.helpers({
+  open: function() {
+    return Session.equals('emailOpen', true);
+  },
+  
   recipeIds: function() {
     if (_.isFunction(Router.current().recipeIds))
       return Router.current().recipeIds();

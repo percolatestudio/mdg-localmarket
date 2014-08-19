@@ -2,7 +2,9 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "iron-router": {},
+      "iron-router": {
+        "version": "0.8.2"
+      },
       "iron-layout": {
         "git": "https://github.com/eventedmind/iron-layout.git",
         "branch": "hasRegion"
@@ -31,12 +33,12 @@
       "momentum": {
         "git": "https://github.com/percolatestudio/meteor-momentum.git",
         "branch": "master",
-        "commit": "4e52991040f29ce4be151ce58dcce9e41c074dab"
+        "commit": "5abbc2fdf510e06664af33150da640d4ae4e9398"
       },
       "momentum-iron-router": {
         "git": "https://github.com/percolatestudio/momentum-iron-router.git",
         "branch": "master",
-        "commit": "91763801e986f2046d0b100606cf0a7e2779650f"
+        "commit": "8c6f912ed98b6767d4b459d19524ce59f2b8b411"
       },
       "fastclick": {
         "git": "https://github.com/percolatestudio/meteor-fastclick",

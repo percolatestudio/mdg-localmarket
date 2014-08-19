@@ -1,6 +1,6 @@
 {
   "packages": {
-    "iron-router": {},
+    "iron-router": "0.8.2",
     "iron-layout": {
       "git": "https://github.com/eventedmind/iron-layout.git",
       "branch": "hasRegion"

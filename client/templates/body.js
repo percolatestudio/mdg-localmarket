@@ -19,10 +19,6 @@ Template.body.helpers({
 
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
-  },
-
-  emailOpen: function() {
-    return Session.get(EMAIL_KEY) && 'email-open';
   }
 });
 

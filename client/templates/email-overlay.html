@@ -1,25 +1,29 @@
 <template name="emailOverlay">
-  <div id="email-overlay">
-    {{#with recipeIds=recipeIds}}
-      <a href="#" data-close-overlay><span class="icon-cross"></span></a>
+  {{#momentum with="fade"}}
+    {{#if open}}
+      <div id="email-overlay">
+        {{#with recipeIds=recipeIds}}
+          <a href="#" data-close-overlay><span class="icon-cross"></span></a>
 
-      <div class="title-overlay">Email {{pluralize recipeIds.length 'recipe' wordOnly=true}}</div>
+          <div class="title-overlay">Email {{pluralize recipeIds.length 'recipe' wordOnly=true}}</div>
 
-      <form>
-        <div class="input-symbol {{errorClass 'name'}}">
-          <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
-          <span class="icon-user"></span>
-        </div>
-        <div class="input-symbol {{errorClass 'sender'}}">
-          <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
-          <span class="icon-email"></span>
-        </div>
-        <div class="input-symbol {{errorClass 'recipient'}}">
-          <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
-          <span class="icon-email"></span>
-        </div>
-        <button class="btn-primary" type='submit'>Send Recipe</button>
-      </form>
-    {{/with}}
-  </div>
+          <form>
+            <div class="input-symbol {{errorClass 'name'}}">
+              <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
+              <span class="icon-user"></span>
+            </div>
+            <div class="input-symbol {{errorClass 'sender'}}">
+              <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
+              <span class="icon-email"></span>
+            </div>
+            <div class="input-symbol {{errorClass 'recipient'}}">
+              <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
+              <span class="icon-email"></span>
+            </div>
+            <button class="btn-primary" type='submit'>Send Recipe</button>
+          </form>
+        {{/with}}
+      </div>
+    {{/if}}
+  {{/momentum}}
 </template>
