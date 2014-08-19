@@ -5,9 +5,12 @@ Template.emailOverlay.helpers({
     return Session.equals('emailOpen', true);
   },
   
-  recipeIds: function() {
-    if (_.isFunction(Router.current().recipeIds))
-      return Router.current().recipeIds();
+  recipes: function() {
+    // XXX: too much of hack?
+    if (this._id)
+      return Recipes.find(this._id);
+    else
+      return this;
   },
   
   errorClass: function(name) {
@@ -30,7 +33,8 @@ Template.emailOverlay.events({
 
     if (_.all(errors, function(e) { return ! e; })) {
       // XXX: sending state?
-      Meteor.call('emailRecipes', this.recipeIds, options, function() {
+      var recipeIds = this.map(function(r) { return r._id; });
+      Meteor.call('emailRecipes', recipeIds, options, function() {
         Session.set('emailOpen', false);
       });
     }
