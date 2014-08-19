@@ -17,14 +17,6 @@ pluralize = function(n, thing, options) {
 
 Handlebars.registerHelper('pluralize', pluralize);
 
-UI.registerHelper('categoryName', function(shortName) {
-  return Recipes.SEASON_NAMES[shortName];
-});
-
-UI.registerHelper('categoryName', function(shortName) {
-  return Recipes.SEASON_NAMES[shortName];
-});
-
 UI.registerHelper('recipeImage', function(options) {
   var size = options.hash.size || '640x800';
 
