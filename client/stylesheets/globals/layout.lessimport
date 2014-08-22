@@ -1,7 +1,7 @@
 @menu-width: 45%;
 
 body {
-  background: @color-rare;
+  background: @color-well;
 }
 
 #container {
@@ -24,12 +24,12 @@ body {
   .transition(all 200ms ease-out);
   .transform(translate3d(0, 0, 0));
 
-  background: @color-empty;
-
   .content-scrollable {
     .position(absolute, 0, 0, 0, 0);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+
+    background: @color-empty;
   }
 
   .menu-open & {

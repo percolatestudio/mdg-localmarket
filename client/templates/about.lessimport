@@ -1,8 +1,5 @@
 .page.about {
-  .bg-image.about {
-    height: 15em;
-    z-index: -1;
-  }
+  .bg-image.about { height: 15em; }
 
   .title-about {
     .font-l1;
