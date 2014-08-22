@@ -1,6 +1,7 @@
 nav {
-  .transform(translate3d(0,0,0));
   .position(absolute, 0, 0, auto, 0, 100%, 3em);
+  .transform(translate3d(0,0,0));
+  .transition( all 200ms ease-out );
 
   text-align: center;
   z-index: 10;
@@ -12,10 +13,10 @@ nav {
       color: @color-empty;
     }
 
-    // Gradient over image to give nav contrast
+    // Gradient over image to give nav contrast, extends past nav boundaries
     &:after {
       .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
-      .background-image(linear-gradient(top, rgba(0,0,0,.35), rgba(0,0,0,0) 100%));
+      .background-image(linear-gradient(top, rgba(0,0,0,.30), rgba(0,0,0,0) 100%));
 
       content: '';
       z-index: -1;
@@ -23,10 +24,10 @@ nav {
   }
 
   &.scrolled {
-    .background-image(linear-gradient(bottom, rgba(255,255,255,.95), rgba(255,255,255,1) 100%));
+    background: rgba(255,255,255,.97);
     color: @color-full;
 
-    &:after { display: none; }
+    &:after { opacity: 0; }
     .nav-item { color: @color-full; }
   }
 
@@ -37,7 +38,7 @@ nav {
     .ellipsized;
 
     .position(absolute, 50%, 0, auto, 0);
-    .transform(translate3d(0, -35%, 0));
+    .transform(translate3d(0, -40%, 0));
 
     line-height: 1;
 
