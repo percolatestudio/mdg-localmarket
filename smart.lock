@@ -17,7 +17,8 @@
         "git": "https://github.com/percolatestudio/momentum-iron-router.git",
         "branch": "master"
       },
-      "fastclick": {}
+      "fastclick": {},
+      "publish-counts": {}
     },
     "packages": {
       "iron-router": {
@@ -44,6 +45,11 @@
         "git": "https://github.com/percolatestudio/meteor-fastclick",
         "tag": "v0.6.7",
         "commit": "fcb3bfd34d9f6874e626b4e24e8f54107938db41"
+      },
+      "publish-counts": {
+        "git": "https://github.com/percolatestudio/publish-counts.git",
+        "tag": "v0.2.2",
+        "commit": "45cf58d47a34b06d2788e30f140b6392644f6199"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

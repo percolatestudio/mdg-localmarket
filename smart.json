@@ -11,6 +11,7 @@
     "momentum-iron-router": {
       "git": "https://github.com/percolatestudio/momentum-iron-router.git"
     },
-    "fastclick": {}
+    "fastclick": {},
+    "publish-counts": {}
   }
 }

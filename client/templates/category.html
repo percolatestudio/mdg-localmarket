@@ -9,7 +9,7 @@
     {{#with category}}
       <div class="bg-image {{name}}">
         <h1 class="title-category">{{title}}</h1>
-        <span class="count-category">5 Recipes</span>
+        <span class="count-category">{{pluralize ../recipes.count 'Recipe'}}</span>
       </div>
 
       <p class="description-category">{{description}}</p>
