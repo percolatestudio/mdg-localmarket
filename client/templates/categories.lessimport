@@ -1,5 +1,5 @@
 .page.categories {
-  padding-top: 3em;
+  .content-scrollable { padding-top: 3em; }
 
   .subtitle-categories {
     .font-m1;

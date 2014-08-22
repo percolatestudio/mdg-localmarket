@@ -6,19 +6,21 @@
       <a href="#" class="nav-item" data-email><span class="icon-share"></span></a>
     {{/contentFor}}
 
-    <div class="list-recipes">
-      {{#each favoriteRecipes}}
-        <a class="item-recipe highlighted" href="{{pathFor 'recipe'}}">
-          <span class="attribution">
-            <span class="title-recipe">{{title}}</span>
-            <span class="author-recipe">{{source.name}}</span>
-          </span>
-          <img src="{{recipeImage recipe=this size='640x480'}}" />
-        </a>
-      {{else}}
-        {{! XXX: DOM this is one way to do "if not"}}
-        Other way
-      {{/each}}
+    <div class="content-scrollable">
+      <div class="list-recipes">
+        {{#each favoriteRecipes}}
+          <a class="item-recipe highlighted" href="{{pathFor 'recipe'}}">
+            <span class="attribution">
+              <span class="title-recipe">{{title}}</span>
+              <span class="author-recipe">{{source.name}}</span>
+            </span>
+            <img src="{{recipeImage recipe=this size='640x480'}}" />
+          </a>
+        {{else}}
+          {{! XXX: DOM this is one way to do "if not"}}
+          Other way
+        {{/each}}
+      </div>
     </div>
   </div>
 

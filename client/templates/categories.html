@@ -2,15 +2,17 @@
   <div class="page categories">
     {{> nav title='Categories'}}
 
-    <span class="subtitle-categories">Browse by Season</span>
+    <div class="content-scrollable">
+      <span class="subtitle-categories">Browse by Season</span>
 
-    <div class="list-categories">
-      {{#each categories}}
-        <a href="{{pathFor 'category' name=name}}" class="item-category {{name}} bg-image-small">
-          <span class="name-category">{{title}}</span>
-          <span class="count">{{pluralize recipeCount 'Recipe'}}</span>
-        </a>
-      {{/each}}
+      <div class="list-categories">
+        {{#each categories}}
+          <a href="{{pathFor 'category' name=name}}" class="item-category {{name}} bg-image-small">
+            <span class="name-category">{{title}}</span>
+            <span class="count">{{pluralize recipeCount 'Recipe'}}</span>
+          </a>
+        {{/each}}
+      </div>
     </div>
   </div>
 </template>

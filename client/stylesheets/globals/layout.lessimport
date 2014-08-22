@@ -20,25 +20,30 @@ body {
 }
 
 #content-container {
-  .position(absolute, 0, 0, 0, 0);;
+  .position(absolute, 0, 0, 0, 0);
   .transition(all 200ms ease-out);
   .transform(translate3d(0, 0, 0));
 
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-
   background: @color-empty;
+
+  .content-scrollable {
+    .position(absolute, 0, 0, 0, 0);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
   .menu-open & {
     .transform(translate3d(@menu-width, 0, 0));
   }
 
-  > [data-momentum] > div.page {
+  [data-momentum] > div.page {
     .position(absolute, 0, 0, 0, 0);
   }
+
 }
 
-.content-overlay {
+
+.content-overlay { //transparent screen to prevent interactions on content when menu is open
   .position(absolute, 0, 0, 0, 0);
   cursor: pointer;
 
@@ -59,6 +64,6 @@ body {
   }
 }
 
-.email-open #content-container {
+.email-open .content-scrollable {
   overflow: hidden; //prevents ios scrolling background when overlay is open
 }

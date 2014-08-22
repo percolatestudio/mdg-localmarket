@@ -5,9 +5,6 @@ nav {
   text-align: center;
   z-index: 10;
 
-  &.scrolled {
-    background: @color-empty;
-  }
   &.black {
     color: @color-empty;
 
@@ -23,6 +20,14 @@ nav {
       content: '';
       z-index: -1;
     }
+  }
+
+  &.scrolled {
+    .background-image(linear-gradient(bottom, rgba(255,255,255,.95), rgba(255,255,255,1) 100%));
+    color: @color-full;
+
+    &:after { display: none; }
+    .nav-item { color: @color-full; }
   }
 
   .title-page {

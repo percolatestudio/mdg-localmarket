@@ -1,9 +1,9 @@
 Template.nav.rendered = function() {
   var $nav = this.$('nav');
-  $nav.closest('.page').waypoint(function(direction) {
-    $nav.toggleClass('over', direction === 'down');
+  $nav.siblings('.content-scrollable').waypoint(function(direction) {
+    $nav.toggleClass('scrolled', direction === 'down');
   }, {
-    context: '#content-container',
-    offset: -400
+    context: '.content-scrollable',
+    offset: -200
   });
 }

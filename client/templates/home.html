@@ -1,20 +1,24 @@
 <template name="home">
   <div class="page home">
     {{> nav title='Sous' black=true}}
-    <div class="list-recipes">
-      {{#each featuredRecipes}}
-        <a class="item-recipe {{#if highlighted}}highlighted{{/if}}" href="{{pathFor 'recipe'}}">
-          <span class="attribution">
-            <span class="title-recipe">{{title}}</span>
-            <span class="author-recipe">{{source.name}}</span>
-          </span>
-          {{#if highlighted}}
-            <img src="{{recipeImage recipe=this size='640x480'}}" />
-          {{else}}
-            <img src="{{recipeImage recipe=this size='320x350'}}" />
-          {{/if}}
-        </a>
-      {{/each}}
+
+    <div class="content-scrollable">
+      <div class="list-recipes">
+        {{#each featuredRecipes}}
+          <a class="item-recipe {{#if highlighted}}highlighted{{/if}}" href="{{pathFor 'recipe'}}">
+            <span class="attribution">
+              <span class="title-recipe">{{title}}</span>
+              <span class="author-recipe">{{source.name}}</span>
+            </span>
+            {{#if highlighted}}
+              <img src="{{recipeImage recipe=this size='640x480'}}" />
+            {{else}}
+              <img src="{{recipeImage recipe=this size='320x350'}}" />
+            {{/if}}
+          </a>
+        {{/each}}
+      </div>
     </div>
+
   </div>
 </template>
