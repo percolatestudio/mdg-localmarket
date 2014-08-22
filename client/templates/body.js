@@ -4,17 +4,30 @@ Session.setDefault(MENU_KEY, false);
 var EMAIL_KEY = 'emailOpen';
 Session.setDefault(EMAIL_KEY, false);
 
+
+// XXX: this work around until IR properly supports this
+//   IR refactor will include Location.back, which will ensure that initator is
+//   set 
+var nextInitiator = null, initiator = null;
+Deps.autorun(function() {
+  // add a dep
+  Router.current();
+  
+  initiator = nextInitiator;
+  nextInitiator = null;
+});
+
+
+
 Template.body.helpers({
   transitionOptions: function() { return function(from, to, node) {
     if (to.initiator === 'menu')
       return 'none';
-
-    // XXX: use initiator === 'back' for the LTR -- requires support from IR,
-    //   coming in near future version
-    if (to.path === '/')
+    
+    if (initiator === 'back') // should be to.initiator
       return 'left-to-right';
-    else
-      return 'right-to-left';
+
+    return 'right-to-left';
   }},
 
   menuOpen: function() {
@@ -30,6 +43,8 @@ Template.body.events({
   },
 
   'click [data-back]': function(e) {
+    nextInitiator = 'back';
+    
     // XXX: set the back transition via Location.back()
     history.back();
     e.stopImmediatePropagation();
