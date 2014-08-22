@@ -17,9 +17,9 @@
             <img src="{{recipeImage recipe=this size='640x480'}}" />
           </a>
         {{else}}
-          <div class="no-favorites">
-            <div class="title-no-favorites">No favorites yet</div>
-            <div class="subtitle-no-favorites">Tap on the <span class="icon-heart-hollow"></span> to save your favorite recipes. <a href="{{pathFor 'home'}}">Return home</a></div>
+          <div class="wrapper-message">
+            <div class="title-message">No favorites yet</div>
+            <div class="subtitle-message">Tap on the <span class="icon-heart-hollow"></span> to save your favorite recipes. <a href="{{pathFor 'home'}}">Return home</a></div>
 
           </div>
         {{/each}}
