@@ -1,3 +1,18 @@
 .page.favorites {
   .content-scrollable { padding-top: 3em; }
+  .no-favorites {
+    padding: 50% 10% 0;
+    text-align: center;
+
+    .title-no-favorites {
+      .font-m1;
+      .type-bold;
+      color: @color-medium-well;
+      margin-bottom: .5em;
+    }
+    .subtitle-no-favorites {
+      .font-s3;
+      color: @color-medium;
+    }
+  }
 }
