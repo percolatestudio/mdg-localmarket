@@ -1,12 +1,12 @@
 Momentum.registerPlugin('fade', function(options) {
   options = _.extend({}, options, {
-    duration: 500,
+    duration: 200,
   });
-  
+
   return {
     insertElement: function(node, next, done) {
       var $node = $(node);
-      
+
       $node
         .insertBefore(next)
         .velocity('fadeIn', {
