@@ -57,13 +57,6 @@ body {
   .background-image(linear-gradient(top, rgba(232, 234, 241,.97), rgba(243,243,244, .97) 100%));
   .position(absolute, 0, 0, 0, 0);;
 
-  display: none;
   z-index: 1;
-  .email-open & {
-    display: block;
-  }
 }
 
-.email-open .content-scrollable {
-  overflow: hidden; //prevents ios scrolling background when overlay is open
-}
