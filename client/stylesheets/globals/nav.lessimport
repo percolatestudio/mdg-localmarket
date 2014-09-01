@@ -15,8 +15,8 @@ nav {
 
     // Gradient over image to give nav contrast, extends past nav boundaries
     &:after {
-      .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
       .background-image(linear-gradient(top, rgba(0,0,0,.30), rgba(0,0,0,0) 100%));
+      .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
 
       content: '';
       z-index: -1;

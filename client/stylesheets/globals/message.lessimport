@@ -1,4 +1,4 @@
-// Empty states and 404
+// Empty states and 404 messages
 .wrapper-message {
   padding: 50% 10% 0;
   text-align: center;
