@@ -1,10 +1,11 @@
 //Sous icons
 @font-face {
 	font-family: 'sous';
-	src:url('icon/sous.eot?-h2gnbt');
-	src:url('icon/sous.eot?#iefix-h2gnbt') format('embedded-opentype'),
-		url('icon/sous.woff?-h2gnbt') format('woff'),
-		url('icon/sous.ttf?-h2gnbt') format('truetype');
+	src:url('icon/sous.eot?-60xlsp');
+	src:url('icon/sous.eot?#iefix-60xlsp') format('embedded-opentype'),
+		url('icon/sous.woff?-60xlsp') format('woff'),
+		url('icon/sous.ttf?-60xlsp') format('truetype'),
+		url('icon/sous.svg?-60xlsp#sous') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +24,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-sync:before {
+	content: "\e600";
+}
 .icon-user:before {
 	content: "\e601";
 }
