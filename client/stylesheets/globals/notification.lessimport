@@ -1,3 +1,13 @@
+@-webkit-keyframes spin {
+  0% { .transform(rotate(0deg)); }
+  100% { .transform(rotate(359deg)); }
+}
+@keyframes spin {
+  0% { .transform(rotate(0deg)); }
+  100% { .transform(rotate(359deg)); }
+}
+
+
 // Notification message (e.g., when unable to connect)
 .notifications {
   .position(absolute, auto, auto, 10px, 50%, 280px);
@@ -15,13 +25,11 @@
     width: 100%;
 
     .icon-sync {
-      .position(absolute, 50%, auto, auto, 12px);
-      .transform(translateY(-50%));
+      .position(absolute, 35%, auto, auto, 12px);
+      .animation(spin 2s infinite linear);
 
       color: @color-empty;
       font-size: 1.5em;
-
-      &:before { .animation(spin 2s infinite linear); }
     }
 
     .meta {
@@ -38,14 +46,4 @@
       }
     }
   }
-}
-
-//keyframes
-@keyframes spin {
-  0% { .transform(rotate(0deg)); }
-  100% { .transform(rotate(359deg)); }
-}
-@-webkit-keyframes spin {
-  0% { .transform(rotate(0deg)); }
-  100% { .transform(rotate(359deg)); }
 }
