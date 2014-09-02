@@ -8,6 +8,7 @@ Momentum.registerPlugin('fade', function(options) {
       var $node = $(node);
 
       $node
+        .hide()
         .insertBefore(next)
         .velocity('fadeIn', {
           duration: options.duration,
