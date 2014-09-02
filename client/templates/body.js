@@ -55,7 +55,7 @@ Template.body.events({
     e.preventDefault();
   },
 
-  'click .content-overlay': function() {
+  'click .content-overlay': function(e) {
     Session.set(MENU_KEY, false);
     e.preventDefault();
   },
