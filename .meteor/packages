@@ -11,3 +11,5 @@ tmeasday:publish-counts@0.2.2
 iron:router@0.9.1
 percolate:momentum
 percolate:momentum-iron-router
+percolatestudio:fastclick
+

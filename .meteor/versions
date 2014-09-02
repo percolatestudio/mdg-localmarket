@@ -34,6 +34,7 @@ observe-sequence@1.0.1
 ordered-dict@1.0.0
 percolate:momentum-iron-router@0.0.1
 percolate:momentum@0.0.1
+percolatestudio:fastclick@0.6.7
 random@1.0.0
 reactive-dict@1.0.0
 reload@1.0.0
