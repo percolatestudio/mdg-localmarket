@@ -59,7 +59,7 @@ nav {
     color: @color-full;
     display: inline-block;
     height: 3rem;
-    width: 2rem;
+    width: 3rem;
 
     &:active { opacity: .5; }
 
@@ -70,12 +70,12 @@ nav {
     }
   }
   .nav-group {
-    .position(absolute, 0, auto, auto, .5rem);
+    .position(absolute, 0, auto, auto, 0);
     z-index: 1;
 
     &.right {
       left: auto;
-      right: .5rem;
+      right: 0;
     }
   }
 }
