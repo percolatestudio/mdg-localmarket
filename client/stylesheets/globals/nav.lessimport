@@ -3,10 +3,12 @@ nav {
   .transform(translate3d(0,0,0));
   .transition( all 200ms ease-out );
 
+  background: rgba(255,255,255,.97);
   text-align: center;
   z-index: 10;
 
   &.black {
+    background: transparent;
     color: @color-empty;
 
     .nav-item {
