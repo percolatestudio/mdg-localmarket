@@ -32,6 +32,10 @@ Template.body.helpers({
 
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
+  },
+
+  connected: function() {
+    return Meteor.status().connected;
   }
 });
 
