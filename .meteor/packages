@@ -7,9 +7,9 @@ standard-app-packages
 less
 email
 jquery-waypoints
-tmeasday:publish-counts@0.2.2
-iron:router@0.9.1
-percolate:momentum
-percolate:momentum-iron-router
+tmeasday:publish-counts@0.3.0-rc0
+percolate:momentum@0.0.3-rc1
 percolatestudio:fastclick
+iron:router@0.9.3-rc0
+percolate:momentum-iron-router@0.0.2-rc0
 

@@ -19,7 +19,7 @@ Deps.autorun(function() {
 
 
 
-Template.body.helpers({
+Template.appBody.helpers({
   transitionOptions: function() { return function(from, to, node) {
     if (to.initiator === 'menu')
       return 'none';
@@ -39,7 +39,7 @@ Template.body.helpers({
   }
 });
 
-Template.body.events({
+Template.appBody.events({
   'click [data-menu]': function(e) {
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
     e.stopImmediatePropagation();
