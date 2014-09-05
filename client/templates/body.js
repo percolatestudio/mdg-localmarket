@@ -18,18 +18,45 @@ Deps.autorun(function() {
 });
 
 
+Template.appBody.rendered = function() {
+  this.find("#content-container")._uihooks = {
+    insertElement: function(node, next) {
+      // short-circuit and just do it right away
+      if (initiator === 'menu')
+        return $(node).insertBefore(next);
+      
+      var start = (initiator === 'back') ? '-100%' : '100%';
+      
+      $(node)
+        .css('transform', 'translateX(' + start + ')')
+        .insertBefore(next)
+        .velocity({translateX: [0, start]}, {
+          duration: 500,
+          easing: 'ease-in-out',
+          queue: false
+        });
+    },
+    removeElement: function(node) {
+      if (initiator === 'menu')
+        return $(node).remove();
+      
+      var end = (initiator === 'back') ? '100%' : '-100%';
+      
+      $(node)
+        .velocity({translateX: end}, {
+          duration: 500,
+          easing: 'ease-in-out',
+          queue: false,
+          complete: function() {
+            $(node).remove();
+          }
+        });
+    }
+  };
+}
+
 
 Template.appBody.helpers({
-  transitionOptions: function() { return function(from, to, node) {
-    if (to.initiator === 'menu')
-      return 'none';
-    
-    if (initiator === 'back') // should be to.initiator
-      return 'left-to-right';
-
-    return 'right-to-left';
-  }},
-
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
   },
@@ -61,11 +88,8 @@ Template.appBody.events({
   },
 
   'click #menu a': function(e) {
+    nextInitiator = 'menu'
     Session.set(MENU_KEY, false);
-
-    Router.go($(e.target).closest('a').attr('href'), {initiator: 'menu'});
-    e.stopImmediatePropagation();
-    e.preventDefault();
   },
 
   'click [data-email]': function() {
