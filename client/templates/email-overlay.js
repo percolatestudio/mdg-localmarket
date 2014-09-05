@@ -10,7 +10,7 @@ Template.emailOverlay.helpers({
     if (this._id)
       return Recipes.find(this._id);
     else
-      return this;
+      return this.recipes;
   },
   
   errorClass: function(name) {
