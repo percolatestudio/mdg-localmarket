@@ -10,7 +10,7 @@ body {
   max-width: 500px;
   max-height: 600px;
 
-  // hide anything offscreen .. we can never scroll the body
+  // Hide anything offscreen
   overflow: hidden;
 }
 
@@ -26,12 +26,12 @@ body {
 
   .content-scrollable {
     .position(absolute, 0, 0, 0, 0);
+    background: @color-empty;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-
-    background: @color-empty;
   }
 
+  // Toggle menu on mobile
   .menu-open & {
     .transform(translate3d(@menu-width, 0, 0));
   }
@@ -42,8 +42,8 @@ body {
 
 }
 
-
-.content-overlay { //transparent screen to prevent interactions on content when menu is open
+// Transparent screen to prevent interactions on content when menu is open
+.content-overlay {
   .position(absolute, 0, 0, 0, 0);
   cursor: pointer;
 
@@ -56,7 +56,5 @@ body {
 #email-overlay {
   .background-image(linear-gradient(top, rgba(232, 234, 241,.97), rgba(243,243,244, .97) 100%));
   .position(absolute, 0, 0, 0, 0);;
-
   z-index: 1;
 }
-
