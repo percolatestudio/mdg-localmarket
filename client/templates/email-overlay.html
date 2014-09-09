@@ -1,5 +1,5 @@
 <template name="emailOverlay">
-  {{#momentum with="fade"}}
+  <div id="email-hook">
     {{#if open}}
       <div id="email-overlay">
         {{#with recipes}}
@@ -25,5 +25,5 @@
         {{/with}}
       </div>
     {{/if}}
-  {{/momentum}}
+  </div>
 </template>

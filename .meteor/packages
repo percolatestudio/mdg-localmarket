@@ -8,7 +8,7 @@ less
 email
 jquery-waypoints
 tmeasday:publish-counts@0.3.0-rc0
-percolate:momentum@0.0.3-rc1
 percolatestudio:fastclick
 iron:router@0.9.3-rc0
+percolate:velocityjs
 

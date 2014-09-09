@@ -1,3 +1,4 @@
+var ANIMATION_DURATION = 500;
 var MENU_KEY = 'menuOpen';
 Session.setDefault(MENU_KEY, false);
 
@@ -27,11 +28,11 @@ Template.appBody.rendered = function() {
       
       var start = (initiator === 'back') ? '-100%' : '100%';
       
+      $.Velocity.hook(node, 'translateX', start);
       $(node)
-        .css('transform', 'translateX(' + start + ')')
         .insertBefore(next)
         .velocity({translateX: [0, start]}, {
-          duration: 500,
+          duration: ANIMATION_DURATION,
           easing: 'ease-in-out',
           queue: false
         });
@@ -44,7 +45,7 @@ Template.appBody.rendered = function() {
       
       $(node)
         .velocity({translateX: end}, {
-          duration: 500,
+          duration: ANIMATION_DURATION,
           easing: 'ease-in-out',
           queue: false,
           complete: function() {

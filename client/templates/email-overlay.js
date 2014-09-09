@@ -1,4 +1,31 @@
+var ANIMATION_DURATION = 200;
 Session.setDefault('emailErrors', {});
+
+Template.emailOverlay.rendered = function() {
+  this.find('#email-hook')._uihooks = {
+    insertElement: function(node, next, done) {
+      var $node = $(node);
+
+      $node
+        .hide()
+        .insertBefore(next)
+        .velocity('fadeIn', {
+          duration: ANIMATION_DURATION
+        });
+    },
+    removeElement: function(node, done) {
+      var $node = $(node);
+
+      $node
+        .velocity("fadeOut", {
+          duration: ANIMATION_DURATION,
+          complete: function() {
+            $node.remove();
+          }
+        });
+    }
+  }
+}
 
 Template.emailOverlay.helpers({
   open: function() {

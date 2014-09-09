@@ -37,7 +37,7 @@ mobile-status-bar@1.0.0-cordova2
 mongo@1.0.4-rc0
 observe-sequence@1.0.2-rc0
 ordered-dict@1.0.0
-percolate:momentum@0.0.3-rc1
+percolate:velocityjs@1.0.0
 percolatestudio:fastclick@0.6.7
 random@1.0.0
 reactive-dict@1.0.1-rc1
