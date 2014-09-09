@@ -2,7 +2,6 @@ nav {
   .position(absolute, 0, 0, auto, 0, 100%, 3em);
   .transform(translate3d(0,0,0));
   .transition( all 200ms ease-out );
-
   background: rgba(255,255,255,.97);
   text-align: center;
   z-index: 10;
@@ -19,7 +18,6 @@ nav {
     &:after {
       .background-image(linear-gradient(top, rgba(0,0,0,.30), rgba(0,0,0,0) 100%));
       .position(absolute, 0, 0, auto, 0, 100%, 3.5em);
-
       content: '';
       z-index: -1;
     }
@@ -38,10 +36,8 @@ nav {
     .type-secondary;
     .title-caps;
     .ellipsized;
-
     .position(absolute, 50%, 0, auto, 0);
     .transform(translate3d(0, -40%, 0));
-
     line-height: 1;
 
     .subtext-page {

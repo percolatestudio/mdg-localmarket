@@ -1,4 +1,3 @@
-//Sous icons
 @font-face {
 	font-family: 'sous';
 	src:url('icon/sous.eot?-60xlsp');

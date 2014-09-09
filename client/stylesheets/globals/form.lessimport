@@ -1,14 +1,13 @@
 // standard text input
 input[type="text"],
 textarea {
-  .placeholder(@color-medium);
-
-  //input sizing
+  // Sizing
   font-size: 1rem;
   padding: .75em 0; //total height ~48
   line-height: 1.5em !important;
 
-  //input style
+  // Style
+  .placeholder(@color-medium);
   background: transparent;
   border: none;
   border-bottom: 1px solid rgba(0,0,0,.1);
@@ -24,20 +23,21 @@ textarea {
   &[disabled] { opacity: .5; }
 }
 
-// input with an icon
+// Input with an icon
 .input-symbol {
   display: inline-block;
   position: relative;
 
   &.error {
     input { border-bottom: 1px solid @color-negative; }
+
     [class^="icon-"],
     [class*=" icon-"] {
       color: @color-negative;
     }
   }
 
-  //icon position, input padding
+  // Position & padding
   [class^="icon-"],
   [class*=" icon-"] {
     left: 1rem;
@@ -45,9 +45,10 @@ textarea {
 
   input { padding-left: 2.75em !important; }
 
-  //icon & input styling
+  // Styling
   input {
     width: 100%;
+
     &:focus {
       & + [class^="icon-"],
       & + [class*=" icon-"] {
@@ -59,7 +60,6 @@ textarea {
   [class*=" icon-"] {
     .transition( all 300ms ease-in );
     .transform(translate3d(0,-50%,0));
-
     background: transparent;
     color: @color-medium;
     font-size: 1rem;

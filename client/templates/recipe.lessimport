@@ -1,10 +1,8 @@
 .page.recipe {
-  nav {
-    [data-unfavorite] { color: @color-brand; }
-  }
-  .image {
-    .transform(translate3d(0,0,0));//gpu rendering
+  nav [data-unfavorite] { color: @color-brand; }
 
+  .image {
+    .transform(translate3d(0,0,0));//Gpu rendering
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,11 +11,11 @@
     position: relative;
     width: 100%;
   }
+
   .attribution {
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 20%, @color-empty 100%));
     .position(absolute, auto, 0, 3em, 0);
-    .transform(translate3d(0,0,0));//gpu rendering
-
+    .transform(translate3d(0,0,0));// Gpu rendering
     min-height: 9em;
     padding: 1.25em 1.25em 1em;
     text-align: center;
@@ -56,7 +54,6 @@
       border-left: 1px solid @color-medium-rare;
       padding-left: .5rem;
     }
-
   }
 
   .btns-group {
@@ -77,13 +74,11 @@
       color: @color-primary;
       padding: 1.25rem 1.25rem .75rem;
     }
-    .list-ingredients {
-      .item-ingredient {
-        .font-s3;
 
-        border-top: 1px solid lighten(@color-full, 5%);
-        padding: .75rem 1.25rem;
-      }
+    .list-ingredients .item-ingredient {
+      .font-s3;
+      border-top: 1px solid lighten(@color-full, 5%);
+      padding: .75rem 1.25rem;
     }
   }
 }

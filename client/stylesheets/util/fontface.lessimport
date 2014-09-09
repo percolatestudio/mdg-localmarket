@@ -1,6 +1,9 @@
-//Typography for Sous
+// Typography for Sous
+// An example of self-hosting instead of relying on a webfont service
 
-@font-face { //Note: this is an all-caps subset of Lora; will not work with lowercase
+@font-face {
+  // Note: this is an all-caps subset of Lora
+  // It will appear incorrectly with lowercase characters
   font-family: 'lorabold';
   src: url('font/lora-bold-subset.eot');
   src: url('font/lora-bold-subset.eot?#iefix') format('embedded-opentype'),

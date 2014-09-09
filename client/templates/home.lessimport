@@ -2,46 +2,45 @@
   nav .title-page {
     font-size: .95rem;
   }
-  .list-recipes {
-    .item-recipe:first-child {
-      height: 400px;
 
-      .attribution {
-        .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 50%, @color-empty 100%));
-        .transform(translate3d(0,0,0));
+  .list-recipes .item-recipe:first-child {
+    height: 400px;
 
-        &:before {
-          .font-s1;
-          .type-bold;
-          .title-caps;
-          .position(absolute, 0, 50%);
-          .transform(translate3d(50%, -50%, 0));
+    .attribution {
+      .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 50%, @color-empty 100%));
+      .transform(translate3d(0,0,0));
 
-          background: @color-primary;
-          color: @color-empty;
-          content: 'Featured';
-          line-height: 1;
-          padding: .15rem .2rem .1rem;
-        }
-
-        .title-recipe {
-          .font-m2;
-          .type-bold;
-
-          color: @color-full;
-          line-height: 1;
-          padding-bottom: .25rem;
-          padding-top: .5rem;
-        }
-        .author-recipe {
-          color: @color-medium;
-          padding-bottom: .5rem;
-        }
+      &:before {
+        .font-s1;
+        .type-bold;
+        .title-caps;
+        .position(absolute, 0, 50%);
+        .transform(translate3d(50%, -50%, 0));
+        background: @color-primary;
+        color: @color-empty;
+        content: 'Featured';
+        line-height: 1;
+        padding: .15rem .2rem .1rem;
       }
-      img {
-        .position(absolute, auto, auto, auto, 50%, auto, 100%);
-        .transform(translate3d(-50%,0,0));
+
+      .title-recipe {
+        .font-m2;
+        .type-bold;
+        color: @color-full;
+        line-height: 1;
+        padding-bottom: .25rem;
+        padding-top: .5rem;
       }
+
+      .author-recipe {
+        color: @color-medium;
+        padding-bottom: .5rem;
+      }
+    }
+
+    img {
+      .position(absolute, auto, auto, auto, 50%, auto, 100%);
+      .transform(translate3d(-50%,0,0));
     }
   }
 }

@@ -1,14 +1,14 @@
 [class^="btn-"],
 [class*=" btn-"] {
-  .type-black;
-  .title-caps;
-  .transition( all 200ms ease-in );
-
-  /* Sizing */
+  // Sizing
   .font-s2;
   line-height: 22px !important; //override line-height always so we can use em's to size.
   padding: 1.25em 1.25em .9em; // 48px tall
 
+  // Style
+  .type-black;
+  .title-caps;
+  .transition( all 200ms ease-in );
   color: @color-empty;
   display: inline-block;
   position: relative;
@@ -20,6 +20,7 @@
   &[class*="primary"] {
     background-color: @color-primary;
     color: @color-empty;
+
     &:hover { background-color: darken(@color-primary, 5%); }
     &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
@@ -27,6 +28,7 @@
   &[class*="secondary"] {
     background: @color-secondary;
     color: @color-empty;
+
     &:hover{ background-color: darken(@color-secondary, 5%); }
     &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
@@ -34,6 +36,7 @@
   &[class*="tertiary"] {
     background-color: @color-rare;
     color: @color-primary;
+
     &:hover{ background-color: darken(@color-rare, 10%); }
     &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }

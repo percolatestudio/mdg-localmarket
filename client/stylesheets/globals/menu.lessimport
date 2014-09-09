@@ -9,16 +9,13 @@
   a {
     .font-s2;
     .type-bold;
-
     color: rgba(255,255,255,.4);
     display: block;
     height: 142px;
     padding-top: 3rem;
     text-align: center;
 
-    & + a {
-      box-shadow: rgba(129,206,200,.1) 0 -1px 0 0;
-    }
+    & + a { box-shadow: rgba(129,206,200,.1) 0 -1px 0 0; }
 
     &:hover,
     &:active,
@@ -26,9 +23,7 @@
       color: @color-empty;
     }
 
-    .title-menu {
-      .title-caps;
-    }
+    .title-menu { .title-caps; }
 
     [class^="icon-"],
     [class*=" icon-"] {

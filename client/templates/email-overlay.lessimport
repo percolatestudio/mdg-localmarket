@@ -16,7 +16,6 @@
     .font-l1;
     .type-black;
     .title-caps;
-
     color: @color-well;
     line-height: 1;
     padding-top: 6rem;

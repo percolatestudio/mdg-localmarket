@@ -24,8 +24,7 @@
 }
 
 
-/* Large fonts */
-
+// Large fonts
 .font-l3() {
   font-size: 56px;
   line-height: 64px;
@@ -41,8 +40,7 @@
   line-height: 44px;
 }
 
-/* Medium fonts */
-
+// Medium fonts
 .font-m3() {
   font-size: 28px;
   line-height: 32px;
@@ -58,11 +56,10 @@
   line-height: 24px;
 }
 
-/* Small fonts */
-
+// Small fonts
 .font-s3() {
-  //this sets the baseline for the layout but gets overridden per template
-  //vertical rhythm is all multiples of 4
+  // This sets the baseline for the layout but gets overridden per template
+  // Vertical rhythm is all multiples of 4
   font-size: 14px;
   line-height: 20px;
 }
@@ -78,7 +75,8 @@
 }
 
 
-// ALT to be paired to type-secondary because the typeface LORA reads larger than LATO
+// ALT to be paired to type-secondary
+// Because the typeface LORA reads larger than LATO
 .font-s2-alt() {
   font-size: 11px;
   line-height: 18px;

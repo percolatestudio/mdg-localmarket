@@ -10,20 +10,22 @@
       z-index: 1;
     }
 
-    &:before { //right side
+    // Right side of down arrow
+    &:before {
       .position(absolute, auto, 0, 0, 50%, auto, .5rem);
       margin-left: .5rem;
     }
 
-    &:after { //left side
+    // Left side of down arrow
+    &:after {
       .position(absolute, auto, 50%, 0, 0, auto, .5rem);
       margin-right: .5rem;
     }
 
+    // Down arrow
     .count-category:after {
       .position(absolute, auto, auto, -.5rem, 50%);
       .transform(translate3d(-50%,0,0));
-
       border-top: .5rem solid transparent;
       border-left: .5rem solid @color-empty;
       border-right: .5rem solid @color-empty;
@@ -38,7 +40,6 @@
     .title-caps;
     .position(absolute, 50%, 0, auto, 0);
     .transform(translate3d(0,-30%,0));
-
     color: @color-empty;
     line-height: 1;
     text-align: center;
@@ -53,7 +54,6 @@
   .count-category {
     .font-s1;
     .position(absolute, auto, 0, .5rem, 0);
-
     color: rgba(255,255,255,.7);
     display: block;
     padding-bottom: .5rem;
