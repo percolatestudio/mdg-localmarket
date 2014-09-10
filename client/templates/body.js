@@ -1,3 +1,4 @@
+var ANIMATION_DURATION = 500;
 var MENU_KEY = 'menuOpen';
 Session.setDefault(MENU_KEY, false);
 
@@ -18,18 +19,45 @@ Deps.autorun(function() {
 });
 
 
+Template.appBody.rendered = function() {
+  this.find("#content-container")._uihooks = {
+    insertElement: function(node, next) {
+      // short-circuit and just do it right away
+      if (initiator === 'menu')
+        return $(node).insertBefore(next);
+      
+      var start = (initiator === 'back') ? '-100%' : '100%';
+      
+      $.Velocity.hook(node, 'translateX', start);
+      $(node)
+        .insertBefore(next)
+        .velocity({translateX: [0, start]}, {
+          duration: ANIMATION_DURATION,
+          easing: 'ease-in-out',
+          queue: false
+        });
+    },
+    removeElement: function(node) {
+      if (initiator === 'menu')
+        return $(node).remove();
+      
+      var end = (initiator === 'back') ? '100%' : '-100%';
+      
+      $(node)
+        .velocity({translateX: end}, {
+          duration: ANIMATION_DURATION,
+          easing: 'ease-in-out',
+          queue: false,
+          complete: function() {
+            $(node).remove();
+          }
+        });
+    }
+  };
+}
 
-Template.body.helpers({
-  transitionOptions: function() { return function(from, to, node) {
-    if (to.initiator === 'menu')
-      return 'none';
-    
-    if (initiator === 'back') // should be to.initiator
-      return 'left-to-right';
 
-    return 'right-to-left';
-  }},
-
+Template.appBody.helpers({
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
   },
@@ -39,7 +67,7 @@ Template.body.helpers({
   }
 });
 
-Template.body.events({
+Template.appBody.events({
   'click [data-menu]': function(e) {
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
     e.stopImmediatePropagation();
@@ -61,11 +89,8 @@ Template.body.events({
   },
 
   'click #menu a': function(e) {
+    nextInitiator = 'menu'
     Session.set(MENU_KEY, false);
-
-    Router.go($(e.target).closest('a').attr('href'), {initiator: 'menu'});
-    e.stopImmediatePropagation();
-    e.preventDefault();
   },
 
   'click [data-email]': function() {

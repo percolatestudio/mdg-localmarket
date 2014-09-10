@@ -1,4 +1,4 @@
-<template name="body">
+<template name="appBody">
   <div id="container" class="{{menuOpen}}">
     <section id="menu" class="overthrow">
       <a href="{{pathFor 'home'}}" class="{{activePage 'home'}}">
@@ -36,9 +36,7 @@
     <div class="content-overlay"></div>
 
     <div id="content-container">
-      {{#momentum with='iron-router' options=transitionOptions}}
-        {{> yield}}
-      {{/momentum}}
+      {{> yield}}
     </div>
 
   </div>

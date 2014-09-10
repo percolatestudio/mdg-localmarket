@@ -1,11 +1,11 @@
 <template name="emailOverlay">
-  {{#momentum with="fade"}}
+  <div id="email-hook">
     {{#if open}}
       <div id="email-overlay">
         {{#with recipes}}
           <a href="#" data-close-overlay><span class="icon-cross"></span></a>
 
-          <div class="title-overlay">Email {{pluralize recipes.count 'recipe' wordOnly=true}}</div>
+          <div class="title-overlay">Email {{pluralize count 'recipe' wordOnly=true}}</div>
 
           <form>
             <div class="input-symbol {{errorClass 'name'}}">
@@ -25,5 +25,5 @@
         {{/with}}
       </div>
     {{/if}}
-  {{/momentum}}
+  </div>
 </template>
