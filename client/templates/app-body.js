@@ -1,4 +1,4 @@
-var ANIMATION_DURATION = 500;
+var ANIMATION_DURATION = 300;
 var MENU_KEY = 'menuOpen';
 Session.setDefault(MENU_KEY, false);
 
