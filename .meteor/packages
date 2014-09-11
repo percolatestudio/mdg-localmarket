@@ -7,7 +7,7 @@ standard-app-packages
 less
 email
 jquery-waypoints
-tmeasday:publish-counts@0.3.0-rc0
+tmeasday:publish-counts@0.3.1-rc0
 percolatestudio:fastclick
 iron:router@0.9.3-rc0
 percolate:velocityjs
