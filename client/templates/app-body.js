@@ -65,6 +65,10 @@ Template.appBody.helpers({
   menuOpen: function() {
     return Session.get(MENU_KEY) && 'menu-open';
   },
+  
+  emailOpen: function() {
+    return Session.get(EMAIL_KEY) && 'email-open';
+  },
 
   connected: function() {
     return Meteor.status().connected;

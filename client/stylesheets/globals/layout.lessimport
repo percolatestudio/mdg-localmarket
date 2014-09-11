@@ -61,6 +61,10 @@ body {
     .transform(translate3d(@menu-width, 0, 0));
   }
 
+  .email-open & {
+    -webkit-filter: blur(7px);
+  }
+
   > div.page {
     .position(absolute, 0, 0, 0, 0);
   }
@@ -79,7 +83,7 @@ body {
 }
 
 #email-overlay {
-  .background-image(linear-gradient(top, rgba(232, 234, 241,.97), rgba(243,243,244, .97) 100%));
+  .background-image(linear-gradient(top, rgba(232, 234, 241,.95), rgba(243,243,244, .95) 100%));
   .position(absolute, 0, 0, 0, 0);;
   z-index: 1;
 }
