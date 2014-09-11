@@ -42,10 +42,23 @@ Template.emailOverlay.helpers({
   
   errorClass: function(name) {
     return Session.get('emailErrors')[name] && 'error';
+  },
+  
+  attachedImage: function() {
+    // XXX: obviously this going to be something cordova-y
+    return Session.get('attachedImage');
   }
 });
 
 Template.emailOverlay.events({
+  'click [data-image-attach]': function() {
+    Session.set('attachedImage', true);
+  },
+  
+  'click [data-image-remove]': function() {
+    Session.set('attachedImage', false);
+  },
+  
   'submit': function(e, template) {
     e.preventDefault();
     
