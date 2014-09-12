@@ -6,6 +6,6 @@ Template.categories.helpers({
   },
   
   recipeCount: function() {
-    return Counts.get(this.name + '-count');
+    return Counts.get(this.name);
   }
 });

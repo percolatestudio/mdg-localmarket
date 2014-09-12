@@ -10,7 +10,7 @@ Meteor.publish('favoriteRecipes', function() {
 Meteor.publish('seasonCounts', function() {
   var self = this;
   _.each(Recipes.SEASONS, function(season) {
-    Counts.publish(self, season.name + '-count', Recipes.forSeason(season.name));
+    Counts.publish(self, season.name, Recipes.forSeason(season.name));
   });
 });
 
