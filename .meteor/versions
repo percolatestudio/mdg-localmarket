@@ -40,7 +40,6 @@ mongo@1.0.5
 observe-sequence@1.0.2
 ordered-dict@1.0.0
 percolate:velocityjs@1.0.0
-percolatestudio:fastclick@0.6.7
 random@1.0.0
 reactive-dict@1.0.2
 reactive-var@1.0.1

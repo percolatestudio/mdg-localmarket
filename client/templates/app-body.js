@@ -5,11 +5,6 @@ Session.setDefault(MENU_KEY, false);
 var EMAIL_KEY = 'emailOpen';
 Session.setDefault(EMAIL_KEY, false);
 
-// XXX: remove and replace with MDG's fastclick package when it's released
-window.addEventListener('load', function() {
-  FastClick.attach(document.body);
-}, false);
-
 // XXX: this work around until IR properly supports this
 //   IR refactor will include Location.back, which will ensure that initator is
 //   set 
