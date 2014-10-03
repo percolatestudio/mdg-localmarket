@@ -5,6 +5,35 @@ Session.setDefault(MENU_KEY, false);
 var EMAIL_KEY = 'emailOpen';
 Session.setDefault(EMAIL_KEY, false);
 
+// each time the router changes page, wait for it to render, then
+//   set up a scroll handler to store scroll position in history
+Router.onAfterAction(function() {
+  Tracker.afterFlush(function() {
+    $('.content-scrollable').scroll(_.debounce(function() {
+      var state = Iron.Location.get().options.historyState;
+      var scrollTop = $(this).scrollTop();
+      // XXX: this causes the router to reroute. This seems wrong. consult
+      Iron.Location.replaceState(_.extend({}, state, {lastScrollTop: scrollTop}));
+    }, 100));
+  });
+});
+
+// if we change page due to popState (e.g. back button)
+//   check to see
+Iron.Location.onPopState(function() {
+  var state = this.options.historyState;
+  if (state && state.lastScrollTop)
+    // we need to wait a) for blaze to render b) for the browser
+    Tracker.afterFlush(function() {
+      Meteor.setTimeout(function() {
+        // grab the last scrollable on the screen 
+        //   (the old one will still be transitioning off)
+        $('.content-scrollable').eq(-1).scrollTop(state.lastScrollTop);
+      }, 0)
+    });
+});
+
+
 // XXX: this work around until IR properly supports this
 //   IR refactor will include Location.back, which will ensure that initator is
 //   set 
@@ -54,7 +83,6 @@ Template.appBody.rendered = function() {
     }
   };
 }
-
 
 Template.appBody.helpers({
   menuOpen: function() {
