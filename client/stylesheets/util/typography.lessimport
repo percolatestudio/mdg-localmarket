@@ -1,21 +1,21 @@
 .type-regular() {
-  font-family: 'latoregular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
 }
 
 .type-italic() {
-  font-family: 'latoitalic', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
 }
 
 .type-bold() {
-  font-family: 'latobold', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
+  font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 
 .type-black() {
-  font-family: 'latoblack', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: normal;
+  font-family: 'lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
 }
 
 .type-secondary() {
