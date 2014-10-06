@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'sous';
-	src:url('icon/sous.eot?1jax0f');
-	src:url('icon/sous.eot?#iefix1jax0f') format('embedded-opentype'),
-		url('icon/sous.woff?1jax0f') format('woff'),
-		url('icon/sous.ttf?1jax0f') format('truetype'),
-		url('icon/sous.svg?1jax0f#sous') format('svg');
+	src:url('icon/sous.eot?hplp6b');
+	src:url('icon/sous.eot?#iefixhplp6b') format('embedded-opentype'),
+		url('icon/sous.woff?hplp6b') format('woff'),
+		url('icon/sous.ttf?hplp6b') format('truetype'),
+		url('icon/sous.svg?hplp6b#sous') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,6 +23,15 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-rss:before {
+	content: "\e603";
+}
+.icon-photo:before {
+	content: "\e604";
+}
+.icon-twitter:before {
+	content: "\e606";
+}
 .icon-camera:before {
 	content: "\e602";
 }
@@ -40,9 +49,6 @@
 }
 .icon-question:before {
 	content: "\e613";
-}
-.icon-share:before {
-	content: "\e617";
 }
 .icon-email:before {
 	content: "\e619";
