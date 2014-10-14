@@ -34,52 +34,97 @@ Iron.Location.onPopState(function() {
 });
 
 
-// XXX: this work around until IR properly supports this
-//   IR refactor will include Location.back, which will ensure that initator is
-//   set 
-var nextInitiator = null, initiator = null;
-Deps.autorun(function() {
-  // add a dep
-  Router.current();
-  
-  initiator = nextInitiator;
-  nextInitiator = null;
+// We use `initiator` to drive the page-page transition animation.
+//
+// We need to differentiate between a few different cases
+//   a. A click on a link within the app (R->L transition)
+//   b. A click on the app's back button (L->R transition)
+//   c. A click on a link in the menu (no transition)
+//   d. Navigation via the browser history (fade in-out transition) 
+var initiator = null;
+Template.appBody.setInitiator = function(init) {
+  initiator = init;
+}
+
+Iron.Location.onGo(function() {
+  Template.appBody.setInitiator('click');
+});
+
+// if the user hits back in the app, we want to know that at the next popstate
+var goingBack = false;
+Template.appBody.goBack = function() {
+  goingBack = true;
+  Template.appBody.setInitiator('back');
+  history.back();
+}
+
+Iron.Location.onPopState(function() {
+  if (goingBack)
+    goingBack = false;
+  else
+    Template.appBody.setInitiator('history')
 });
 
 
 Template.appBody.rendered = function() {
   this.find("#content-container")._uihooks = {
     insertElement: function(node, next) {
+      var $node = $(node);
+      
       // short-circuit and just do it right away
       if (initiator === 'menu')
-        return $(node).insertBefore(next);
+        return $node.insertBefore(next);
       
-      var start = (initiator === 'back') ? '-100%' : '100%';
+      if (initiator === 'history') {
+        // fade in/out transition XXX: duplicated with email-overlay
+        $node
+          .hide()
+          .insertBefore(next)
+          .velocity('fadeIn', {
+            duration: ANIMATION_DURATION
+          });
+        
+      } else {
+        // side to side transition
+        var start = (initiator === 'back') ? '-100%' : '100%';
       
-      $.Velocity.hook(node, 'translateX', start);
-      $(node)
-        .insertBefore(next)
-        .velocity({translateX: [0, start]}, {
-          duration: ANIMATION_DURATION,
-          easing: 'ease-in-out',
-          queue: false
-        });
+        $.Velocity.hook(node, 'translateX', start);
+        $node
+          .insertBefore(next)
+          .velocity({translateX: [0, start]}, {
+            duration: ANIMATION_DURATION,
+            easing: 'ease-in-out',
+            queue: false
+          });
+      }
     },
     removeElement: function(node) {
+      var $node = $(node);
+      
       if (initiator === 'menu')
-        return $(node).remove();
+        return $node.remove();
       
-      var end = (initiator === 'back') ? '100%' : '-100%';
+      if (initiator === 'history') {
+        $node
+          .velocity("fadeOut", {
+            duration: ANIMATION_DURATION,
+            complete: function() {
+              $node.remove();
+            }
+          });
+      } else {
+        var end = (initiator === 'back') ? '100%' : '-100%';
       
-      $(node)
-        .velocity({translateX: end}, {
-          duration: ANIMATION_DURATION,
-          easing: 'ease-in-out',
-          queue: false,
-          complete: function() {
-            $(node).remove();
-          }
-        });
+        $node
+          .velocity({translateX: end}, {
+            duration: ANIMATION_DURATION,
+            easing: 'ease-in-out',
+            queue: false,
+            complete: function() {
+              $node.remove();
+            }
+          });
+      }
     }
   };
 }
@@ -106,10 +151,7 @@ Template.appBody.events({
   },
 
   'click [data-back]': function(e) {
-    nextInitiator = 'back';
-    
-    // XXX: set the back transition via Location.back()
-    history.back();
+    Template.appBody.goBack();
     e.stopImmediatePropagation();
     e.preventDefault();
   },
@@ -120,7 +162,7 @@ Template.appBody.events({
   },
 
   'click #menu a': function(e) {
-    nextInitiator = 'menu'
+    Template.appBody.setInitiator('menu');
     Session.set(MENU_KEY, false);
   },
 
