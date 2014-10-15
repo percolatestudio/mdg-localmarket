@@ -32,11 +32,17 @@
               <li class="item-ingredient">{{this}}</li>
             {{/each}}
           </ul>
+          {{#placeholder name='directions' height=12}}
+            {{> placeholder 'direction1'}}
+            {{> placeholder 'direction2'}}
+          {{/placeholder}}
         </div>
       {{else}}
-        {{#each activities}}
-          {{> activity}}
-        {{/each}}
+        {{#placeholder name='activities' height=12}}
+          {{#each activities}}
+            {{> activity}}
+          {{/each}}
+        {{/placeholder}}
       {{/if}}
     </div>
   </div>

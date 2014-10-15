@@ -31,7 +31,13 @@
             </div>
           {{/if}}
 
-          <button class="btn-primary" type='submit'>Send Recipe</button>
+          <button class="btn-primary" type='submit'>
+            {{#if tweeting}}
+              Share &amp; Tweet
+            {{else}}
+              Share
+            {{/if}}
+          </button>
         </form>
       {{/unless}}
 
