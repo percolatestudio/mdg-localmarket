@@ -87,9 +87,5 @@ Template.appBody.events({
   'click #menu a': function(e) {
     nextInitiator = 'menu'
     Session.set(MENU_KEY, false);
-  },
-
-  'click [data-close-overlay]': function() {
-    Session.set(EMAIL_KEY, false);
   }
 });

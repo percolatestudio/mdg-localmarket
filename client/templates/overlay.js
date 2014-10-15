@@ -50,3 +50,10 @@ Template.overlay.helpers({
     return Session.get(DATA_KEY);
   }
 });
+
+Template.overlay.events({
+  'click .js-close-overlay': function(e) {
+    e.preventDefault();
+    Overlay.close()
+  }
+});
