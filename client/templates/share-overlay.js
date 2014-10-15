@@ -1,12 +1,10 @@
+var TWEETING_KEY = 'shareOverlayTweeting';
+
+Template.shareOverlay.created = function() {
+  Session.set(TWEETING_KEY, false);
+}
+
 Template.shareOverlay.helpers({
-  recipes: function() {
-    // XXX: too much of hack?
-    if (this._id)
-      return Recipes.find(this._id);
-    else
-      return this.recipes;
-  },
-  
   errorClass: function(name) {
     return Session.get('emailErrors')[name] && 'error';
   },
@@ -14,36 +12,45 @@ Template.shareOverlay.helpers({
   attachedImage: function() {
     // XXX: obviously this going to be something cordova-y
     return Session.get('attachedImage');
+  },
+  
+  tweeting: function() {
+    return Session.get(TWEETING_KEY);
   }
 });
 
 Template.shareOverlay.events({
-  'click [data-image-attach]': function() {
+  'click .js-attach-image': function() {
     Session.set('attachedImage', true);
+  },
+  
+  'click .js-unattach-image': function() {
+    Session.set('attachedImage', false);
   },
   
   'click [data-image-remove]': function() {
     Session.set('attachedImage', false);
   },
   
-  'submit': function(e, template) {
-    e.preventDefault();
+  'change [name=tweeting]': function(event) {
+    Session.set(TWEETING_KEY, $(event.target).is(':checked'));
+  },
+  
+  'submit': function(event, template) {
+    event.preventDefault();
     
-    var errors = {}, options = {};
+    var text = $(event.target).find('[name=text]').val()
     
-    _.each(['name', 'sender', 'recipient'], function(field) {
-      options[field] = template.$('[name=' + field + ']').val();
-      errors[field] = (! options[field]);
+    // XXX: post to twitter
+    
+    // XXX: methods or allow/deny?
+    Activities.insert({
+      recipeId: this._id,
+      userId: Meteor.userId(),
+      text: text,
+      date: new Date()
     });
-
-    Session.set('emailErrors', errors);
-
-    if (_.all(errors, function(e) { return ! e; })) {
-      // XXX: sending state?
-      var recipeIds = this.map(function(r) { return r._id; });
-      Meteor.call('emailRecipes', recipeIds, options, function() {
-        Session.set('emailOpen', false);
-      });
-    }
+    
+    Overlay.close();
   }
 });

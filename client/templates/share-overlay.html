@@ -1,44 +1,40 @@
 <template name="shareOverlay">
   {{#if currentUser}}
     <div id="share-overlay">
-      {{#with recipes}}
+
+      {{#unless attachedImage}}
+        <a href="#" data-close-overlay><span class="icon-cross"></span></a>
+        <div class="title-overlay">Share</div>
+        
+        <button class="js-attach-image">Take photo</button>
+      {{else}}
+        <a href="#" class="js-unattach-image"><span class="icon-left-arrow"></span></a>
+        <div>Share</div>
         <a href="#" data-close-overlay><span class="icon-cross"></span></a>
 
-        <div class="title-overlay">Email {{pluralize count 'recipe' wordOnly=true}}</div>
-
+        <img src="http://placehold.it/320x100" class="thumbnail">
+        
         <form>
-          <div class="input-symbol {{errorClass 'name'}}">
-            <input name="name" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Name" />
-            <span class="icon-user"></span>
+          <img src="http://placehold.it/38x38" class="avatar">
+          <div class="input-symbol {{errorClass 'text'}}">
+            <textarea name="text" type="text" autocapitalize="off" autocorrect="off" 
+              placeholder="Add Advice.. bunch of other stuff I can't read on my tiny printout"></textarea>
           </div>
-
-          <div class="input-symbol {{errorClass 'sender'}}">
-            <input name="sender" type="text" autocapitalize="off" autocorrect="off" placeholder="Your Email Address" />
-            <span class="icon-email"></span>
-          </div>
-
-          <div class="input-symbol {{errorClass 'recipient'}}">
-            <input name="recipient" type="text" autocapitalize="off" autocorrect="off" placeholder="Recipient's Email Address" />
-            <span class="icon-email"></span>
-          </div>
-
-          <aside class="aside-email">
-            {{#if attachedImage}}
-              <div data-image-remove class="image-remove">
-                <img src="http://placehold.it/48x48" class="thumbnail">
-                <a data-image-remove ><span class="title-aside">Remove Image</span></a>
-              </div>
-            {{else}}
-              <a data-image-attach class="image-attach">
-                <span class="icon-camera"></span> <span class="title-aside">I made this</span>
-              </a>
-            {{/if}}
-          </aside>
-
+          
+          <input type="checkbox" name="tweeting" id="tweeting" value="false">
+          <label for="tweeting">Post to Twitter</label>
+          
+          {{#if tweeting}}
+            <div class="input-symbol {{errorClass 'tweet'}}">
+              <textarea name="tweet" type="text" autocapitalize="off" autocorrect="off" 
+                value="Other stuff I can't read without straining my eyes"></textarea>
+            </div>
+          {{/if}}
 
           <button class="btn-primary" type='submit'>Send Recipe</button>
         </form>
-      {{/with}}
+      {{/unless}}
+
     </div>
   {{else}}
     {{! XXX: I don't really like this. It seems crappy to repeat the login overlay here. 
