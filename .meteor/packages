@@ -13,4 +13,5 @@ iron:router
 percolate:velocityjs
 accounts-twitter
 service-configuration
+percolate:wireframing
 
