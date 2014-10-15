@@ -14,5 +14,8 @@ Meteor.publish('bookmarkedRecipes', function() {
 
 Meteor.publish('recipe', function(id) {
   check(id, String);
-  return Recipes.find(id);
+  return [
+    Recipes.find(id),
+    Activities.find({recipeId: id})
+  ];
 });
