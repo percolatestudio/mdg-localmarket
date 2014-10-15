@@ -1,37 +1,4 @@
-var ANIMATION_DURATION = 200;
-Session.setDefault('emailErrors', {});
-
-Template.emailOverlay.rendered = function() {
-  this.find('#email-hook')._uihooks = {
-    insertElement: function(node, next, done) {
-      var $node = $(node);
-
-      $node
-        .hide()
-        .insertBefore(next)
-        .velocity('fadeIn', {
-          duration: ANIMATION_DURATION
-        });
-    },
-    removeElement: function(node, done) {
-      var $node = $(node);
-
-      $node
-        .velocity("fadeOut", {
-          duration: ANIMATION_DURATION,
-          complete: function() {
-            $node.remove();
-          }
-        });
-    }
-  }
-}
-
-Template.emailOverlay.helpers({
-  open: function() {
-    return Session.equals('emailOpen', true);
-  },
-  
+Template.shareOverlay.helpers({
   recipes: function() {
     // XXX: too much of hack?
     if (this._id)
@@ -50,7 +17,7 @@ Template.emailOverlay.helpers({
   }
 });
 
-Template.emailOverlay.events({
+Template.shareOverlay.events({
   'click [data-image-attach]': function() {
     Session.set('attachedImage', true);
   },

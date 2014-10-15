@@ -2,9 +2,6 @@ var ANIMATION_DURATION = 300;
 var MENU_KEY = 'menuOpen';
 Session.setDefault(MENU_KEY, false);
 
-var EMAIL_KEY = 'emailOpen';
-Session.setDefault(EMAIL_KEY, false);
-
 // XXX: this work around until IR properly supports this
 //   IR refactor will include Location.back, which will ensure that initator is
 //   set 
@@ -61,10 +58,6 @@ Template.appBody.helpers({
     return Session.get(MENU_KEY) && 'menu-open';
   },
   
-  emailOpen: function() {
-    return Session.get(EMAIL_KEY) && 'email-open';
-  },
-
   connected: function() {
     return Meteor.status().connected;
   }
@@ -94,10 +87,6 @@ Template.appBody.events({
   'click #menu a': function(e) {
     nextInitiator = 'menu'
     Session.set(MENU_KEY, false);
-  },
-
-  'click [data-email]': function() {
-    Session.set(EMAIL_KEY, true);
   },
 
   'click [data-close-overlay]': function() {

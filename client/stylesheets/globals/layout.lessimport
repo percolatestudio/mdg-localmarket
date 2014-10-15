@@ -82,7 +82,7 @@ body {
   }
 }
 
-#email-overlay {
+#share-overlay {
   .background-image(linear-gradient(top, rgba(232, 234, 241,.95), rgba(243,243,244, .95) 100%));
   .position(absolute, 0, 0, 0, 0);;
   z-index: 1;

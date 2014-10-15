@@ -19,5 +19,9 @@ Template.recipe.events({
     template.$('[data-ingredients]').velocity('scroll', {
       container: $('.content-scrollable')
     });
+  },
+  
+  'click .js-share': function() {
+    Overlay.open('shareOverlay', this);
   }
 });
