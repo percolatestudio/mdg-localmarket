@@ -1,6 +1,6 @@
-<template name="favorites">
-  <div class="page favorites">
-    {{> nav title='Favorites' subtext=recipeCount}}
+<template name="bookmarks">
+  <div class="page bookmarks">
+    {{> nav title='Bookmarks' subtext=recipeCount}}
 
     {{#contentFor 'rightNav'}}
       <a href="#" class="nav-item" data-email><span class="icon-twitter"></span></a>
@@ -8,7 +8,7 @@
 
     <div class="content-scrollable">
       <div class="list-recipes">
-        {{#each favoriteRecipes}}
+        {{#each this}}
           <a class="item-recipe highlighted" href="{{pathFor 'recipe'}}">
             <span class="attribution">
               <span class="title-recipe">{{title}}</span>
@@ -18,8 +18,8 @@
           </a>
         {{else}}
           <div class="wrapper-message">
-            <div class="title-message">No favorites yet</div>
-            <div class="subtitle-message">Tap on the <span class="icon-heart-hollow"></span> to save your favorite recipes. <a href="{{pathFor 'home'}}">Return home</a></div>
+            <div class="title-message">No bookmarks yet</div>
+            <div class="subtitle-message">Tap on the <span class="icon-heart-hollow"></span> to bookmark your favorite recipes. <a href="{{pathFor 'home'}}">Return home</a></div>
 
           </div>
         {{/each}}
