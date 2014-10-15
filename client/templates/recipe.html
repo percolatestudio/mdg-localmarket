@@ -37,8 +37,7 @@
         </div>
       {{else}}
         {{#each activities}}
-          <img src="http://placehold.it/320x100" class="thumbnail">
-          <p>{{text}}</p>
+          {{> activity}}
         {{/each}}
       {{/if}}
     </div>

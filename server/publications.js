@@ -2,6 +2,9 @@ Meteor.publish('allRecipes', function() {
   return Recipes.find();
 });
 
+Meteor.publish('feed', function() {
+  return Activities.find({}, {sort: {date: -1}, limit: 10});
+});
 
 Meteor.publish('featuredRecipes', function() {
   return Recipes.featured();
