@@ -12,7 +12,7 @@
         <div>Share</div>
         <a href="#" data-close-overlay><span class="icon-cross"></span></a>
 
-        <img src="http://placehold.it/320x100" class="thumbnail">
+        <img src="{{attachedImage}}" class="thumbnail" width="320px">
         
         <form>
           <img src="http://placehold.it/38x38" class="avatar">
@@ -45,6 +45,6 @@
   {{else}}
     {{! XXX: I don't really like this. It seems crappy to repeat the login overlay here. 
               But I can't see how else to enforce login. Ideas?}}
-    {{> authOverlay}}
+    {{> authOverlay noAutoclose=true}}
   {{/if}}
 </template>

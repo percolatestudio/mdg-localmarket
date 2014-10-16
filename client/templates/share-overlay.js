@@ -1,7 +1,9 @@
 var TWEETING_KEY = 'shareOverlayTweeting';
+var IMAGE_KEY = 'shareOverlayAttachedImage';
 
 Template.shareOverlay.created = function() {
   Session.set(TWEETING_KEY, false);
+  Session.set(IMAGE_KEY, null);
 }
 
 Template.shareOverlay.helpers({
@@ -11,7 +13,7 @@ Template.shareOverlay.helpers({
   
   attachedImage: function() {
     // XXX: obviously this going to be something cordova-y
-    return Session.get('attachedImage');
+    return Session.get(IMAGE_KEY);
   },
   
   tweeting: function() {
@@ -21,15 +23,21 @@ Template.shareOverlay.helpers({
 
 Template.shareOverlay.events({
   'click .js-attach-image': function() {
-    Session.set('attachedImage', true);
+    MeteorCamera.getPicture({width: 320}, function(error, data) {
+      // XXX: error handling
+      if (error)
+        alert(error.reason);
+      
+      Session.set(IMAGE_KEY, data);
+    });
   },
   
   'click .js-unattach-image': function() {
-    Session.set('attachedImage', false);
+    Session.set(IMAGE_KEY, null);
   },
   
   'click [data-image-remove]': function() {
-    Session.set('attachedImage', false);
+    Session.set(IMAGE_KEY, null);
   },
   
   'change [name=tweeting]': function(event) {
@@ -48,6 +56,7 @@ Template.shareOverlay.events({
       recipeId: this._id,
       userId: Meteor.userId(),
       text: text,
+      image: Session.get(IMAGE_KEY),
       date: new Date()
     });
     
