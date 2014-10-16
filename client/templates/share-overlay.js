@@ -16,6 +16,10 @@ Template.shareOverlay.helpers({
     return Session.get(IMAGE_KEY);
   },
   
+  avatar: function() {
+    return Meteor.user().services.twitter.profile_image_url_https;
+  },
+  
   tweeting: function() {
     return Session.get(TWEETING_KEY);
   }
@@ -55,6 +59,7 @@ Template.shareOverlay.events({
     Activities.insert({
       recipeId: this._id,
       userId: Meteor.userId(),
+      userAvatar: Meteor.user().services.twitter.profile_image_url_https,
       text: text,
       image: Session.get(IMAGE_KEY),
       date: new Date()
