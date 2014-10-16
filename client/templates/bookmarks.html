@@ -1,9 +1,7 @@
 <template name="bookmarks">
   <div class="page bookmarks">
-    {{#nav title='Bookmarks' subtext=recipeCount}}
-      <a href="#" class="nav-item" data-email><span class="icon-twitter"></span></a>
-    {{/nav}}
-
+    {{> nav title='Bookmarks' subtext=recipeCount}}
+    
     <div class="content-scrollable">
       <div class="list-recipes">
         {{#each this}}
