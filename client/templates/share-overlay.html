@@ -3,14 +3,14 @@
     <div id="share-overlay">
 
       {{#unless attachedImage}}
-        <a href="#" data-close-overlay><span class="icon-cross"></span></a>
+        <a href="#" class="js-close-overlay"><span class="icon-cross"></span></a>
         <div class="title-overlay">Share</div>
         
         <button class="js-attach-image">Take photo</button>
       {{else}}
         <a href="#" class="js-unattach-image"><span class="icon-left-arrow"></span></a>
         <div>Share</div>
-        <a href="#" data-close-overlay><span class="icon-cross"></span></a>
+        <a href="#" class="js-close-overlay"><span class="icon-cross"></span></a>
 
         <img src="{{attachedImage}}" class="thumbnail" width="320px">
         
@@ -43,8 +43,6 @@
 
     </div>
   {{else}}
-    {{! XXX: I don't really like this. It seems crappy to repeat the login overlay here. 
-              But I can't see how else to enforce login. Ideas?}}
-    {{> authOverlay noAutoclose=true}}
+    {{> authOverlay}}
   {{/if}}
 </template>
