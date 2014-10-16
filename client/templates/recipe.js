@@ -9,7 +9,7 @@ Template.recipe.helpers({
     return Session.get(RECIPE_KEY);
   },
   bookmarked: function() {
-    return !! Bookmarks.findOne({userId: Meteor.userId(), recipeId: this._id});
+    return _.include(Meteor.user().bookmarkedRecipeIds, this._id);
   },
   activities: function() {
     return Activities.find({recipeId: this._id}, {sort: {date: -1}});
@@ -23,20 +23,13 @@ Template.recipe.events({
     if (! Meteor.userId())
       return Overlay.open('authOverlay');
     
-    // XXX: methods? -- check if a bookmark already exists?
-    Bookmarks.insert({userId: Meteor.userId(), recipeId: this._id});
-    Recipes.update(this._id, {$inc: {bookmarkCount: 1}});
+    Meteor.call('bookmarkRecipe', this._id);
   },
 
   'click .js-remove-bookmark': function(e) {
     e.preventDefault();
 
-    // XXX: methods? -- check if a bookmark already exists?
-    var bookmark = Bookmarks.findOne({userId: Meteor.userId(), recipeId: this._id});
-    if (bookmark) {
-      Bookmarks.remove(bookmark._id);
-      Recipes.update(this._id, {$inc: {bookmarkCount: -1}});
-    }
+    Meteor.call('unbookmarkRecipe', this._id);
   },
   
   'click .js-show-recipe': function() {
