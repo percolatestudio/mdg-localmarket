@@ -8,74 +8,15 @@
 
   &[class*="about"] {
     .background-image(
-      linear-gradient(top, rgba(0,0,0,.1) 0%, rgba(0,0,0,.05) 100%),
+      linear-gradient(top, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 100%),
       url('img/app/bg-about-640x540.jpg')
     );
   }
 
-  @linear-gradient-spring: linear-gradient(135deg, rgba(36,87,72,.65) 0%, rgba(76,85,30,.65) 100%);
-  @linear-gradient-fall: linear-gradient(135deg, rgba(6,55,0,.65) 0%, rgba(80,45,0,.65) 100%);
-  @linear-gradient-summer: linear-gradient(135deg, rgba(35,45,85,.65) 0%, rgba(122,76,29,.65) 100%);
-  @linear-gradient-winter: linear-gradient(135deg, rgba(0,0,61,.65) 0%, rgba(102,64,40,.65) 100%);
-
-  // Backgrounds for categories
-  &[class*="spring"] {
+  &[class*="home"] {
     .background-image(
-      @linear-gradient-spring,
-      url('img/app/bg-seasons-spring-640x655.jpg')
+      linear-gradient(top, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 100%),
+      url('img/app/bg-home-640x655.jpg')
     );
-  }
-
-  &[class*="summer"] {
-    .background-image(
-      @linear-gradient-summer,
-      url('img/app/bg-seasons-summer-640x655.jpg')
-    );
-  }
-
-  &[class*="fall"] {
-    .background-image(
-      @linear-gradient-fall,
-      url('img/app/bg-seasons-fall-640x655.jpg')
-    );
-  }
-
-  &[class*="winter"] {
-    .background-image(
-      @linear-gradient-winter,
-      url('img/app/bg-seasons-winter-640x655.jpg')
-    );
-  }
-
-  // Backgrounds for categories that are small
-  //More specificity to override previous image declarations
-  &[class*="-small"] {
-    &[class*="spring"] {
-      .background-image(
-        @linear-gradient-spring,
-        url('img/app/bg-seasons-spring-640x240.jpg')
-      );
-    }
-
-    &[class*="summer"] {
-      .background-image(
-        @linear-gradient-summer,
-        url('img/app/bg-seasons-summer-640x240.jpg')
-      );
-    }
-
-    &[class*="fall"] {
-      .background-image(
-        @linear-gradient-fall,
-        url('img/app/bg-seasons-fall-640x240.jpg')
-      );
-    }
-
-    &[class*="winter"] {
-      .background-image(
-        @linear-gradient-winter,
-        url('img/app/bg-seasons-winter-640x240.jpg')
-      );
-    }
   }
 }
