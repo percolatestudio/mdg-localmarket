@@ -3,7 +3,7 @@
   // Sizing
   .font-s2;
   line-height: 22px !important; //override line-height always so we can use em's to size.
-  padding: 1.25em 1.25em .9em; // 48px tall
+  padding: 1.2em 1.25em .95em; // 48px tall
 
   // Style
   .type-black;
@@ -33,12 +33,36 @@
     &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
 
-  &[class*="tertiary"] {
-    background-color: @color-rare;
-    color: @color-primary;
+  &[class*="twitter"] {
+    background-color: @color-twitter;
+    color: @color-empty;
 
-    &:hover{ background-color: darken(@color-rare, 10%); }
-    &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
+    &:hover { background-color: darken(@color-twitter, 10%); }
+    &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
+  }
+
+  &[class*="camera"] {
+    border-radius: 10em;
+    box-shadow: @color-primary 0 0 0px 2px inset;
+    font-size: 20px; //reset
+    height: 4.5rem;
+    letter-spacing: 0; //reset
+    padding: 0; //reset
+    text-indent: 0; //reset
+    width: 4.5rem;
+
+    .icon-camera {
+      @dimension-camera: 3.9rem;
+      .position(absolute, 50%, 50%, auto, auto, @dimension-camera, @dimension-camera );
+      .transform(translate3d(50%, -50%,0));
+      background-color: @color-primary;
+      border-radius: 10em;
+      display: inline-block;
+      line-height: @dimension-camera;
+    }
+
+    &:hover { background-color: darken(@color-primary, 5%); }
+    &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
   }
 
   &[disabled] { opacity: .5; }
