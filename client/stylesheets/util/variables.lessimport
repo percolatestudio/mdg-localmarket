@@ -1,7 +1,7 @@
 // Core
 @color-primary: #d83e14; // blood orange
-@color-secondary: #000; //
-@color-tertiary: #000; //
+@color-secondary: @color-well; //
+@color-tertiary: @color-medium-well; //
 @color-complementary: #000; //
 
 // Social Colors

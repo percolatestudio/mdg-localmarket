@@ -48,14 +48,6 @@ body {
   .transition(all 200ms ease-out);
   .transform(translate3d(0, 0, 0));
 
-  .content-scrollable {
-    .position(absolute, 0, 0, 0, 0);
-    background: @color-empty;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
   // Toggle menu on mobile
   .menu-open & {
     .transform(translate3d(@menu-width, 0, 0));
@@ -68,7 +60,14 @@ body {
   > div.page {
     .position(absolute, 0, 0, 0, 0);
   }
+}
 
+.content-scrollable {
+  .position(absolute, 0, 0, 0, 0);
+  background: @color-empty;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 // Transparent screen to prevent interactions on content when menu is open

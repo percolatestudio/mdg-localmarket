@@ -9,43 +9,44 @@
       <a href="#" class="nav-item js-share"><span class="icon-share"></span></a>
     {{/nav}}
 
+    <div class="image-recipe" style="background-image: url('{{recipeImage recipe=this size='640x800'}}')"></div>
+
+    <div class="attribution-recipe">
+      <h1 class="title-recipe">{{title}}</h1>
+      <p class="description-recipe">{{excerpt}}</p>
+      <span class="source">{{source.name}}</span>
+      <span class="time">{{cookTime}}</span>
+    </div>
+
+    <div class="btns-group">
+      <a class="btn-secondary active js-show-recipe">Make It</a>
+      <a class="btn-secondary js-show-feed">Feed</a>
+    </div>
+
     <div class="content-scrollable">
-      <div class="image" style="background-image: url('{{recipeImage recipe=this size='640x800'}}')"></div>
-
-      <div class="attribution">
-        <h1 class="title-recipe">{{title}}</h1>
-        <p class="description-recipe">{{excerpt}}</p>
-        <span class="source">{{source.name}}</span>
-        <span class="time">{{cookTime}}</span>
-      </div>
-
-      <div class="btns-group">
-        <a class="btn-primary js-show-recipe">Make It</a>
-        <a class="btn-secondary js-show-feed">Feed</a>
-      </div>
-
       {{#if showRecipe}}
         <div class="ingredients" name="ingredients" data-ingredients>
-          <h2 class="title-ingredients">21 Ingredients</h2>
+          <h2 class="section-title">Ingredients</h2>
           <ul class="list-ingredients">
             {{#each ingredients}}
               <li class="item-ingredient">{{this}}</li>
             {{/each}}
           </ul>
-          {{#placeholder name='directions' height=12}}
-            <ol>
-              {{#each directions}}
-                <li>{{this}}</li>
-              {{/each}}
-            </ol>
-          {{/placeholder}}
+
+          <h2 class="section-title">Ingredients</h2>
+          <ol>
+            {{#each directions}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ol>
+
         </div>
       {{else}}
-        {{#placeholder name='activities' height=12}}
+        <div class="list-activities">
           {{#each activities}}
             {{> activity}}
           {{/each}}
-        {{/placeholder}}
+        </div>
       {{/if}}
     </div>
   </div>
