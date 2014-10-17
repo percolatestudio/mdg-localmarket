@@ -33,8 +33,11 @@
             {{/each}}
           </ul>
           {{#placeholder name='directions' height=12}}
-            {{> placeholder 'direction1'}}
-            {{> placeholder 'direction2'}}
+            <ol>
+              {{#each directions}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ol>
           {{/placeholder}}
         </div>
       {{else}}
