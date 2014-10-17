@@ -1,7 +1,6 @@
 [
 {
   "title": "Fromage Fort",
-  "featured": true,
   "highlighted": true,
   "excerpt": "When I’ve got too many cheese bits on hand, it's now fromage fort to the rescue",
   "source": {
@@ -27,7 +26,6 @@
 },
 {
   "title": "Classic Ragu Bolognese",
-  "featured": false,
   "excerpt": "A certain magic happens as the beef and aromatic vegetables slowly cook down with wine, tomato paste, and broth",
   "source": {
     "name": "Bon Appétit",
@@ -58,7 +56,6 @@
 },
 {
   "title": "Animal-Cracker Cookies",
-  "featured": false,
   "excerpt": "Create and decorate magical cookies that are as much fun as a day at the circus!",
   "source": {
     "name": "Williams-Sonoma",
@@ -84,7 +81,6 @@
 },
 {
   "title": "Chicken in Mole",
-  "featured": false,
   "excerpt": "If there is one dish that could be considered Mexican haute cuisine, then Mole Poblano is surely it",
   "source": {
     "name": "Epicurious",
@@ -125,7 +121,6 @@
 },
 {
   "title": "Fatted Calf's Meatlof",
-  "featured": true,
   "highlighted": true,
   "excerpt": "It is a thing of beauty, shaped into a large oval loaf and glazed with tangy cocktail sauce",
   "source": {
@@ -172,7 +167,6 @@
 },
 {
   "title": "Spanish Asparagus Revuelto",
-  "featured": false,
   "excerpt": "In Spain, wild asparagus is very popular, and it’s a sure sign of spring",
   "source": {
     "name": "NY Times",
@@ -199,7 +193,6 @@
 },
 {
   "title": "Lahmacun - Turkish Pizza w/ Spicy Minced Beef & Salad Topping",
-  "featured": true,
   "excerpt": "",
   "source": {
     "name": "Ottolenghi",
@@ -237,7 +230,6 @@
 },
 {
   "title": "Easiest Spaghetti & Meatballs",
-  "featured": true,
   "excerpt": "No pasta's more iconic than spaghetti and meatballs",
   "source": {
     "name": "Martha Stewart",
@@ -264,7 +256,6 @@
 },
 {
   "title": "Apricots Honey Panna Cotta",
-  "featured": false,
   "highlighted": true,
   "excerpt": "Juicy, fragrant, perfectly textured for a little fire action",
   "source": {
@@ -289,7 +280,6 @@
 },
 {
   "title": "Slanted Door's Shaking Beef",
-  "featured": true,
   "excerpt": "Cubes of tender filet mignon are sautéed with red onions and a vinaigrette",
   "source": {
     "name": "7x7 magazine",
@@ -318,7 +308,6 @@
 },
 {
   "title": "Bavarian-style Soft Pretzel",
-  "featured": true,
   "excerpt": "",
   "source": {
     "name": "NY Times",
@@ -342,7 +331,6 @@
 },
 {
   "title": "Elderberry Syrup",
-  "featured": false,
   "excerpt": "The gorgeous syrup is great in a glass of sparkling water over ice, dripped some over plain yogurt",
   "source": {
     "name": "David Lebovitz",
@@ -363,7 +351,6 @@
 },
 {
   "title": "Spaghetti with Lemon & Olive Oil",
-  "featured": false,
   "excerpt": "This is one of those recipes that are almost better off without one",
   "source": {
     "name": "Smitten Kitchen",
@@ -388,7 +375,6 @@
 },
 {
   "title": "Homemade Pasta Dough",
-  "featured": false,
   "excerpt": "",
   "source": {
     "name": "Mario Batali",
@@ -408,7 +394,6 @@
 },
 {
   "title": "Diner Style Hamburgers",
-  "featured": true,
   "excerpt": "This is the traditional, griddled hamburger of diners and takeaway spots, smashed thin and cooked crisp on its edges",
   "source": {
     "name": "NY Times",
@@ -431,7 +416,6 @@
 },
 {
   "title": "Grits Praline & Brown Butter Ice Cream",
-  "featured": true,
   "excerpt": "\"Decadent\" isn’t a word we throw around lightly",
   "source": {
     "name": "Anson Mills",
@@ -459,7 +443,6 @@
 },
 {
   "title": "Roasted Butternut Squash Lasagna",
-  "featured": true,
   "highlighted": true,
   "excerpt": "Making homemade pasta may seem arduous, but this dish is worth the extra work",
   "source": {
@@ -491,7 +474,6 @@
 },
 {
   "title": "Peanut Butter Cookie with Salted Peanut Caramel",
-  "featured": false,
   "excerpt": "This recipe takes Peanut Butter Cookies to the next level",
   "source": {
     "name": "David Lebovitz",
@@ -523,7 +505,6 @@
 },
 {
   "title": "Bucatini all' Amatriciana",
-  "featured": true,
   "excerpt": "This dish is named for the town of Amatrice...considered by many Italians to be birthplace of the best cooks on the peninsula",
   "source": {
     "name": "Mario Batali",
@@ -548,7 +529,6 @@
 },
 {
   "title": "Orecchiette with red lamb sausage & carrots",
-  "featured": false,
   "excerpt": "Chef di Cucina Matt Abdoo expounded on the virtues of the fundamental building block of Italian cooking: fresh pasta",
   "source": {
     "name": "Mario Batali",
@@ -586,7 +566,6 @@
 },
 {
   "title": "Chocolate Chai Spice Cupcake",
-  "featured": true,
   "excerpt": "The moist chocolatey goodness of the cake can live on its own",
   "source": {
     "name": "Cupcake Bakeshop",
@@ -617,7 +596,6 @@
 },
 {
   "title": "Mexican Rice",
-  "featured": false,
   "excerpt": "",
   "source": {
     "name": "NY Times",
@@ -643,7 +621,6 @@
 },
 {
   "title": "Whole Wheat Goldfish Crackers",
-  "featured": true,
   "excerpt": "",
   "source": {
     "name": "Smitten Kitchen",
@@ -666,7 +643,6 @@
 },
 {
   "title": "Italian Red-Wine Braised Duck with Olive Gremolata",
-  "featured": true,
   "highlighted": true,
   "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
   "source": {
@@ -702,7 +678,6 @@
 },
 {
   "title": "Pierre Hermé & Dorie Greenspan's World Peace Cookies",
-  "featured": false,
   "excerpt": "Shortbread cookie meets salted chocolate chip, and world peace feels within reach",
   "source": {
     "name": "Food52",
@@ -728,7 +703,6 @@
 },
 {
   "title": "Braised eggs with beef, smoked aubergine and tomato",
-  "featured": true,
   "excerpt": "",
   "source": {
     "name": "Ottolenghi",
@@ -763,7 +737,6 @@
 },
 {
   "title": "Pomegranate Hibiscus Tea & Hony Ginger Yogurt Verrines",
-  "featured": false,
   "excerpt": "",
   "source": {
     "name": "Tartelette",
@@ -791,7 +764,6 @@
 },
 {
   "title": "Chocolate Tart",
-  "featured": true,
   "highlighted": true,
   "excerpt": "A good chocolate tart doesn’t need to be fancy, but it needs to be deep, dark, and yes, somewhat decadent.",
   "source": {
@@ -819,7 +791,6 @@
 },
 {
   "title": "Cashew Gateau with Coffe Cardamom Mousse",
-  "featured": true,
   "excerpt": "The inspiration for the caramel stained \"glass\" panel comes from my grandmother",
   "source": {
     "name": "Tartelette",
