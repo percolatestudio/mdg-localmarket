@@ -11,8 +11,8 @@
     .type-bold;
     color: rgba(255,255,255,.4);
     display: block;
-    height: 142px;
-    padding-top: 3rem;
+    height: 140px;
+    padding-top: 44px;
     text-align: center;
 
     & + a { box-shadow: rgba(129,206,200,.1) 0 -1px 0 0; }
