@@ -1,71 +1,74 @@
 // standard text input
 input[type="text"],
 textarea {
+  .font-s3;
+  .type-regular;
+
   // Sizing
-  font-size: 1rem;
-  padding: .75em 0; //total height ~48
+  padding: 1rem 1.25rem; //total height ~48
   line-height: 1.5em !important;
 
   // Style
   .placeholder(@color-medium);
   background: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0,0,0,.1);
   border-radius: 0;
   box-sizing: border-box;
+  color: @color-well;
   outline: none;
 
   &:active,
   &:focus {
-    border-bottom: 1px solid rgba(0,0,0,.3);
+
   }
 
   &[disabled] { opacity: .5; }
 }
 
-// Input with an icon
-.input-symbol {
-  display: inline-block;
-  position: relative;
+// Custom checkbox
+.checkbox {
+  .font-s3;
+  .type-bold;
+  color: @color-medium;
+  clear: both;
+  display: block;
+  line-height: 1rem !important;
 
-  &.error {
-    input { border-bottom: 1px solid @color-negative; }
+  cursor: pointer;
+  min-height: 1em;
+  position: relative; //necessary for special styling
 
-    [class^="icon-"],
-    [class*=" icon-"] {
-      color: @color-negative;
+  input[type="checkbox"] {
+    font-size: 1em;
+    margin-right: .5em;
+    visibility: hidden;
+
+    & + span:before {
+      .position(absolute, .2em, auto, auto, 0, .85em, .85em);
+      content: '';
+      box-shadow: @color-medium 0 0 0 1px inset;
+      display: block;
     }
-  }
 
-  // Position & padding
-  [class^="icon-"],
-  [class*=" icon-"] {
-    left: 1rem;
-  }
+    &:checked + span:before {
+      box-shadow: none;
+      color: @color-primary;
 
-  input { padding-left: 2.75em !important; }
+      // Icon family from icon.lessimport
+      font-family: 'market';
+    	speak: none;
+    	font-style: normal;
+    	font-weight: normal;
+    	font-variant: normal;
+    	text-transform: none;
+    	line-height: 1;
 
-  // Styling
-  input {
-    width: 100%;
+    	// Better Font Rendering
+    	-webkit-font-smoothing: antialiased;
+    	-moz-osx-font-smoothing: grayscale;
 
-    &:focus {
-      & + [class^="icon-"],
-      & + [class*=" icon-"] {
-        color: @color-well;
-      }
+    	// Checkmark icon
+      content: "\e609";
     }
-  }
-  [class^="icon-"],
-  [class*=" icon-"] {
-    .transition( all 300ms ease-in );
-    .transform(translate3d(0,-50%,0));
-    background: transparent;
-    color: @color-medium;
-    font-size: 1rem;
-    height: 1rem;
-    position: absolute;
-    top: 50%;
-    width: 1rem;
   }
 }

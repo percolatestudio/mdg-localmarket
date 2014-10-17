@@ -3,7 +3,7 @@
     <div class="overlay share">
 
       {{#unless attachedImage}}
-        <a href="#" class="js-close-overlay dismiss"><span class="icon-cross"></span></a>
+        <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
         <div class="wrapper-heading">
           <div class="title-overlay">Share</div>
           <div class="subtitle-overlay">Share that you made this recipe with the Local Market community.</div>
@@ -14,27 +14,34 @@
           <div class="subtext-camera">Add your photo</div>
         </div>
       {{else}}
-        <a href="#" class="js-unattach-image"><span class="icon-left-arrow"></span></a>
-        <div>Share</div>
-        <a href="#" class="js-close-overlay"><span class="icon-cross"></span></a>
+        <a href="#" class="js-unattach-image overlay-back"><span class="icon-arrow-left-alt"></span></a>
+        <div class="title-page">Share</div>
+        <a href="#" class="js-close-overlay overlay-dismiss"><span class="icon-cross"></span></a>
 
-        <img src="{{attachedImage}}" class="thumbnail" width="320px">
+        <div class="bg-image" style="background-image: url('{{attachedImage}}')"></div>
 
-        <form>
-          <img src="{{avatar}}" class="avatar">
-          <div class="input-symbol {{errorClass 'text'}}">
+        <form class="form-share">
+          <div class="form-group">
+            <div class="avatar">
+              <img src="{{avatar}}" class="image-avatar">
+            </div>
+
             <textarea name="text" type="text" autocapitalize="off" autocorrect="off"
-              placeholder="Add Advice.. bunch of other stuff I can't read on my tiny printout"></textarea>
+                placeholder="Add advice, suggestions, or thoughts to share with the community..." class="message-share {{errorClass 'text'}}"></textarea>
           </div>
 
-          <input type="checkbox" name="tweeting" id="tweeting" value="false">
-          <label for="tweeting">Post to Twitter</label>
+          <div class="wrapper-checkbox {{#if tweeting}}active{{/if}}">
+            <label for="tweeting" class="checkbox">
+              <input type="checkbox" name="tweeting" id="tweeting" value="false">
+              <span>Post to Twitter</span>
+            </label>
+          </div>
+
 
           {{#if tweeting}}
-            <div class="input-symbol {{errorClass 'tweet'}}">
-              <textarea name="tweet" type="text" autocapitalize="off" autocorrect="off"
-                value="Other stuff I can't read without straining my eyes"></textarea>
-            </div>
+            <span class="message-tweet-arrow"></span>
+            <textarea name="tweet" type="text" autocapitalize="off" autocorrect="off"
+              value="I made #recipe name! #shortened URL" class="message-tweet {{errorClass 'tweet'}}"></textarea>
           {{/if}}
 
           <button class="btn-primary" type='submit'>
