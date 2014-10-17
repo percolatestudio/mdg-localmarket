@@ -1,0 +1,38 @@
+.overlay {
+  .dismiss {
+    .position(absolute, 0, 0, auto, auto, 3em, 3em);
+    text-align: center;
+    text-decoration: none;
+    z-index: 1;
+
+    .icon-cross {
+      color: @color-medium-well;
+      font-size: 1em;
+      line-height: 48px;
+    }
+  }
+
+  .wrapper-heading {
+    .position(absolute, 50%);
+    .transform(translate3d(0, -50%,0));
+    text-align: center;
+    padding: 0 1.25rem;
+  }
+
+  .title-overlay {
+    .font-l2;
+    .type-bold;
+    color: @color-full;
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
+
+  .subtitle-overlay {
+    .font-m1;
+    color: @color-well;
+  }
+
+
+  .btn-primary,
+  .btn-twitter { .position(absolute, auto, 0, 0, 0, 100%); }
+}
