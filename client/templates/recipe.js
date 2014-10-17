@@ -9,7 +9,7 @@ Template.recipe.helpers({
     return Session.get(RECIPE_KEY);
   },
   bookmarked: function() {
-    return _.include(Meteor.user().bookmarkedRecipeIds, this._id);
+    return Meteor.user() && _.include(Meteor.user().bookmarkedRecipeIds, this._id);
   },
   activities: function() {
     return Activities.find({recipeId: this._id}, {sort: {date: -1}});
