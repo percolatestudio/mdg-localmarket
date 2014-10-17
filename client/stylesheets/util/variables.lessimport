@@ -1,15 +1,15 @@
 // Core
-@color-primary: #d7933b; //golden burnt sienna
-@color-secondary: #568baf; //cerulean blue
-@color-tertiary: #000; //sunburst orange
-@color-complementary: #000; //light turquoise
+@color-primary: #d83e14; // blood orange
+@color-secondary: #000; //
+@color-tertiary: #000; //
+@color-complementary: #000; //
 
-// Brand Colors
-@color-brand: #f3ac15; //sunburst orange
-@color-brand-alt: #f3cc71; //muted sunburst orange
+// Social Colors
+@color-twitter: #46c8f5;
 
 // Alert
 @color-negative: #ff6622; //error, alert
+
 
 // Greyscale
 @color-empty: white;

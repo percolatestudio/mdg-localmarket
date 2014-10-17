@@ -26,13 +26,13 @@
 
 // Large fonts
 .font-l3() {
-  font-size: 56px;
-  line-height: 64px;
+  font-size: 48px;
+  line-height: 56px;
 }
 
 .font-l2() {
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 40px;
+  line-height: 48px;
 }
 
 .font-l1() {
@@ -52,8 +52,8 @@
 }
 
 .font-m1() {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 // Small fonts
