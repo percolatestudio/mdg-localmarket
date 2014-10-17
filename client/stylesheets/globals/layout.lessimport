@@ -61,7 +61,7 @@ body {
     .transform(translate3d(@menu-width, 0, 0));
   }
 
-  .email-open & {
+  .overlay-open & {
     -webkit-filter: blur(7px);
   }
 
@@ -82,7 +82,7 @@ body {
   }
 }
 
-#share-overlay {
+.overlay {
   .background-image(linear-gradient(top, rgba(232, 234, 241,.95), rgba(243,243,244, .95) 100%));
   .position(absolute, 0, 0, 0, 0);;
   z-index: 1;
