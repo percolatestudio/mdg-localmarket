@@ -52,10 +52,10 @@ Template.shareOverlay.events({
     event.preventDefault();
     
     var text = $(event.target).find('[name=text]').val();
-    var tweet;
-    if (Session.get(TWEETING_KEY))
-      tweet = $(event.target).find('[name=tweet]').val();
-    
+
+    var tweet = Session.get(TWEETING_KEY) ? 
+      $(event.target).find('[name=tweet]').val() : null;
+
     Meteor.call('createActivity', {
       recipeId: this._id,
       text: text,
