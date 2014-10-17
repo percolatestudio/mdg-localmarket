@@ -58,6 +58,10 @@ Template.appBody.helpers({
     return Session.get(MENU_KEY) && 'menu-open';
   },
   
+  overlayOpen: function() {
+    return Overlay.isOpen() ? 'overlay-open' : '';
+  },
+  
   connected: function() {
     return Meteor.status().connected;
   }

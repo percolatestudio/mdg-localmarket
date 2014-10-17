@@ -12,6 +12,9 @@ Overlay = {
   close: function() {
     Session.set(TEMPLATE_KEY, null);
     Session.set(DATA_KEY, null);
+  },
+  isOpen: function() {
+    return ! Session.equals(TEMPLATE_KEY, null);
   }
 }
 
