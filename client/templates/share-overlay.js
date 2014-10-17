@@ -51,20 +51,17 @@ Template.shareOverlay.events({
   'submit': function(event, template) {
     event.preventDefault();
     
-    var text = $(event.target).find('[name=text]').val()
+    var text = $(event.target).find('[name=text]').val();
+    var tweet;
+    if (Session.get(TWEETING_KEY))
+      tweet = $(event.target).find('[name=tweet]').val();
     
-    // XXX: post to twitter
-    
-    // XXX: methods or allow/deny?
-    Activities.insert({
+    Meteor.call('createActivity', {
       recipeId: this._id,
-      userId: Meteor.userId(),
-      userAvatar: Meteor.user().services.twitter.profile_image_url_https,
       text: text,
-      image: Session.get(IMAGE_KEY),
-      date: new Date()
-    });
-    
+      image: Session.get(IMAGE_KEY)
+    }, tweet);
+
     Overlay.close();
   }
 });
