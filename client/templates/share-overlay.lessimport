@@ -8,6 +8,7 @@
       margin-bottom: .5rem;
     }
     .subtext-camera {
+      .font-s2;
       color: @color-medium;
       margin-bottom: .75rem;
     }
