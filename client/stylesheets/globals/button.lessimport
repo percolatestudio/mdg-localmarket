@@ -57,12 +57,20 @@
       .transform(translate3d(50%, -50%,0));
       background-color: @color-primary;
       border-radius: 10em;
+      color: @color-empty;
       display: inline-block;
       line-height: @dimension-camera;
     }
 
-    &:hover { background-color: darken(@color-primary, 5%); }
-    &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
+    &:hover {
+      box-shadow: darken(@color-primary, 3%) 0 0 0px 2px inset;
+      .icon-camera { background-color: darken(@color-primary, 3%); }
+    }
+
+    &:active {
+      box-shadow: darken(@color-primary, 3%) 0 0 0px 2px inset;
+      .icon-camera { background-color: darken(@color-primary, 3%); }
+    }
   }
 
   &[disabled] { opacity: .5; }
