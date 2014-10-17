@@ -1,34 +1,40 @@
 <template name="home">
   <div class="page home">
-    {{> nav title='Sous' black=true}}
+    {{> nav title='Home' black=true}}
 
     <div class="content-scrollable">
-      {{> placeholder name='logo' height=12}}
-      {{> placeholder name='news'}}
-      
-      {{#placeholder name='popular recipes'}}
-        <div class="list-recipes">
-          {{#each featuredRecipes}}
-            <a class="item-recipe" href="{{pathFor 'recipe'}}">
-              <span class="attribution">
-                <span class="title-recipe">{{title}}</span>
-                <span class="author-recipe">{{source.name}}</span>
-              </span>
+      <div class="bg-image home">
+        <h1 class="title-home">
+          <img src="img/app/logo-local.svg" alt="Local Market"/>
+        </h1>
+        <span class="arrow"></span>
+      </div>
 
-              <img src="{{recipeImage recipe=this size='320x350'}}" />
-            </a>
-          {{/each}}
-        </div>
-        
-        <a href="{{pathFor 'recipes'}}">Explore all our recipes</a>
-      {{/placeholder}}
-      
-      
-      {{#placeholder name='whats cooking'}}
-        {{#each activities}}
-          {{> activity}}
+      <div class="callout-news">
+        <span class="title-callout">News</span>
+        Duck breasts just arrived at the deli!
+      </div>
+
+      <h2 class="section-title">Popular Recipes</h2>
+      <div class="list-recipes">
+        {{#each featuredRecipes}}
+          <a class="item-recipe" href="{{pathFor 'recipe'}}">
+            <span class="attribution">
+              <span class="title-recipe">{{title}}</span>
+              <span class="author-recipe">{{source.name}}</span>
+            </span>
+
+            <img src="{{recipeImage recipe=this size='320x350'}}" />
+          </a>
         {{/each}}
-      {{/placeholder}}
+      </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
+
+      <h2 class="section-title">What's Cooking</h2>
+      {{#each activities}}
+        {{> activity}}
+      {{/each}}
     </div>
 
   </div>
