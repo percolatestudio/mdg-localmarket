@@ -1,5 +1,5 @@
 <template name="activity">
-  <a href="#" class="item-activity">
+  <a href="{{pathFor 'recipe' _id=this.recipeId}}" class="item-activity">
 
     <div class="bg-image" style="background-image: url('{{image}}');"></div>
 
@@ -10,6 +10,5 @@
       <span class="meta"><span class="author">{{firstName}}</span> {{text}} <span class="location">&mdash;in San Francisco</span></span>
     </span>
 
-    <a href="{{pathFor 'recipe' _id=this.recipeId}}">Go to Recipe</a>
   </a>
 </template>
