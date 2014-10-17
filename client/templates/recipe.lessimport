@@ -1,5 +1,5 @@
 .page.recipe {
-  nav [data-unfavorite] { color: @color-brand; }
+  nav .bookmarked { color: @color-primary; }
 
   .image {
     .transform(translate3d(0,0,0));//Gpu rendering
