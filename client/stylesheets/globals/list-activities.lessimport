@@ -1,0 +1,45 @@
+.list-activities { overflow: hidden; }
+
+.list-activities .item-activity {
+  .transform(translate3d(0,0,0));
+  float: left;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  .attribution {
+    .position(absolute, auto, 0, 0, 0);
+    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 70%, @color-empty 100%));
+    .font-s2;
+    padding: .5rem;
+    z-index: 1;
+
+
+    .display(flex);
+    .flex-wrap(wrap);
+
+    .avatar,
+    .meta {
+      .flex(1);
+    }
+
+    .avatar {
+      max-width: 2rem;
+      height: 2rem;
+      margin-right: .5rem;
+    }
+    .meta {
+      color: @color-well;
+      overflow: hidden;
+    }
+
+    .author { .type-black; }
+    .location { color: @color-medium-rare; }
+  }
+
+  .bg-image {
+    display: block;
+    height: 16rem;
+    width: 100%;
+  }
+}

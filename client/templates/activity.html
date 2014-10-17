@@ -1,5 +1,14 @@
 <template name="activity">
-  <img src="{{image}}" class="thumbnail" width="320px">
-  <img src="{{userAvatar}}" class="thumbnail" width="40px">
-  <p>{{text}}</p>
+  <a href="#" class="item-activity">
+
+    <div class="bg-image" style="background-image: url('{{image}}');"></div>
+
+    <span class="attribution">
+      <span class="avatar">
+        <img src="{{userAvatar}}" class="image-avatar">
+      </span>
+      <span class="meta"><span class="author">Dominic</span> {{text}} <span class="location">&mdash;in San Francisco</span></span>
+    </span>
+
+  </a>
 </template>

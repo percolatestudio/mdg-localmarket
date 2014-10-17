@@ -32,9 +32,11 @@
       <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
 
       <h2 class="section-title">What's Cooking</h2>
-      {{#each activities}}
-        {{> activity}}
-      {{/each}}
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{/each}}
+      </div>
     </div>
 
   </div>
