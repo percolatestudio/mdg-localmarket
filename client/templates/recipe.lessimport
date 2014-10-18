@@ -156,6 +156,12 @@
   .content-scrollable {
     top: 100%;
   }
+
+  .image-recipe {
+    .transition( all 400ms ease-in );
+    .transform(scale3d(1,1,1));
+  }
+
   .content-scrollable,
   .btns-group,
   .attribution-recipe {
@@ -185,6 +191,7 @@
   }
   .image-recipe {
     .blur(10px);
+    .transform(scale3d(1.2,1.2,1.2));
   }
   .attribution-recipe {
     top: 3em;
