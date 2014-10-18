@@ -20,7 +20,7 @@
     </div>
 
     <div class="btns-group">
-      <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}rest{{/if}} js-show-recipe">Make It</a>
+      <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Make It</a>
       <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} js-show-feed">Feed</a>
     </div>
 
@@ -41,9 +41,12 @@
           <h2 class="section-title">Directions</h2>
           <ol class="list-directions">
             {{#each directions}}
-              <li class="item-direction">{{this}}</li>
+              <li class="item-direction">
+                <span class="text">{{this}}</span>
+              </li>
             {{/each}}
           </ol>
+          <a href="{{source.url}}" target="_blank" class="btn-secondary">Read full recipe on {{source.name}}</a>
         </div>
       {{/if}}
 

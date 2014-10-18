@@ -32,13 +32,15 @@
     &:hover { background-color: darken(@color-tertiary, 5%); }
     &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
 
-    &.active {
+    &.active,
+    &.no-state {
       background: @color-secondary;
       color: @color-empty;
 
       &:hover{ background-color: darken(@color-secondary, 5%); }
       &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
     }
+
   }
 
   &[class*="twitter"] {
