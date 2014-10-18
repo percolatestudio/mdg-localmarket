@@ -1,12 +1,12 @@
-var RECIPE_KEY = 'recipeShow';
+var TAB_KEY = 'recipeShowTab';
 
 Template.recipe.created = function() {
-  Session.set(RECIPE_KEY, true);
+  Session.set(TAB_KEY, 'recipe');
 }
 
 Template.recipe.helpers({
-  showRecipe: function() {
-    return Session.get(RECIPE_KEY);
+  isActiveTab: function(name) {
+    return Session.equals(TAB_KEY, name);
   },
   bookmarked: function() {
     return Meteor.user() && _.include(Meteor.user().bookmarkedRecipeIds, this._id);
@@ -33,11 +33,15 @@ Template.recipe.events({
   },
   
   'click .js-show-recipe': function() {
-    Session.set(RECIPE_KEY, true);
+    Session.set(TAB_KEY, 'make');
   },
   
   'click .js-show-feed': function() {
-    Session.set(RECIPE_KEY, false);
+    Session.set(TAB_KEY, 'feed');
+  },
+  
+  'click .js-uncollapse': function() {
+    Session.set(TAB_KEY, 'recipe');
   },
 
   'click [data-ingredients-trigger]': function(e, template) {
