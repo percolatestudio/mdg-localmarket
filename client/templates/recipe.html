@@ -1,6 +1,6 @@
 <template name="recipe">
   <div class="page recipe">
-    {{#nav black=true back=true}}
+    {{#nav title="Recipe" black=true back=true}}
       {{#if bookmarked}}
         <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
       {{else}}
@@ -24,23 +24,24 @@
     </div>
 
     <div class="content-scrollable">
+      <div class="wrapper-share">
+        <a class="btn-primary js-share">Share that you made this</a>
+      </div>
+
       {{#if showRecipe}}
-        <div class="ingredients" name="ingredients" data-ingredients>
-          <h2 class="section-title">Ingredients</h2>
-          <ul class="list-ingredients">
-            {{#each ingredients}}
-              <li class="item-ingredient">{{this}}</li>
-            {{/each}}
-          </ul>
+        <h2 class="section-title">Ingredients</h2>
+        <ul class="list-ingredients">
+          {{#each ingredients}}
+            <li class="item-ingredient">{{this}}</li>
+          {{/each}}
+        </ul>
 
-          <h2 class="section-title">Ingredients</h2>
-          <ol>
-            {{#each directions}}
-              <li>{{this}}</li>
-            {{/each}}
-          </ol>
-
-        </div>
+        <h2 class="section-title">Ingredients</h2>
+        <ol class="list-directions">
+          {{#each directions}}
+            <li class="item-direction">{{this}}</li>
+          {{/each}}
+        </ol>
       {{else}}
         <div class="list-activities">
           {{#each activities}}
