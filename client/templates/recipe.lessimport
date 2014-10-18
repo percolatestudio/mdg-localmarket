@@ -152,8 +152,24 @@
 
 
 // Collapse Interaction
-.page.recipe .content-scrollable {
-  top: 100%;
+.page.recipe {
+  .content-scrollable {
+    top: 100%;
+  }
+  .content-scrollable,
+  .btns-group,
+  .attribution-recipe {
+    .transition( all 300ms ease-in );
+    .transform(translate3d(0,0,0));
+  }
+
+  .attribution-recipe > *:not(.title-recipe) {
+    .transform(scale3d(1,1,1));
+    .transition( scale3d 300ms ease-in, height 0 ease-in 300ms, opacity 300ms ease-in );
+    opacity: 1;
+    height: auto;
+    width: auto;
+  }
 }
 
 .page.recipe.collapse {
@@ -186,7 +202,8 @@
     }
 
     > *:not(.title-recipe) {
-      display: none;
+      opacity: 0;
+      .transform(scale3d(0,0,0));
     }
   }
   .btns-group {
