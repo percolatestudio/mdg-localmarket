@@ -1,7 +1,10 @@
 var TAB_KEY = 'recipeShowTab';
 
 Template.recipe.created = function() {
-  Session.set(TAB_KEY, 'recipe');
+  if (Router.current().params.activityId)
+    Session.set(TAB_KEY, 'feed');
+  else
+    Session.set(TAB_KEY, 'recipe');
 }
 
 Template.recipe.helpers({
