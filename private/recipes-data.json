@@ -120,6 +120,32 @@
   "imageName": "spring-chicken-in-mole.jpg"
 },
 {
+  "title": "Spanish Asparagus Revuelto",
+  "excerpt": "In Spain, wild asparagus is very popular, and it’s a sure sign of spring",
+  "source": {
+    "name": "NY Times",
+    "url": "http://www.nytimes.com/recipes/1016240/spanish-asparagus-revuelto.html"
+  },
+  "cookTime": "30 min",
+  "ingredients": [
+    "Olive oil",
+    "2 peeled garlic cloves, plus 1/2 teaspoon minced garlic",
+    "2 cups bread cubes, made with day-old bread, cut in 1/2-inch cubes",
+    "Salt and pepper",
+    "2 ounces diced Spanish chorizo",
+    "1 bunch thin asparagus, about 1 1/2 pounds, cut in 1- to 2-inch lengths",
+    "1 bunch green onions, chopped",
+    "8 large eggs, beaten",
+    "1/2 teaspoon pimentón",
+    "2 tablespoons roughly chopped Italian parsley"
+  ],
+  "directions": [
+    "Put 3 tablespoons olive oil in a cast-iron skillet over medium-high heat. Add peeled garlic cloves and let them sizzle until lightly browned, then remove.",
+    "Add bread cubes, season with salt and pepper, lower heat to medium and gently fry until lightly browned and crisp, about 2 minutes. Remove bread and set aside to cool."
+  ],
+  "imageName": "spring-spanish-asparagus-revuelto.jpg"
+},
+{
   "title": "Fatted Calf's Meatlof",
   "highlighted": true,
   "excerpt": "It is a thing of beauty, shaped into a large oval loaf and glazed with tangy cocktail sauce",
@@ -164,32 +190,6 @@
     "Toast the fennel seeds the same way, then let cool completely."
   ],
   "imageName": "spring-meatloaf.jpg"
-},
-{
-  "title": "Spanish Asparagus Revuelto",
-  "excerpt": "In Spain, wild asparagus is very popular, and it’s a sure sign of spring",
-  "source": {
-    "name": "NY Times",
-    "url": "http://www.nytimes.com/recipes/1016240/spanish-asparagus-revuelto.html"
-  },
-  "cookTime": "30 min",
-  "ingredients": [
-    "Olive oil",
-    "2 peeled garlic cloves, plus 1/2 teaspoon minced garlic",
-    "2 cups bread cubes, made with day-old bread, cut in 1/2-inch cubes",
-    "Salt and pepper",
-    "2 ounces diced Spanish chorizo",
-    "1 bunch thin asparagus, about 1 1/2 pounds, cut in 1- to 2-inch lengths",
-    "1 bunch green onions, chopped",
-    "8 large eggs, beaten",
-    "1/2 teaspoon pimentón",
-    "2 tablespoons roughly chopped Italian parsley"
-  ],
-  "directions": [
-    "Put 3 tablespoons olive oil in a cast-iron skillet over medium-high heat. Add peeled garlic cloves and let them sizzle until lightly browned, then remove.",
-    "Add bread cubes, season with salt and pepper, lower heat to medium and gently fry until lightly browned and crisp, about 2 minutes. Remove bread and set aside to cool."
-  ],
-  "imageName": "spring-spanish-asparagus-revuelto.jpg"
 },
 {
   "title": "Lahmacun - Turkish Pizza w/ Spicy Minced Beef & Salad Topping",
@@ -255,30 +255,6 @@
   "imageName": "spring-easiest-spaghetti-and-meatballs.jpg"
 },
 {
-  "title": "Apricots Honey Panna Cotta",
-  "highlighted": true,
-  "excerpt": "Juicy, fragrant, perfectly textured for a little fire action",
-  "source": {
-    "name": "Tartelette",
-    "url": "http://www.tarteletteblog.com/2011/07/recipe-gluten-free-apricots-honey-panna.html"
-  },
-  "cookTime": "35 min",
-  "ingredients": [
-    "6 apricots",
-    "olive oil",
-    "1/4 cup water",
-    "1 tablespoon powdered gelatin (2 sheets gelatin)",
-    "2 cups heavy cream",
-    "1/4 cup honey",
-    "1 cup full fat buttermilk"
-  ],
-  "directions": [
-    "Cut the apricots in half and remove the pit. Brush lightly with olive oil and grill over hot coals until tender (about 3-4 minutes on each side).",
-    "Let cool and puree until smooth in a food processor. Divide the mixture between 6 glasses."
-  ],
-  "imageName": "summer-apricots-honey-panna-cotta.jpg"
-},
-{
   "title": "Slanted Door's Shaking Beef",
   "excerpt": "Cubes of tender filet mignon are sautéed with red onions and a vinaigrette",
   "source": {
@@ -328,6 +304,30 @@
     "Turn out onto counter (or attach dough hook to mixer) and knead for 8 to 10 minutes, until smooth and supple. Cut into 12 pieces and let rest 5 minutes."
   ],
   "imageName": "summer-bavarian-pretzel.jpg"
+},
+{
+  "title": "Apricots Honey Panna Cotta",
+  "highlighted": true,
+  "excerpt": "Juicy, fragrant, perfectly textured for a little fire action",
+  "source": {
+    "name": "Tartelette",
+    "url": "http://www.tarteletteblog.com/2011/07/recipe-gluten-free-apricots-honey-panna.html"
+  },
+  "cookTime": "35 min",
+  "ingredients": [
+    "6 apricots",
+    "olive oil",
+    "1/4 cup water",
+    "1 tablespoon powdered gelatin (2 sheets gelatin)",
+    "2 cups heavy cream",
+    "1/4 cup honey",
+    "1 cup full fat buttermilk"
+  ],
+  "directions": [
+    "Cut the apricots in half and remove the pit. Brush lightly with olive oil and grill over hot coals until tender (about 3-4 minutes on each side).",
+    "Let cool and puree until smooth in a food processor. Divide the mixture between 6 glasses."
+  ],
+  "imageName": "summer-apricots-honey-panna-cotta.jpg"
 },
 {
   "title": "Elderberry Syrup",
@@ -415,33 +415,6 @@
   "imageName": "summer-hamburger.jpg"
 },
 {
-  "title": "Grits Praline & Brown Butter Ice Cream",
-  "excerpt": "\"Decadent\" isn’t a word we throw around lightly",
-  "source": {
-    "name": "Anson Mills",
-    "url": "http://www.ansonmills.com/recipes/480?recipes_by=grain"
-  },
-  "cookTime": "2 hr 20 min",
-  "ingredients": [
-    "2 ounces (4 tablespoons) European-style unsalted butter",
-    "1 cup heavy cream",
-    "1 cup whole milk",
-    "6 large egg yolks",
-    "1/3 cup sugar",
-    "1 1/2 teaspoons vanilla extract",
-    "1/8 teaspoon fine sea salt",
-    "2 ounces Anson Mills Antebellum Coarse Yellow Grits or Antebellum Coarse White Grits",
-    "2 1/2 cups spring or filtered water",
-    "1 teaspoon fine sea salt",
-    "3.5 ounces sugar"
-  ],
-  "directions": [
-    "Make the ice cream base: Set a large bowl in a sink or basin filled with lots (at least 3 quarts) of ice cubes and cold water. Have a fine-mesh strainer nearby. Melt the butter in a small heavy-bottomed saucepan over low heat, stirring with a wooden spoon to scrape the browning milk solids back into the butter, until the butter is the color of a hazelnut in the shell and the kitchen smells miraculous, 3 to 5 minutes. Pull the pan off the heat and set it aside.",
-    "Pour the cream and milk into a medium heavy-bottomed saucepan set over medium-high heat. Whisk the egg yolks and sugar in a medium bowl. Drizzle the hot butter cautiously into the yolk-sugar mixture a little at a time, whisking well as you do."
-  ],
-  "imageName": "summer-grits-icecream.jpg"
-},
-{
   "title": "Roasted Butternut Squash Lasagna",
   "highlighted": true,
   "excerpt": "Making homemade pasta may seem arduous, but this dish is worth the extra work",
@@ -471,6 +444,33 @@
     "Melt butter in a small saucepan over medium heat. Continue to cook until browned and fragrant, about 3 minutes. Transfer to a bowl."
   ],
   "imageName": "fall-roasted-butternut-squash-lasagna.jpg"
+},
+{
+  "title": "Grits Praline & Brown Butter Ice Cream",
+  "excerpt": "\"Decadent\" isn’t a word we throw around lightly",
+  "source": {
+    "name": "Anson Mills",
+    "url": "http://www.ansonmills.com/recipes/480?recipes_by=grain"
+  },
+  "cookTime": "2 hr 20 min",
+  "ingredients": [
+    "2 ounces (4 tablespoons) European-style unsalted butter",
+    "1 cup heavy cream",
+    "1 cup whole milk",
+    "6 large egg yolks",
+    "1/3 cup sugar",
+    "1 1/2 teaspoons vanilla extract",
+    "1/8 teaspoon fine sea salt",
+    "2 ounces Anson Mills Antebellum Coarse Yellow Grits or Antebellum Coarse White Grits",
+    "2 1/2 cups spring or filtered water",
+    "1 teaspoon fine sea salt",
+    "3.5 ounces sugar"
+  ],
+  "directions": [
+    "Make the ice cream base: Set a large bowl in a sink or basin filled with lots (at least 3 quarts) of ice cubes and cold water. Have a fine-mesh strainer nearby. Melt the butter in a small heavy-bottomed saucepan over low heat, stirring with a wooden spoon to scrape the browning milk solids back into the butter, until the butter is the color of a hazelnut in the shell and the kitchen smells miraculous, 3 to 5 minutes. Pull the pan off the heat and set it aside.",
+    "Pour the cream and milk into a medium heavy-bottomed saucepan set over medium-high heat. Whisk the egg yolks and sugar in a medium bowl. Drizzle the hot butter cautiously into the yolk-sugar mixture a little at a time, whisking well as you do."
+  ],
+  "imageName": "summer-grits-icecream.jpg"
 },
 {
   "title": "Peanut Butter Cookie with Salted Peanut Caramel",
@@ -565,6 +565,41 @@
   "imageName": "fall-orecchiette-sausage-ragu.jpg"
 },
 {
+  "title": "Italian Red-Wine Braised Duck with Olive Gremolata",
+  "highlighted": true,
+  "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
+  "source": {
+    "name": "NY Times",
+    "url": "http://www.nytimes.com/recipes/1014424/italian-red-wine-braised-duck-with-olive-gremolata.html"
+  },
+  "cookTime": "2 hr 30 min",
+  "ingredients": [
+    "4 Muscovy duck legs (about 4 pounds), untrimmed",
+    "Salt and pepper",
+    "1/2 teaspoon coriander seed, toasted and coarsely ground",
+    "1/2 teaspoon fennel seed, toasted and coarsely ground",
+    "2 tablespoons olive oil",
+    "2 cups finely diced onion",
+    "3/4 cup finely diced carrot",
+    "3/4 cup finely diced celery",
+    "1 large thyme sprig",
+    "1 bay leaf",
+    "1 4-inch strip of orange peel, pith removed",
+    "4 garlic cloves, minced",
+    "2 tablespoons tomato paste",
+    "1 cup chopped canned or fresh tomatoes",
+    "1 cup dry red wine",
+    "3 cups chicken broth",
+    "Pinch cayenne or red pepper, optional",
+    "Olive gremolata for garnish"
+  ],
+  "directions": [
+    "Trim duck legs of extraneous fat with a sharp knife, leaving a thin layer on top. (It is best to do this straight from the fridge, while fat is still firm.) Save duck fat for rendering.",
+    "Season each leg generously with salt and pepper, then sprinkle with ground coriander and fennel. Massage seasoning into meat and leave at room temperature for 30 minutes, or wrap and refrigerate overnight."
+  ],
+  "imageName": "winter-braised-duck.jpg"
+},
+{
   "title": "Chocolate Chai Spice Cupcake",
   "excerpt": "The moist chocolatey goodness of the cake can live on its own",
   "source": {
@@ -642,41 +677,6 @@
   "imageName": "fall-whole-wheat-goldfish-crackers.jpg"
 },
 {
-  "title": "Italian Red-Wine Braised Duck with Olive Gremolata",
-  "highlighted": true,
-  "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
-  "source": {
-    "name": "NY Times",
-    "url": "http://www.nytimes.com/recipes/1014424/italian-red-wine-braised-duck-with-olive-gremolata.html"
-  },
-  "cookTime": "2 hr 30 min",
-  "ingredients": [
-    "4 Muscovy duck legs (about 4 pounds), untrimmed",
-    "Salt and pepper",
-    "1/2 teaspoon coriander seed, toasted and coarsely ground",
-    "1/2 teaspoon fennel seed, toasted and coarsely ground",
-    "2 tablespoons olive oil",
-    "2 cups finely diced onion",
-    "3/4 cup finely diced carrot",
-    "3/4 cup finely diced celery",
-    "1 large thyme sprig",
-    "1 bay leaf",
-    "1 4-inch strip of orange peel, pith removed",
-    "4 garlic cloves, minced",
-    "2 tablespoons tomato paste",
-    "1 cup chopped canned or fresh tomatoes",
-    "1 cup dry red wine",
-    "3 cups chicken broth",
-    "Pinch cayenne or red pepper, optional",
-    "Olive gremolata for garnish"
-  ],
-  "directions": [
-    "Trim duck legs of extraneous fat with a sharp knife, leaving a thin layer on top. (It is best to do this straight from the fridge, while fat is still firm.) Save duck fat for rendering.",
-    "Season each leg generously with salt and pepper, then sprinkle with ground coriander and fennel. Massage seasoning into meat and leave at room temperature for 30 minutes, or wrap and refrigerate overnight."
-  ],
-  "imageName": "winter-braised-duck.jpg"
-},
-{
   "title": "Pierre Hermé & Dorie Greenspan's World Peace Cookies",
   "excerpt": "Shortbread cookie meets salted chocolate chip, and world peace feels within reach",
   "source": {
@@ -700,6 +700,33 @@
     "Working with a stand mixer, preferably fitted with a paddle attachment, or with a hand mixer in a large bowl, beat the butter on medium speed until soft and creamy. Add both sugars, the salt and vanilla extract and beat for 2 minutes more."
   ],
   "imageName": "winter-world-peace-cookie.jpg"
+},
+{
+  "title": "Chocolate Tart",
+  "highlighted": true,
+  "excerpt": "A good chocolate tart doesn’t need to be fancy, but it needs to be deep, dark, and yes, somewhat decadent.",
+  "source": {
+    "name": "David Lebovitz",
+    "url": "http://www.davidlebovitz.com/2011/10/chocolate-tart-recipe/"
+  },
+  "cookTime": "1 hr",
+  "ingredients": [
+    "1 1/4 cup (250 g) sugar",
+    "6 tablespoons (90 ml) warm coffee",
+    "4 ounces (115 g) unsalted butter, cubed, room temperature",
+    "pinch of sea salt",
+    "4 ounces (115 g) bittersweet or semisweet chocolate, chopped",
+    "2 ounces (55 g) unsweetened chocolate, chopped",
+    "2 large eggs",
+    "1/4 cup (35 g) flour",
+    "1 tablespoon dark rum or 1 teaspoon vanilla extract",
+    "One 9–10 inch prebaked tart shell"
+  ],
+  "directions": [
+    "Preheat oven to 350ºF (180ºC.)",
+    "Spread the sugar in an even layer in the bottom of a large, heavy-duty saucepan or Dutch oven. Cook the sugar over moderate heat until the edges liquefy and being to caramelize. Use a heatproof utensil to gently drag the liquefied sugar toward the center of the pan, encouraging the sugar to melt evenly."
+  ],
+  "imageName": "winter-chocolate-tart.jpg"
 },
 {
   "title": "Braised eggs with beef, smoked aubergine and tomato",
@@ -734,60 +761,6 @@
     "Cut a single slit in each aubergine, from top to bottom and allow the juices to strain. Once cool enough to handle, scoop out all the flesh, avoiding all black skin, and set aside. You should have about 370g aubergine flesh."
   ],
   "imageName": "winter-braised-eggs-with-beef.jpg"
-},
-{
-  "title": "Pomegranate Hibiscus Tea & Hony Ginger Yogurt Verrines",
-  "excerpt": "",
-  "source": {
-    "name": "Tartelette",
-    "url": "http://www.tarteletteblog.com/2008/12/pomegranate-hibiscus-tea-honey-ginger.html"
-  },
-  "cookTime": "30 min",
-  "ingredients": [
-    "1 1/2 cups brewed hibiscus tea",
-    "1/2 cup pomegranate juice",
-    "2 tablespoons sugar",
-    "1 tablespoon powdered gelatin",
-    "1/4 cup cold water",
-    "1 tablespoon lemon zest",
-    "1 1/2 tsp gelatin",
-    "2 Tb water",
-    "2 cups Greek yogurt",
-    "1/4 cup honey",
-    "2 teaspoons freshly grated ginger"
-  ],
-  "directions": [
-    "Pour the water into a small container, sprinkle the gelatin over it and set aside.",
-    "In small saucepan set over medium high, heat together the tea and juice, and the sugar until the sugar is dissolved."
-  ],
-  "imageName": "winter-pomegranate-hibiscus-tea.jpg"
-},
-{
-  "title": "Chocolate Tart",
-  "highlighted": true,
-  "excerpt": "A good chocolate tart doesn’t need to be fancy, but it needs to be deep, dark, and yes, somewhat decadent.",
-  "source": {
-    "name": "David Lebovitz",
-    "url": "http://www.davidlebovitz.com/2011/10/chocolate-tart-recipe/"
-  },
-  "cookTime": "1 hr",
-  "ingredients": [
-    "1 1/4 cup (250 g) sugar",
-    "6 tablespoons (90 ml) warm coffee",
-    "4 ounces (115 g) unsalted butter, cubed, room temperature",
-    "pinch of sea salt",
-    "4 ounces (115 g) bittersweet or semisweet chocolate, chopped",
-    "2 ounces (55 g) unsweetened chocolate, chopped",
-    "2 large eggs",
-    "1/4 cup (35 g) flour",
-    "1 tablespoon dark rum or 1 teaspoon vanilla extract",
-    "One 9–10 inch prebaked tart shell"
-  ],
-  "directions": [
-    "Preheat oven to 350ºF (180ºC.)",
-    "Spread the sugar in an even layer in the bottom of a large, heavy-duty saucepan or Dutch oven. Cook the sugar over moderate heat until the edges liquefy and being to caramelize. Use a heatproof utensil to gently drag the liquefied sugar toward the center of the pan, encouraging the sugar to melt evenly."
-  ],
-  "imageName": "winter-chocolate-tart.jpg"
 },
 {
   "title": "Cashew Gateau with Coffee Cardamom Mousse",
