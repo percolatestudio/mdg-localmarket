@@ -55,7 +55,7 @@ nav {
     color: @color-full;
     display: inline-block;
     height: 3rem;
-    width: 3rem;
+    width: 40px;
 
     &:active { opacity: .5; }
 
