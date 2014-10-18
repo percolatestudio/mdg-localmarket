@@ -1,6 +1,7 @@
 <template name="recipe">
-  <div class="page recipe">
-    {{#nav title="Recipe" black=true back=true}}
+
+  <div class="page recipe {{#unless isActiveTab 'recipe'}}collapse{{/unless}}">
+    {{#nav title='Recipe' black=true back=true}}
       {{#if bookmarked}}
         <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
       {{else}}
@@ -11,7 +12,7 @@
 
     <div class="image-recipe" style="background-image: url('{{recipeImage recipe=this size='640x800'}}')"></div>
 
-    <div class="attribution-recipe">
+    <div class="attribution-recipe js-uncollapse">
       <h1 class="title-recipe">{{title}}</h1>
       <p class="description-recipe">{{excerpt}}</p>
       <span class="source">{{source.name}}</span>
@@ -19,34 +20,40 @@
     </div>
 
     <div class="btns-group">
-      <a class="btn-secondary active js-show-recipe">Make It</a>
-      <a class="btn-secondary js-show-feed">Feed</a>
+      <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} js-show-recipe">Make It</a>
+      <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} js-show-feed">Feed</a>
     </div>
 
     <div class="content-scrollable">
-      <div class="wrapper-share">
-        <a class="btn-primary js-share">Share that you made this</a>
-      </div>
+      {{#if isActiveTab 'make'}}
+        <div class="wrapper-make">
+          <div class="wrapper-share">
+            <a class="btn-primary js-share">Share that you made this</a>
+          </div>
 
-      {{#if showRecipe}}
-        <h2 class="section-title">Ingredients</h2>
-        <ul class="list-ingredients">
-          {{#each ingredients}}
-            <li class="item-ingredient">{{this}}</li>
-          {{/each}}
-        </ul>
+          <h2 class="section-title">Ingredients</h2>
+          <ul class="list-ingredients">
+            {{#each ingredients}}
+              <li class="item-ingredient">{{this}}</li>
+            {{/each}}
+          </ul>
 
-        <h2 class="section-title">Ingredients</h2>
-        <ol class="list-directions">
-          {{#each directions}}
-            <li class="item-direction">{{this}}</li>
-          {{/each}}
-        </ol>
-      {{else}}
-        <div class="list-activities">
-          {{#each activities}}
-            {{> activity}}
-          {{/each}}
+          <h2 class="section-title">Directions</h2>
+          <ol class="list-directions">
+            {{#each directions}}
+              <li class="item-direction">{{this}}</li>
+            {{/each}}
+          </ol>
+        </div>
+      {{/if}}
+
+      {{#if isActiveTab 'feed'}}
+        <div class="wrapper-feed">
+          <div class="list-activities">
+            {{#each activities}}
+              {{> activity}}
+            {{/each}}
+          </div>
         </div>
       {{/if}}
     </div>

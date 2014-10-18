@@ -82,8 +82,7 @@
     padding: 1.25rem 1.25rem;
   }
 
-  .make-recipe {
-    .transform(translate3d(0,0,0));//gpu rendering
+  .content-scrollable {
     background: @color-rare;
     position: absolute;
     width: 100%;
@@ -96,15 +95,14 @@
     .item-ingredient + .item-ingredient,
     .item-direction + .item-direction { border-top: 1px solid @color-raw-alt; }
 
-    .item-ingredient {
+    .item-ingredient,
+    .item-direction {
       .font-s3;
       padding: .75rem 1.25rem;
 
     }
 
-    .item-direction {
 
-    }
   }
 }
 
