@@ -192,7 +192,7 @@
   "imageName": "spring-meatloaf.jpg"
 },
 {
-  "title": "Lahmacun - Turkish Pizza w/ Spicy Minced Beef & Salad Topping",
+  "title": "Lahmacun - Turkish Pizza",
   "excerpt": "",
   "source": {
     "name": "Ottolenghi",
@@ -473,7 +473,7 @@
   "imageName": "summer-grits-icecream.jpg"
 },
 {
-  "title": "Peanut Butter Cookie with Salted Peanut Caramel",
+  "title": "Peanut Butter Cookie w/ Salted Peanut Caramel",
   "excerpt": "This recipe takes Peanut Butter Cookies to the next level",
   "source": {
     "name": "David Lebovitz",
@@ -565,7 +565,7 @@
   "imageName": "fall-orecchiette-sausage-ragu.jpg"
 },
 {
-  "title": "Italian Red-Wine Braised Duck with Olive Gremolata",
+  "title": "Italian Red-Wine Braised Duck w/ Olive Gremolata",
   "highlighted": true,
   "excerpt": "A good braise always trumps a steak or a roast, both in terms of complex flavors and satisfaction",
   "source": {
@@ -677,8 +677,8 @@
   "imageName": "fall-whole-wheat-goldfish-crackers.jpg"
 },
 {
-  "title": "Pierre Hermé & Dorie Greenspan's World Peace Cookies",
-  "excerpt": "Shortbread cookie meets salted chocolate chip, and world peace feels within reach",
+  "title": "World Peace Cookies",
+  "excerpt": "By Pierre Hermé & Dorie Greenspan. Shortbread cookie meets salted chocolate chip, and world peace feels within reach",
   "source": {
     "name": "Food52",
     "url": "http://food52.com/recipes/25372-pierre-herme-dorie-greenspan-s-world-peace-cookies"
@@ -729,7 +729,7 @@
   "imageName": "winter-chocolate-tart.jpg"
 },
 {
-  "title": "Braised eggs with beef, smoked aubergine and tomato",
+  "title": "Braised eggs w/ beef, smoked aubergine & tomato",
   "excerpt": "",
   "source": {
     "name": "Ottolenghi",
