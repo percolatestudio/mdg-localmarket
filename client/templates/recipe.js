@@ -35,11 +35,13 @@ Template.recipe.events({
     Meteor.call('unbookmarkRecipe', this._id);
   },
   
-  'click .js-show-recipe': function() {
+  'click .js-show-recipe': function(event) {
+    event.stopPropagation();
     Session.set(TAB_KEY, 'make');
   },
   
-  'click .js-show-feed': function() {
+  'click .js-show-feed': function(event) {
+    event.stopPropagation();
     Session.set(TAB_KEY, 'feed');
   },
   
