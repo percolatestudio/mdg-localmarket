@@ -47,14 +47,6 @@ Template.recipe.events({
     Session.set(TAB_KEY, 'recipe');
   },
 
-  'click [data-ingredients-trigger]': function(e, template) {
-    // XXX: @zol -- we should split velocity out as a separate package and
-    //   explicitly depend on it
-    template.$('[data-ingredients]').velocity('scroll', {
-      container: $('.content-scrollable')
-    });
-  },
-  
   'click .js-share': function() {
     Overlay.open('shareOverlay', this);
   },
