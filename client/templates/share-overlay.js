@@ -60,7 +60,12 @@ Template.shareOverlay.events({
       recipeId: this._id,
       text: text,
       image: Session.get(IMAGE_KEY)
-    }, tweet, Geolocation.currentLocation());
+    }, tweet, Geolocation.currentLocation(), function(error) {
+      if (! error)
+        Template.appBody.addNotification('You shared something.');
+      else
+        Template.appBody.addNotification('Something went wrong when sharing :(');
+    });
 
     Overlay.close();
   }

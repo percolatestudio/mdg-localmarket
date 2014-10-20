@@ -19,17 +19,27 @@
       </a>
     </section>
 
-    {{#unless connected}}
       <div class="notifications">
-        <div class="notification">
-          <span class="icon-sync"></span>
-          <div class="meta">
-            <div class="title-notification">Trying to connect</div>
-            <div class="description">There seems to be a connection issue</div>
+        {{#unless connected}}
+          <div class="notification">
+            <span class="icon-sync"></span>
+            <div class="meta">
+              <div class="title-notification">Trying to connect</div>
+              <div class="description">There seems to be a connection issue</div>
+            </div>
           </div>
-        </div>
+        {{/unless}}
+        {{#each notifications}}
+          <!-- XXX: flesh this out -->
+          <div class="notification">
+            <span class="icon-sync"></span>
+            <div class="meta">
+              <div class="title-notification">{{title}}</div>
+              <div class="description">This is a notification</div>
+            </div>
+          </div>
+        {{/each}}
       </div>
-    {{/unless}}
 
     {{> overlay}}
 
