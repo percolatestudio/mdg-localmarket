@@ -27,9 +27,9 @@
     <div class="content-scrollable">
       {{#if isActiveTab 'make'}}
         <div class="wrapper-make">
-          <div class="wrapper-share">
-            <a class="btn-primary js-share">Share that you made this</a>
-          </div>
+
+          <a class="btn-tertiary js-share">Share that you made this</a>
+
 
           <h2 class="section-title">Ingredients</h2>
           <ul class="list-ingredients">
@@ -46,7 +46,7 @@
               </li>
             {{/each}}
           </ol>
-          <a href="{{source.url}}" target="_blank" class="btn-secondary">Read full recipe on {{source.name}}</a>
+          <a href="{{source.url}}" target="_blank" class="btn-primary">Read full recipe on {{source.name}}</a>
         </div>
       {{/if}}
 

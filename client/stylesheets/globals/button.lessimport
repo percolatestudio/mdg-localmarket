@@ -17,6 +17,10 @@
   vertical-align: middle;
   white-space: nowrap;
 
+  &[class*="small"] {
+    padding: .7em 1.25em .50em; // 36px tall
+  }
+
   &[class*="primary"] {
     background-color: @color-primary;
     color: @color-empty;
@@ -26,7 +30,7 @@
   }
 
   &[class*="secondary"] {
-    background: rgba(0,0,0,.2);
+    background: rgba(0,0,0,.1);
     color: rgba(255,255,255,.5);
 
     &:hover { background-color: darken(@color-tertiary, 5%); }
@@ -34,13 +38,12 @@
 
     &.active,
     &.no-state {
-      background: rgba(0,0,0,.5);
+      background: rgba(0,0,0,.3);
       color: @color-empty;
 
       &:hover{ background-color: darken(@color-secondary, 5%); }
       &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
     }
-
   }
 
   &[class*="twitter"] {
