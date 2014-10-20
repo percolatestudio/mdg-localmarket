@@ -60,7 +60,7 @@ Template.shareOverlay.events({
       recipeId: this._id,
       text: text,
       image: Session.get(IMAGE_KEY)
-    }, tweet);
+    }, tweet, Geolocation.currentLocation());
 
     Overlay.close();
   }

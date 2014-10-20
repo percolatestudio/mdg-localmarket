@@ -15,4 +15,6 @@ accounts-twitter
 service-configuration
 percolate:wireframing
 mdg:camera
+mdg:geolocation
+oauth1
 
