@@ -10,6 +10,13 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+
+    &:before {
+      content: '';
+      .position(absolute, 0,0,0,0);
+      background: rgba(0,0,0,.2);
+      z-index: 2;
+    }
   }
 
   .attribution-recipe {
@@ -83,7 +90,7 @@
     .font-s3;
     .type-black;
     .title-caps;
-    background: rgba(255,255,255,.8);
+    background: rgba(238,238,238,.97);
     color: @color-full;
     line-height: 1rem;
     text-align: center;
@@ -100,7 +107,7 @@
   .item-ingredient,
   .item-direction {
     .font-s3;
-    background: rgba(255,255,255,.95);
+    background: rgba(255,255,255,.97);
     padding: .75rem 1.25rem;
   }
 
@@ -150,8 +157,6 @@
   }
 
   .image-recipe {
-    .blur(10px);
-    .transform(scale3d(1.2,1.2,1.2));
     height: 100%;
   }
 
@@ -187,7 +192,6 @@
 
   .image-recipe {
     .transition( all @transition-time + 200ms ease-out );
-    .transform(scale3d(1,1,1));
   }
 
   .content-scrollable,
