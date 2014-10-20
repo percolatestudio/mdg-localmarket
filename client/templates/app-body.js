@@ -84,13 +84,13 @@ Template.appBody.helpers({
 });
 
 Template.appBody.events({
-  'click [data-menu]': function(e) {
+  'click .js-menu': function(e) {
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
     e.stopImmediatePropagation();
     e.preventDefault();
   },
 
-  'click [data-back]': function(e) {
+  'click .js-back': function(e) {
     nextInitiator = 'back';
     
     // XXX: set the back transition via Location.back()

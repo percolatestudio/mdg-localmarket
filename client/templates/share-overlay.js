@@ -40,10 +40,6 @@ Template.shareOverlay.events({
     Session.set(IMAGE_KEY, null);
   },
   
-  'click [data-image-remove]': function() {
-    Session.set(IMAGE_KEY, null);
-  },
-  
   'change [name=tweeting]': function(event) {
     Session.set(TWEETING_KEY, $(event.target).is(':checked'));
   },
