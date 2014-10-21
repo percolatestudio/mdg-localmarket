@@ -1,4 +1,6 @@
 .page.recipe {
+  background: @color-empty;
+
   nav .bookmarked { color: @color-primary !important; }
 
   .image-recipe {
@@ -23,7 +25,7 @@
   .attribution-recipe {
     .position(absolute, auto, 0, 0, 0);
     .transform(translate3d(0,0,0));// Gpu rendering
-    box-shadow: rgba(0,0,0,.1) 0 1px 3px 0;
+    box-shadow: rgba(0,0,0,.1) 0 2px 2px 0;
     min-height: 9em;
     overflow: hidden;
     padding-top: 1.25em;
@@ -36,6 +38,7 @@
       .position(absolute,0,0,0,0);
       .transform(translate3d(0,0,0));
       content: '';
+      min-height: 12em;
       opacity: 1;
       z-index: -1;
     }
@@ -228,7 +231,7 @@
   .attribution-recipe .title-recipe {
     .transition( all @transition-time * .75 @easing );
     transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25;
-
+    width: 100%; // Needed for iOS animation
   }
 
   .description-recipe,
