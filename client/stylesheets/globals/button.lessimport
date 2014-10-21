@@ -17,6 +17,10 @@
   vertical-align: middle;
   white-space: nowrap;
 
+  &[class*="small"] {
+    padding: .7em 1.25em .50em; // 36px tall
+  }
+
   &[class*="primary"] {
     background-color: @color-primary;
     color: @color-empty;
@@ -27,7 +31,7 @@
 
   &[class*="secondary"] {
     background: @color-tertiary;
-    color: @color-empty;
+    color: rgba(255,255,255,.4);
 
     &:hover { background-color: darken(@color-tertiary, 5%); }
     &:active { box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
@@ -40,7 +44,6 @@
       &:hover{ background-color: darken(@color-secondary, 5%); }
       &:active{ box-shadow: rgba(0,0,0,.3) 0 1px 3px 0 inset; }
     }
-
   }
 
   &[class*="twitter"] {

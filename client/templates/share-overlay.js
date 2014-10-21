@@ -40,10 +40,6 @@ Template.shareOverlay.events({
     Session.set(IMAGE_KEY, null);
   },
   
-  'click [data-image-remove]': function() {
-    Session.set(IMAGE_KEY, null);
-  },
-  
   'change [name=tweeting]': function(event) {
     Session.set(TWEETING_KEY, $(event.target).is(':checked'));
   },
@@ -60,7 +56,12 @@ Template.shareOverlay.events({
       recipeId: this._id,
       text: text,
       image: Session.get(IMAGE_KEY)
-    }, tweet);
+    }, tweet, Geolocation.currentLocation(), function(error) {
+      if (! error)
+        Template.appBody.addNotification('You shared something.');
+      else
+        Template.appBody.addNotification('Something went wrong when sharing :(');
+    });
 
     Overlay.close();
   }

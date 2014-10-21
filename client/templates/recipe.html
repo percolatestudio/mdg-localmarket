@@ -17,19 +17,21 @@
       <p class="description-recipe">{{excerpt}}</p>
       <span class="source">{{source.name}}</span>
       <span class="time">{{cookTime}}</span>
+
+      <div class="btns-group">
+        <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Make It</a>
+        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} js-show-feed">Feed</a>
+      </div>
     </div>
 
-    <div class="btns-group">
-      <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Make It</a>
-      <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} js-show-feed">Feed</a>
-    </div>
+
 
     <div class="content-scrollable">
       {{#if isActiveTab 'make'}}
         <div class="wrapper-make">
-          <div class="wrapper-share">
-            <a class="btn-primary js-share">Share that you made this</a>
-          </div>
+
+          <a class="btn-tertiary js-share">Share that you made this</a>
+
 
           <h2 class="section-title">Ingredients</h2>
           <ul class="list-ingredients">
@@ -46,7 +48,7 @@
               </li>
             {{/each}}
           </ol>
-          <a href="{{source.url}}" target="_blank" class="btn-secondary">Read full recipe on {{source.name}}</a>
+          <a href="{{source.url}}" target="_blank" class="btn-primary js-open">Get recipe on {{source.name}}</a>
         </div>
       {{/if}}
 

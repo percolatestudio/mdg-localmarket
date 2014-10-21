@@ -1,5 +1,7 @@
 .page.recipe {
-  nav .bookmarked { color: @color-primary; }
+  background: @color-empty;
+
+  nav .bookmarked { color: @color-primary !important; }
 
   .image-recipe {
     .transform(translate3d(0,0,0));//Gpu rendering
@@ -10,26 +12,50 @@
     overflow: hidden;
     position: relative;
     width: 100%;
+
+    &:before {
+      .position(absolute, 0,0,0,0);
+      background: rgba(0,0,0,.3);
+      content: '';
+      opacity: 0;
+      z-index: 2;
+    }
   }
 
   .attribution-recipe {
-    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 20%, @color-empty 100%));
-    .position(absolute, auto, 0, 3em, 0);
+    .position(absolute, auto, 0, 0, 0);
     .transform(translate3d(0,0,0));// Gpu rendering
+    box-shadow: rgba(0,0,0,.1) 0 2px 2px 0;
     min-height: 9em;
-    padding: 1.25em 1.25em 1em;
+    overflow: hidden;
+    padding-top: 1.25em;
+    padding-bottom: 4em;
     text-align: center;
+    z-index: 1;
+
+    &:after {
+      .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 20%, @color-empty 100%));
+      .position(absolute,0,0,0,0);
+      .transform(translate3d(0,0,0));
+      content: '';
+      min-height: 12em;
+      opacity: 1;
+      z-index: -1;
+    }
 
     .title-recipe {
       .font-m2;
       .type-bold;
+      .transform(translateY(0));
       margin-bottom: .5rem;
+      padding: 0 1em;
     }
 
     .description-recipe {
       .font-s3;
       color: @color-well;
       margin-bottom: .5rem;
+      padding: 0 1em;
 
       &:after { content: '\2026'; }
       &:empty { display: none; }
@@ -54,69 +80,47 @@
       border-left: 1px solid @color-medium-rare;
       padding-left: .5rem;
     }
+
   }
 
   .btns-group {
     .position(absolute, auto, 0, 0, 0, 100%, 3em);
     .transform(translate3d(0,0,0));//gpu rendering
     z-index:1;
-
-    .btn-secondary.active {
-      overflow: visible;
-
-      &:after {
-        .position(absolute, auto, auto, -.5rem, 50%);
-        border-top: .5rem solid @color-well;
-        border-left: .5rem solid transparent;
-        border-right: .5rem solid transparent;
-        content: '';
-        display: inline-block;
-        margin-left: -.5rem;
-      }
-      &:hover:after {
-        border-top: .5rem solid darken(@color-secondary, 5%);
-      }
-    }
   }
 
-  .wrapper-share {
-    background: @color-empty;
-    padding: 1rem 1.25rem;
-    text-align: center;
-
-    .btn-primary {
-      letter-spacing: .2em;
-      text-indent: .2em;
-    }
+  .btn-tertiary {
+    background: rgba(255,255,255,1);
+    display: block;
+    letter-spacing: .2em;
+    text-indent: .2em;
+    color: @color-primary;
+    width: 100%;
   }
+
 
   .section-title {
     .font-s3;
     .type-black;
     .title-caps;
-    color: @color-medium-well;
+    background: @color-rare;
+    color: @color-full;
     line-height: 1rem;
     text-align: center;
-    padding: 1.25rem 1.25rem;
+    padding: 1.75rem 1.25rem 1.25rem;
   }
 
-  .content-scrollable { background: @color-rare; }
-
-  .list-ingredients {
-    margin-bottom: 1rem;
-  }
-
-  .list-ingredients,
-  .list-directions {
-    background: @color-empty;
-  }
+  .content-scrollable { background: @color-empty; }
 
   .item-ingredient + .item-ingredient,
-  .item-direction + .item-direction { border-top: 1px solid @color-raw-alt; }
+  .item-direction + .item-direction {
+    border-top: 1px solid @color-raw-alt;
+  }
 
   .item-ingredient,
   .item-direction {
     .font-s3;
+    background: @color-empty;
     padding: .75rem 1.25rem;
   }
 
@@ -143,41 +147,16 @@
     }
   }
 
-  .list-directions + .btn-secondary {
+  .list-directions + .btn-primary {
     .force-wrap;
     white-space: normal;
+    width: 100%;
   }
 
 }
 
 
-// Collapse Interaction
-.page.recipe {
-  .content-scrollable {
-    top: 100%;
-  }
-
-  .image-recipe {
-    .transition( all 400ms ease-in );
-    .transform(scale3d(1,1,1));
-  }
-
-  .content-scrollable,
-  .btns-group,
-  .attribution-recipe {
-    .transition( all 300ms ease-in );
-    .transform(translate3d(0,0,0));
-  }
-
-  .attribution-recipe > *:not(.title-recipe) {
-    .transform(scale3d(1,1,1));
-    .transition( scale3d 300ms ease-in, height 0 ease-in 300ms, opacity 300ms ease-in );
-    opacity: 1;
-    height: auto;
-    width: auto;
-  }
-}
-
+// Collapse state
 .page.recipe.collapse {
   nav.scrolled {
     background: transparent;
@@ -186,34 +165,80 @@
     &:after { opacity: 1; }
     .nav-item { color: @color-empty; }
   }
+
   .content-scrollable {
     top: 30%;
   }
-  .image-recipe {
-    .blur(10px);
-    .transform(scale3d(1.2,1.2,1.2));
+
+  .image-recipe:before {
+    opacity: 1;
   }
+
   .attribution-recipe {
-    top: 3em;
+    top: 0em;
     bottom: 70%;
-    padding: 0 0 3rem;
-    background: transparent;
-    color: @color-empty;
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    &:after {
+      .transform(translate3d(0,100%,0));
+      height: 12em;
+      opacity: 0;
+      top: auto;
+    }
 
     .title-recipe {
-      .font-m1;
-      .position(absolute, 20%, 50%, auto, auto, 100%);
-      .transform(translate3d(50%, -50%,0));
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
+      .transform(translateY(30%));
+      color: @color-empty;
+      margin-bottom: 0;
+      position: absolute;
+      bottom: 50%;
+      width: 100%;
     }
 
-    > *:not(.title-recipe) {
-      opacity: 0;
+    .description-recipe,
+    .source,
+    .time {
       .transform(scale3d(0,0,0));
+      .position(absolute, auto,auto, 3em, 50%, 0, 0);
+      opacity: 0;
+
     }
   }
-  .btns-group {
-    bottom: 70%;
+}
+
+@transition-time: 700ms;
+@easing: cubic-bezier(0.175, 0.885, 0.335, 1.05);
+
+// Collapse Animation-specific styles
+.page.recipe {
+  .content-scrollable { top: 100%; }
+
+  .image-recipe:before {
+    .transition( all @transition-time + 100ms ease-out );
+  }
+
+  .content-scrollable,
+  .attribution-recipe {
+    .transform(translate3d(0,0,0));
+    .transition( all @transition-time @easing );
+  }
+
+  .attribution-recipe:after {
+    .transition( all @transition-time * .95 @easing );
+  }
+
+  .attribution-recipe .title-recipe {
+    .transition( all @transition-time * .75 @easing );
+    transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25;
+    width: 100%; // Needed for iOS animation
+  }
+
+  .description-recipe,
+  .source,
+  .time {
+    .transform(scale3d(1,1,1));
+    .transition( all @transition-time @easing );
+    opacity: 1;
   }
 }

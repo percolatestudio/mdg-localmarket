@@ -7,6 +7,20 @@ Template.recipe.created = function() {
     Session.set(TAB_KEY, 'recipe');
 }
 
+Template.recipe.rendered = function () {
+  this.$('.recipe').touchwipe({
+    min_move_y: 50,
+    wipeDown: function () {
+      if (Session.equals(TAB_KEY, 'recipe'))
+        Session.set(TAB_KEY, 'make');
+    },
+    wipeUp: function () {
+      Session.set(TAB_KEY, 'recipe');
+    },
+    preventDefaultEvents: false
+  });
+}
+
 Template.recipe.helpers({
   isActiveTab: function(name) {
     return Session.equals(TAB_KEY, name);
@@ -35,11 +49,13 @@ Template.recipe.events({
     Meteor.call('unbookmarkRecipe', this._id);
   },
   
-  'click .js-show-recipe': function() {
+  'click .js-show-recipe': function(event) {
+    event.stopPropagation();
     Session.set(TAB_KEY, 'make');
   },
   
-  'click .js-show-feed': function() {
+  'click .js-show-feed': function(event) {
+    event.stopPropagation();
     Session.set(TAB_KEY, 'feed');
   },
   
@@ -47,15 +63,15 @@ Template.recipe.events({
     Session.set(TAB_KEY, 'recipe');
   },
 
-  'click [data-ingredients-trigger]': function(e, template) {
-    // XXX: @zol -- we should split velocity out as a separate package and
-    //   explicitly depend on it
-    template.$('[data-ingredients]').velocity('scroll', {
-      container: $('.content-scrollable')
-    });
-  },
-  
   'click .js-share': function() {
     Overlay.open('shareOverlay', this);
+  },
+  
+  'click .js-open': function(event) {
+    // On Cordova, open the link in the system browser rather than In-App
+    if (Meteor.isCordova) {
+      event.preventDefault();
+      window.open(event.target.href, '_system');
+    }
   }
 });

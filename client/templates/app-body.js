@@ -1,4 +1,5 @@
 var ANIMATION_DURATION = 300;
+var NOTIFICATION_TIMEOUT = 3000;
 var MENU_KEY = 'menuOpen';
 Session.setDefault(MENU_KEY, false);
 
@@ -14,6 +15,17 @@ Deps.autorun(function() {
   nextInitiator = null;
 });
 
+var notifications = new Meteor.Collection(null);
+
+Template.appBody.addNotification = function(title) {
+  var id = notifications.insert({
+    title: title
+  });
+
+  Meteor.setTimeout(function() {
+    notifications.remove(id);
+  }, NOTIFICATION_TIMEOUT);
+} 
 
 Template.appBody.rendered = function() {
   this.find("#content-container")._uihooks = {
@@ -64,17 +76,21 @@ Template.appBody.helpers({
   
   connected: function() {
     return Meteor.status().connected;
+  },
+  
+  notifications: function() {
+    return notifications.find();
   }
 });
 
 Template.appBody.events({
-  'click [data-menu]': function(e) {
+  'click .js-menu': function(e) {
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
     e.stopImmediatePropagation();
     e.preventDefault();
   },
 
-  'click [data-back]': function(e) {
+  'click .js-back': function(e) {
     nextInitiator = 'back';
     
     // XXX: set the back transition via Location.back()
