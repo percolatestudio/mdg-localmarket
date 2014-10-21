@@ -17,7 +17,7 @@ Template.activity.helpers({
     return this.userName.split(' ')[0];
   },
   path: function() {
-    return Router.path('recipe', { _id: this.recipeId }, 
+    return Router.path('recipe', { name: this.recipeName }, 
       { query: { activityId: this._id } })
   }
 })
