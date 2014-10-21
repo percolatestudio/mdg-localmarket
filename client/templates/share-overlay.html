@@ -41,7 +41,7 @@
           {{#if tweeting}}
             <span class="message-tweet-arrow"></span>
             <textarea name="tweet" type="text" autocapitalize="off" autocorrect="off"
-              value="I made #recipe name! #shortened URL" class="message-tweet {{errorClass 'tweet'}}"></textarea>
+              value="I made {{title}}! {{urlFor 'recipe'}}" class="message-tweet {{errorClass 'tweet'}}"></textarea>
           {{/if}}
 
           <button class="btn-primary" type='submit'>
