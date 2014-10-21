@@ -26,10 +26,10 @@ Template.recipe.helpers({
     return Session.equals(TAB_KEY, name);
   },
   bookmarked: function() {
-    return Meteor.user() && _.include(Meteor.user().bookmarkedRecipeIds, this._id);
+    return Meteor.user() && _.include(Meteor.user().bookmarkedRecipeNames, this.name);
   },
   activities: function() {
-    return Activities.find({recipeId: this._id}, {sort: {date: -1}});
+    return Activities.find({recipeName: this.name}, {sort: {date: -1}});
   }
 });
 
@@ -40,13 +40,13 @@ Template.recipe.events({
     if (! Meteor.userId())
       return Overlay.open('authOverlay');
     
-    Meteor.call('bookmarkRecipe', this._id);
+    Meteor.call('bookmarkRecipe', this.name);
   },
 
   'click .js-remove-bookmark': function(e) {
     e.preventDefault();
 
-    Meteor.call('unbookmarkRecipe', this._id);
+    Meteor.call('unbookmarkRecipe', this.name);
   },
   
   'click .js-show-recipe': function(event) {

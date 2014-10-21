@@ -1,6 +1,6 @@
 Template.home.helpers({
   featuredRecipes: function() {
-    return Recipes.featured();
+    return _.values(RecipesData).slice(0, 4);
   },
   
   activities: function() {
