@@ -1,4 +1,10 @@
-.list-activities { overflow: hidden; }
+.list-activities {
+  overflow: hidden;
+
+  .wrapper-message {
+    top: 50%;
+  }
+}
 
 .list-activities .item-activity {
   .transform(translate3d(0,0,0));

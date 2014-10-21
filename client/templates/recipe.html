@@ -57,6 +57,11 @@
           <div class="list-activities">
             {{#each activities}}
               {{> activity}}
+            {{else}}
+              <div class="wrapper-message">
+                <div class="title-message">No feed activity yet</div>
+                <div class="subtitle-message">Be the first to share that you made this recipe. <a class="js-share">Share now</a></div>
+              </div>
             {{/each}}
           </div>
         </div>
