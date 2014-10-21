@@ -1,8 +1,9 @@
 Template.activity.rendered = function() {
   var self = this;
 
-  // XXX: See https://github.com/percolatestudio/mdg-recipes/issues/21 for a description of the magic '100' number temporary 'hack'
-  // If we're the activity in a list somewhere, scroll us into view
+  // If the activity is in a list, scroll it into view. Note, we can't just use
+  // element.scrollIntoView() because it attempts to scroll in the X direction
+  // messing up our animations
   if (Router.current().params.activityId === self.data._id) {
     var $activity = $(self.firstNode);
     var top = $activity.offset().top;

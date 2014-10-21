@@ -7,10 +7,6 @@ Template.shareOverlay.created = function() {
 }
 
 Template.shareOverlay.helpers({
-  errorClass: function(name) {
-    return Session.get('emailErrors')[name] && 'error';
-  },
-  
   attachedImage: function() {
     // XXX: obviously this going to be something cordova-y
     return Session.get(IMAGE_KEY);

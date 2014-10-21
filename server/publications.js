@@ -14,7 +14,6 @@ Meteor.publish('recipe', function(name) {
   ];
 });
 
-// XXX: ?
 // autopublish the user's bookmarks
 Meteor.publish(null, function() {
   return Meteor.users.find(this.userId, {

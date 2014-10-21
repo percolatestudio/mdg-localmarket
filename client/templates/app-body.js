@@ -1,6 +1,7 @@
 var ANIMATION_DURATION = 300;
 var NOTIFICATION_TIMEOUT = 3000;
 var MENU_KEY = 'menuOpen';
+
 Session.setDefault(MENU_KEY, false);
 
 // XXX: this work around until IR properly supports this
@@ -132,6 +133,5 @@ Template.appBody.events({
       this.callback();
       notifications.remove(this._id);
     }
-      
   }
 });

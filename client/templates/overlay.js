@@ -1,10 +1,9 @@
 var TEMPLATE_KEY = 'overlayTemplate';
 var DATA_KEY = 'overlayData';
-
 var ANIMATION_DURATION = 200;
-Session.setDefault('emailErrors', {});
 
 Session.setDefault(TEMPLATE_KEY, null);
+
 Overlay = {
   open: function(template, data) {
     Session.set(TEMPLATE_KEY, template);
