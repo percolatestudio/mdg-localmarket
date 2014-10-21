@@ -38,8 +38,8 @@ Template.recipe.helpers({
 });
 
 Template.recipe.events({
-  'click .js-add-bookmark': function(e) {
-    e.preventDefault();
+  'click .js-add-bookmark': function(event) {
+    event.preventDefault();
 
     if (! Meteor.userId())
       return Overlay.open('authOverlay');
@@ -47,8 +47,8 @@ Template.recipe.events({
     Meteor.call('bookmarkRecipe', this.name);
   },
 
-  'click .js-remove-bookmark': function(e) {
-    e.preventDefault();
+  'click .js-remove-bookmark': function(event) {
+    event.preventDefault();
 
     Meteor.call('unbookmarkRecipe', this.name);
   },

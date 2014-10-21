@@ -56,8 +56,8 @@ Template.overlay.helpers({
 });
 
 Template.overlay.events({
-  'click .js-close-overlay': function(e) {
-    e.preventDefault();
+  'click .js-close-overlay': function(event) {
+    event.preventDefault();
     Overlay.close()
   }
 });

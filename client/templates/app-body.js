@@ -102,27 +102,27 @@ Template.appBody.helpers({
 });
 
 Template.appBody.events({
-  'click .js-menu': function(e) {
+  'click .js-menu': function(event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
-    e.stopImmediatePropagation();
-    e.preventDefault();
   },
 
-  'click .js-back': function(e) {
+  'click .js-back': function(event) {
     nextInitiator = 'back';
     
     // XXX: set the back transition via Location.back()
     history.back();
-    e.stopImmediatePropagation();
-    e.preventDefault();
+    event.stopImmediatePropagation();
+    event.preventDefault();
   },
 
-  'click .content-overlay': function(e) {
+  'click .content-overlay': function(event) {
     Session.set(MENU_KEY, false);
-    e.preventDefault();
+    event.preventDefault();
   },
 
-  'click #menu a': function(e) {
+  'click #menu a': function(event) {
     nextInitiator = 'menu'
     Session.set(MENU_KEY, false);
   },
