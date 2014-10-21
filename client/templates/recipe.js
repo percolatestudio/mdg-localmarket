@@ -69,13 +69,5 @@ Template.recipe.events({
 
   'click .js-share': function() {
     Overlay.open('shareOverlay', this);
-  },
-  
-  'click .js-open': function(event) {
-    // On Cordova, open the link in the system browser rather than In-App
-    if (Meteor.isCordova) {
-      event.preventDefault();
-      window.open(event.target.href, '_system');
-    }
   }
 });

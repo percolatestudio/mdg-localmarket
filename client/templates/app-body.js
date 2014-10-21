@@ -117,6 +117,14 @@ Template.appBody.events({
     event.stopImmediatePropagation();
     event.preventDefault();
   },
+  
+  'click a.js-open': function(event) {
+    // On Cordova, open links in the system browser rather than In-App
+    if (Meteor.isCordova) {
+      event.preventDefault();
+      window.open(event.target.href, '_system');
+    }
+  },
 
   'click .content-overlay': function(event) {
     Session.set(MENU_KEY, false);
