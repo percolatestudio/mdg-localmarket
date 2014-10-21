@@ -26,8 +26,11 @@
               <img src="{{avatar}}" class="image-avatar">
             </div>
 
-            <textarea name="text" type="text" autocapitalize="off" autocorrect="off"
-                placeholder="Add advice, suggestions, or thoughts to share with the community..." class="message-share {{errorClass 'text'}}"></textarea>
+            <textarea name="text" type="text" 
+              autocapitalize="off" autocorrect="off"
+              required maxlength="140"
+              class="message-share {{errorClass 'text'}}"
+              placeholder="Add advice, suggestions, or thoughts to share with the community..."></textarea>
           </div>
 
           <div class="wrapper-checkbox {{#if tweeting}}active{{/if}}">
@@ -40,8 +43,11 @@
 
           {{#if tweeting}}
             <span class="message-tweet-arrow"></span>
-            <textarea name="tweet" type="text" autocapitalize="off" autocorrect="off"
-              value="I made {{title}}! {{urlFor 'recipe'}}" class="message-tweet {{errorClass 'tweet'}}"></textarea>
+            <textarea name="tweet" type="text" 
+              autocapitalize="off" autocorrect="off"
+              required maxlength="140"
+              value="I made {{title}}! {{urlFor 'recipe'}}" 
+              class="message-tweet {{errorClass 'tweet'}}"></textarea>
           {{/if}}
 
           <button class="btn-primary" type='submit'>
