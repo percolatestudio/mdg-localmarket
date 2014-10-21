@@ -45,6 +45,8 @@ Template.shareOverlay.events({
   },
   
   'submit': function(event, template) {
+    var self = this;
+
     event.preventDefault();
     
     var text = $(event.target).find('[name=text]').val();
@@ -53,14 +55,24 @@ Template.shareOverlay.events({
       $(event.target).find('[name=tweet]').val() : null;
 
     Meteor.call('createActivity', {
-      recipeId: this._id,
+      recipeName: self.name,
       text: text,
       image: Session.get(IMAGE_KEY)
-    }, tweet, Geolocation.currentLocation(), function(error) {
-      if (! error)
-        Template.appBody.addNotification('You shared something.');
-      else
-        Template.appBody.addNotification('Something went wrong when sharing :(');
+    }, tweet, Geolocation.currentLocation(), function(error, result) {
+      if (error) {
+        alert(error);
+      } else {
+        Template.appBody.addNotification({
+          action: 'View',
+          title: 'Your photo was shared.',
+          callback: function() {
+            Router.go('recipe', { name: self.name }, 
+              { query: { activityId: result } });
+
+            Template.recipe.setTab('feed');
+          }
+        });
+      }
     });
 
     Overlay.close();

@@ -27,9 +27,8 @@
           </div>
         {{/unless}}
         {{#each notifications}}
-          <!-- XXX: flesh this out -->
           <div class="notification">
-            <a class="btn-primary">View</a>
+            <a class="btn-primary js-notification-action">{{action}}</a>
             <div class="title-notification">{{title}}</div>
           </div>
         {{/each}}

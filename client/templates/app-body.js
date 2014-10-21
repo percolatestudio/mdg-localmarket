@@ -17,10 +17,9 @@ Deps.autorun(function() {
 
 var notifications = new Meteor.Collection(null);
 
-Template.appBody.addNotification = function(title) {
-  var id = notifications.insert({
-    title: title
-  });
+
+Template.appBody.addNotification = function(notification) {
+  var id = notifications.insert(notification);
 
   Meteor.setTimeout(function() {
     notifications.remove(id);
@@ -107,5 +106,13 @@ Template.appBody.events({
   'click #menu a': function(e) {
     nextInitiator = 'menu'
     Session.set(MENU_KEY, false);
+  },
+  
+  'click .js-notification-action': function() {
+    if (_.isFunction(this.callback)) {
+      this.callback();
+      notifications.remove(this._id);
+    }
+      
   }
 });

@@ -21,6 +21,10 @@ Template.recipe.rendered = function () {
   });
 }
 
+Template.recipe.setTab = function(tab) {
+  Session.set(TAB_KEY, tab);
+}
+
 Template.recipe.helpers({
   isActiveTab: function(name) {
     return Session.equals(TAB_KEY, name);
