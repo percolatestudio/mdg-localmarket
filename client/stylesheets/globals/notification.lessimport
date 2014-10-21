@@ -10,18 +10,23 @@
 
 // Notification message (e.g., when unable to connect)
 .notifications {
-  .position(absolute, auto, auto, 10px, 50%, 280px);
-  .transform(translate3d(-50%, 0, 0));
+  .position(absolute, auto, 0, 0, 0, 100%);
   z-index: 1;
 
   .notification {
     .font-s2;
-    background: rgba(51,51,51, .85);
+    background: rgba(51,51,51, .95);
     color: @color-empty;
-    margin-bottom: 4px;
-    padding: .5rem .75rem;
     position: relative;
     width: 100%;
+
+    &:nth-child(odd) {
+      background: rgba(45,45,45, .95);
+
+      .btn-primary {
+        background: rgba(216,62,20, .78); // This is color-primary in rgba form
+      }
+    }
 
     .icon-sync {
       .position(absolute, 35%, auto, auto, 12px);
@@ -30,20 +35,22 @@
       font-size: 1.5em;
     }
 
-    .meta {
-      overflow: hidden;
-      padding-left: 28px;
+    .icon-sync + .title-notification {
+      padding-left: 40px;
+    }
 
-      .title-notification {
-        .font-s3;
-        .type-black;
-        display: block;
-        line-height: 18px; //more compact
-      }
+    .title-notification {
+      .font-s3;
+      .type-bold;
+      display: block;
+      line-height: 1rem;
+      padding: 1rem .75rem;
+    }
 
-      .description {
-        display: block;
-      }
+    .btn-primary {
+      float: right;
+      background: rgba(216,62,20, .85); // This is color-primary in rgba form
+      height: 48px;
     }
   }
 }
