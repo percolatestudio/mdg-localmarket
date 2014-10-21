@@ -8,7 +8,6 @@ Template.shareOverlay.created = function() {
 
 Template.shareOverlay.helpers({
   attachedImage: function() {
-    // XXX: obviously this going to be something cordova-y
     return Session.get(IMAGE_KEY);
   },
   
@@ -24,11 +23,10 @@ Template.shareOverlay.helpers({
 Template.shareOverlay.events({
   'click .js-attach-image': function() {
     MeteorCamera.getPicture({width: 320}, function(error, data) {
-      // XXX: error handling
       if (error)
         alert(error.reason);
-      
-      Session.set(IMAGE_KEY, data);
+      else
+        Session.set(IMAGE_KEY, data);
     });
   },
   
@@ -56,7 +54,7 @@ Template.shareOverlay.events({
       image: Session.get(IMAGE_KEY)
     }, tweet, Geolocation.currentLocation(), function(error, result) {
       if (error) {
-        alert(error);
+        alert(error.reason);
       } else {
         Template.appBody.addNotification({
           action: 'View',
