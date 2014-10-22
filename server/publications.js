@@ -1,3 +1,7 @@
+Meteor.publish('bookmarkCounts', function() {
+  return BookmarkCounts.find();
+});
+
 Meteor.publish('news', function() {
   return News.find({}, {sort: {date: -1}, limit: 1});
 });

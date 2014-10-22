@@ -5,17 +5,11 @@
     <div class="content-scrollable">
       <div class="list-recipes">
         {{#each this}}
-          <a class="item-recipe {{#if highlighted}}highlighted{{/if}}" href="{{pathFor 'recipe'}}">
-            <span class="attribution">
-              <span class="title-recipe">{{title}}</span>
-              <span class="author-recipe">{{source.name}}</span>
-            </span>
-            {{#if highlighted}}
-              <img src="{{recipeImage recipe=this size='640x480'}}" />
-            {{else}}
-              <img src="{{recipeImage recipe=this size='320x350'}}" />
-            {{/if}}
-          </a>
+          {{#if highlighted}}
+            {{> recipeItem recipe=this size='large'}}
+          {{else}}
+            {{> recipeItem recipe=this size='small'}}
+          {{/if}}
         {{/each}}
       </div>
     </div>

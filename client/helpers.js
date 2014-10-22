@@ -17,11 +17,16 @@ pluralize = function(n, thing, options) {
 
 Handlebars.registerHelper('pluralize', pluralize);
 
+var DIMENSIONS = {
+  small: '320x350',
+  large: '640x480'
+};
+
 UI.registerHelper('recipeImage', function(options) {
-  var size = options.hash.size || '640x800';
+  var size = options.hash.size || 'large';
 
   if (options.hash.recipe)
-    return '/img/recipes/' + size + '/' + options.hash.recipe.name + '.jpg';
+    return '/img/recipes/' + DIMENSIONS[size] + '/' + options.hash.recipe.name + '.jpg';
 });
 
 Handlebars.registerHelper('activePage', function() {
