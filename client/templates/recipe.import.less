@@ -36,7 +36,8 @@
     &:after {
       .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 20%, @color-empty 100%));
       .position(absolute,0,0,0,0);
-      .transform(translate3d(0,0,0));
+      .transform(scale3d(1,1,1));
+      transform-origin: bottom center;
       content: '';
       min-height: 12em;
       opacity: 1;
@@ -52,9 +53,8 @@
       width: 100%; // Needed for iOS animation
     }
 
-    .description-recipe,
-    .source,
-    .time {
+    .metadata-wrapper {
+      .transform(translate3d(0,0,0));
       opacity: 1;
     }
 
@@ -110,6 +110,7 @@
   .content-scrollable {
     background: @color-empty;
     top: 100%;
+    margin-top: -1px; // Fixes flicker from unevenly attached
   }
 
   .item-ingredient + .item-ingredient,
@@ -173,9 +174,9 @@
     cursor: pointer;
 
     &:after {
-      .transform(translate3d(0,100%,0));
+      .transform(scale3d(1,0,1));
       height: 12em;
-      opacity: 0;
+      opacity: .5;
       top: auto;
     }
   }
@@ -188,13 +189,10 @@
     width: 100%;
   }
 
-  .description-recipe,
-  .source,
-  .time {
-    .transform(scale3d(0,0,0));
-    .position(absolute, auto,auto, 3em, 50%, 0, 0);
+  .metadata-wrapper {
+    .transform(translate3d(0,100%,0));
+    .position(absolute, auto,auto, 3em, auto);
     opacity: 0;
-
   }
 }
 
@@ -207,6 +205,8 @@
   .content-scrollable {
     .transform(translate3d(0,0,0));
     .transition( all @transition-time @easing );
+    .backface-visibility(hidden);
+
 
     &.instant { .transition( transform 0, top @transition-time @easing ); }
     &.delayed { .transition( transform 0 linear @transition-time, top @transition-time @easing); }
@@ -215,6 +215,7 @@
   .attribution-recipe {
     .transform(translate3d(0,0,0));
     .transition( all @transition-time @easing );
+    .backface-visibility(hidden);
 
     &:after { .transition( all @transition-time * .95 @easing ); }
   }
@@ -224,12 +225,7 @@
     transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25; // Workaround for lesshats multiple transforms
   }
 
-  .description-recipe,
-  .source,
-  .time {
-    .transform(scale3d(1,1,1));
-    .transition( all @transition-time @easing );
-  }
+  .metadata-wrapper { .transition( all @transition-time * .5 @easing); }
 }
 
 // Move the feed over the top when we are on it
