@@ -43,16 +43,6 @@
     img { width: 100%; }
   }
 
-  .section-title {
-    .font-s3;
-    .type-black;
-    .title-caps;
-    color: @color-medium-well;
-    line-height: 1rem;
-    text-align: center;
-    padding: 1.25rem 1.25rem;
-  }
-
   .callout-news {
     .font-s2;
     border-bottom: 1px solid @color-rare;
@@ -66,8 +56,24 @@
     }
   }
 
+  .section-title {
+    .font-s3;
+    .type-black;
+    .title-caps;
+    color: @color-medium-well;
+    line-height: 1rem;
+    text-align: center;
+    padding: 1.25rem 1.25rem;
+  }
+
   .btn-primary {
     display: block;
     margin-bottom: 1.25rem;
   }
+
+  .list-activities {
+    background: @color-rare;
+    min-height: 16em;
+  }
+
 }
