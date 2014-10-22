@@ -24,7 +24,7 @@
 
   .attribution-recipe {
     .position(absolute, auto, 0, 0, 0);
-    .transform(translate3d(0,0,0));// Gpu rendering
+    .transform(translate3d(0,0,0)); // Gpu rendering
     box-shadow: rgba(0,0,0,.1) 0 2px 2px 0;
     min-height: 9em;
     overflow: hidden;
@@ -52,13 +52,19 @@
       width: 100%; // Needed for iOS animation
     }
 
+    .description-recipe,
+    .source,
+    .time {
+      opacity: 1;
+    }
+
     .description-recipe {
       .font-s3;
       color: @color-well;
       margin-bottom: .5rem;
       padding: 0 1em;
 
-      &:after { content: '\2026'; }
+      &:after { content: '\2026'; } // Ellipsis
       &:empty { display: none; }
     }
 
@@ -81,24 +87,14 @@
       border-left: 1px solid @color-medium-rare;
       padding-left: .5rem;
     }
-
   }
 
   .btns-group {
     .position(absolute, auto, 0, 0, 0, 100%, 3em);
-    .transform(translate3d(0,0,0));//gpu rendering
     z-index:1;
   }
 
-  .btn-tertiary {
-    background: rgba(255,255,255,1);
-    display: block;
-    letter-spacing: .2em;
-    text-indent: .2em;
-    color: @color-primary;
-    width: 100%;
-  }
-
+  .btn-tertiary { display: block; }
 
   .section-title {
     .font-s3;
@@ -112,8 +108,8 @@
   }
 
   .content-scrollable {
-    top: 100%;
     background: @color-empty;
+    top: 100%;
   }
 
   .item-ingredient + .item-ingredient,
@@ -156,23 +152,14 @@
     white-space: normal;
     width: 100%;
   }
-
 }
 
-
-// Collapse state
-.page.recipe.make, .page.recipe.feed {
-  .content-scrollable {
-    top: 30%;
-  }
-
-  .feed-scrollable {
-    .transform(translateX(100%));
-  }
-
-  .make-scrollable {
-    .transform(translateX(0%));
-  }
+// Collapse end-state
+.page.recipe.make,
+.page.recipe.feed {
+  .content-scrollable { top: 30%; }
+  .feed-scrollable { .transform(translate3d(100%, 0, 0)); }
+  .make-scrollable { .transform(translate3d(0,0,0)); }
 
   .image-recipe:before {
     opacity: 1;
@@ -191,72 +178,50 @@
       opacity: 0;
       top: auto;
     }
+  }
+  .title-recipe {
+    .transform(translateY(30%));
+    color: @color-empty;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 50%;
+    width: 100%;
+  }
 
-    .title-recipe {
-      .transform(translateY(30%));
-      color: @color-empty;
-      margin-bottom: 0;
-      position: absolute;
-      bottom: 50%;
-      width: 100%;
-    }
+  .description-recipe,
+  .source,
+  .time {
+    .transform(scale3d(0,0,0));
+    .position(absolute, auto,auto, 3em, 50%, 0, 0);
+    opacity: 0;
 
-    .description-recipe,
-    .source,
-    .time {
-      .transform(scale3d(0,0,0));
-      .position(absolute, auto,auto, 3em, 50%, 0, 0);
-      opacity: 0;
-
-    }
   }
 }
 
-// move the feed over the top when we are on it
-.page.recipe.feed {
-  .feed-scrollable {
-    .transform(translateX(0%));
-  }
-
-  .make-scrollable {
-    .transform(translateX(-100%));
-  }
-}
-
+// Collapse animation-specific styles
 @transition-time: 700ms;
 @easing: cubic-bezier(0.175, 0.885, 0.335, 1.05);
-
-
-// Collapse Animation-specific styles
 .page.recipe {
-  .image-recipe:before {
-    .transition( all @transition-time + 100ms ease-out );
-  }
+  .image-recipe:before { .transition( all @transition-time + 100ms ease-out ); }
 
   .content-scrollable {
     .transform(translate3d(0,0,0));
     .transition( all @transition-time @easing );
 
-    &.instant {
-      .transition( transform 0, top @transition-time @easing );
-    }
-    &.delayed {
-      .transition( transform 0 linear @transition-time, top @transition-time @easing);
-    }
+    &.instant { .transition( transform 0, top @transition-time @easing ); }
+    &.delayed { .transition( transform 0 linear @transition-time, top @transition-time @easing); }
   }
 
   .attribution-recipe {
     .transform(translate3d(0,0,0));
     .transition( all @transition-time @easing );
+
+    &:after { .transition( all @transition-time * .95 @easing ); }
   }
 
-  .attribution-recipe:after {
-    .transition( all @transition-time * .95 @easing );
-  }
-
-  .attribution-recipe .title-recipe {
+  .title-recipe {
     .transition( all @transition-time * .75 @easing );
-    transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25;
+    transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25; // Workaround for lesshats multiple transforms
   }
 
   .description-recipe,
@@ -264,6 +229,11 @@
   .time {
     .transform(scale3d(1,1,1));
     .transition( all @transition-time @easing );
-    opacity: 1;
   }
+}
+
+// Move the feed over the top when we are on it
+.page.recipe.feed {
+  .feed-scrollable { .transform(translate3d(0,0,0)); }
+  .make-scrollable { .transform(translate3d(-100%,0,0)); }
 }

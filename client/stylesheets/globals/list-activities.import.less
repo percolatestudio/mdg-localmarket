@@ -4,12 +4,10 @@
   background: @color-rare;
   min-height: 16em;
 
-  .wrapper-message {
-    top: 50%;
-  }
+  .wrapper-message { top: 50%; }
 }
 
-.list-activities .item-activity {
+.item-activity {
   .transform(translate3d(0,0,0));
   float: left;
   overflow: hidden;
@@ -17,15 +15,13 @@
   width: 100%;
 
   .attribution {
-    .position(absolute, auto, 0, 0, 0);
     .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 70%, @color-empty 100%));
+    .display(flex);
+    .flex-wrap(wrap);
+    .position(absolute, auto, 0, 0, 0);
     .font-s2;
     padding: .5rem;
     z-index: 1;
-
-
-    .display(flex);
-    .flex-wrap(wrap);
 
     .avatar,
     .meta {
@@ -37,6 +33,7 @@
       height: 2rem;
       margin-right: .5rem;
     }
+
     .meta {
       color: @color-well;
       overflow: hidden;

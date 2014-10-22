@@ -26,42 +26,36 @@
 
 
     <div class="content-scrollable static-nav make-scrollable">
-      <div class="wrapper-make">
+      <a class="btn-tertiary js-share">Share that you made this</a>
 
-        <a class="btn-tertiary js-share">Share that you made this</a>
+      <h2 class="section-title">Ingredients</h2>
+      <ul class="list-ingredients">
+        {{#each ingredients}}
+          <li class="item-ingredient">{{this}}</li>
+        {{/each}}
+      </ul>
 
-
-        <h2 class="section-title">Ingredients</h2>
-        <ul class="list-ingredients">
-          {{#each ingredients}}
-            <li class="item-ingredient">{{this}}</li>
-          {{/each}}
-        </ul>
-
-        <h2 class="section-title">Directions</h2>
-        <ol class="list-directions">
-          {{#each directions}}
-            <li class="item-direction">
-              <span class="text">{{this}}</span>
-            </li>
-          {{/each}}
-        </ol>
-        <a href="{{source.url}}" target="_blank" class="btn-primary js-open">Get recipe on {{source.name}}</a>
-      </div>
+      <h2 class="section-title">Directions</h2>
+      <ol class="list-directions">
+        {{#each directions}}
+          <li class="item-direction">
+            <span class="text">{{this}}</span>
+          </li>
+        {{/each}}
+      </ol>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">Get recipe on {{source.name}}</a>
     </div>
-    
+
     <div class="content-scrollable static-nav feed-scrollable">
-      <div class="wrapper-feed">
-        <div class="list-activities">
-          {{#each activities}}
-            {{> activity}}
-          {{else}}
-            <div class="wrapper-message">
-              <div class="title-message">No feed activity yet</div>
-              <div class="subtitle-message">Be the first to share that you made this recipe. <a class="js-share">Share now</a></div>
-            </div>
-          {{/each}}
-        </div>
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message">No feed activity yet</div>
+            <div class="subtitle-message">Be the first to share that you made this recipe. <a class="js-share">Share now</a></div>
+          </div>
+        {{/each}}
       </div>
     </div>
   </div>
