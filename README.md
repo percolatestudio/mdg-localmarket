@@ -1,4 +1,4 @@
-Sous
-===========
+Local Market
+============
 
 Recipes example app
