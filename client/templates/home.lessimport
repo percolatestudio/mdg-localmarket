@@ -70,10 +70,4 @@
     display: block;
     margin-bottom: 1.25rem;
   }
-
-  .list-activities {
-    background: @color-rare;
-    min-height: 16em;
-  }
-
 }

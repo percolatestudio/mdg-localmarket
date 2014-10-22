@@ -1,6 +1,8 @@
 .list-activities {
   overflow: hidden;
   position: relative;
+  background: @color-rare;
+  min-height: 16em;
 
   .wrapper-message {
     top: 50%;
