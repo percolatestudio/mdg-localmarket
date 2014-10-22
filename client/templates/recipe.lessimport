@@ -49,6 +49,7 @@
       .transform(translateY(0));
       margin-bottom: .5rem;
       padding: 0 1em;
+      width: 100%; // Needed for iOS animation
     }
 
     .description-recipe {
@@ -110,7 +111,10 @@
     padding: 1.75rem 1.25rem 1.25rem;
   }
 
-  .content-scrollable { background: @color-empty; }
+  .content-scrollable {
+    top: 100%;
+    background: @color-empty;
+  }
 
   .item-ingredient + .item-ingredient,
   .item-direction + .item-direction {
@@ -158,14 +162,6 @@
 
 // Collapse state
 .page.recipe.collapse {
-  nav.scrolled {
-    background: transparent;
-    color: @color-empty;
-
-    &:after { opacity: 1; }
-    .nav-item { color: @color-empty; }
-  }
-
   .content-scrollable {
     top: 30%;
   }
@@ -179,6 +175,7 @@
     bottom: 70%;
     padding-top: 3em;
     padding-bottom: 3em;
+    cursor: pointer;
 
     &:after {
       .transform(translate3d(0,100%,0));
@@ -212,8 +209,6 @@
 
 // Collapse Animation-specific styles
 .page.recipe {
-  .content-scrollable { top: 100%; }
-
   .image-recipe:before {
     .transition( all @transition-time + 100ms ease-out );
   }
@@ -231,7 +226,6 @@
   .attribution-recipe .title-recipe {
     .transition( all @transition-time * .75 @easing );
     transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25;
-    width: 100%; // Needed for iOS animation
   }
 
   .description-recipe,

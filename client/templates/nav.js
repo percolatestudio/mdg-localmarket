@@ -1,6 +1,6 @@
 Template.nav.rendered = function() {
   var $nav = this.$('nav');
-  $nav.siblings('.content-scrollable').waypoint(function(direction) {
+  $nav.siblings('.content-scrollable:not(.static-nav)').waypoint(function(direction) {
     $nav.toggleClass('scrolled', direction === 'down');
   }, {
     context: '.content-scrollable',
