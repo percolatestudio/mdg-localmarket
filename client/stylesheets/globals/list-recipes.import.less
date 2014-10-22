@@ -23,14 +23,37 @@
       margin-bottom: .25rem;
     }
 
-    .author-recipe {
-      .font-s1-alt;
-      .type-secondary;
-      .title-caps;
-      .ellipsized;
-      color: rgba(255,255,255,.7);
+    .metadata-recipe {
       display: block;
-      line-height: 1;
+      white-space: nowrap;
+      width: 100%;
+
+      .author-recipe {
+        .font-s1-alt;
+        .type-secondary;
+        .title-caps;
+        .ellipsized;
+        color: rgba(255,255,255,.7);
+        display: inline-block;
+        line-height: 1;
+        max-width:  90%;
+        padding-right: 1rem;
+      }
+
+      .bookmarks-recipe {
+        .font-s1;
+        color: rgba(255,255,255,.7);
+        line-height: 1;
+        display: inline-block;
+        margin-left: -1.25rem;
+        padding: .3em .5em;
+        vertical-align: middle;
+
+        .icon-bookmark {
+          font-size: 80%;
+          vertical-align: middle;
+        }
+      }
     }
   }
 
