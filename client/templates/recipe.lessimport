@@ -161,9 +161,17 @@
 
 
 // Collapse state
-.page.recipe.collapse {
+.page.recipe.make, .page.recipe.feed {
   .content-scrollable {
     top: 30%;
+  }
+  
+  .feed-scrollable {
+    .transform(translateX(100%));
+  }
+  
+  .make-scrollable {
+    .transform(translateX(0%));
   }
 
   .image-recipe:before {
@@ -204,8 +212,20 @@
   }
 }
 
+// move the feed over the top when we are on it
+.page.recipe.feed {
+  .feed-scrollable {
+    .transform(translateX(0%));
+  }
+  
+  .make-scrollable {
+    .transform(translateX(-100%));
+  }
+}
+
 @transition-time: 700ms;
 @easing: cubic-bezier(0.175, 0.885, 0.335, 1.05);
+
 
 // Collapse Animation-specific styles
 .page.recipe {
@@ -213,7 +233,18 @@
     .transition( all @transition-time + 100ms ease-out );
   }
 
-  .content-scrollable,
+  .content-scrollable {
+    .transform(translate3d(0,0,0));
+    .transition( all @transition-time @easing );
+    
+    &.instant {
+      .transition( transform 0, top @transition-time @easing );
+    }
+    &.delayed {
+      .transition( transform 0 linear @transition-time, top @transition-time @easing);
+    }
+  }
+
   .attribution-recipe {
     .transform(translate3d(0,0,0));
     .transition( all @transition-time @easing );
