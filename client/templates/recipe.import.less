@@ -48,7 +48,7 @@
       .type-bold;
       .transform(translateY(0));
       margin-bottom: .5rem;
-      padding: 0 1em;
+      padding: 0 1rem;
       width: 100%; // Needed for iOS animation
     }
 
@@ -165,11 +165,11 @@
   .content-scrollable {
     top: 30%;
   }
-  
+
   .feed-scrollable {
     .transform(translateX(100%));
   }
-  
+
   .make-scrollable {
     .transform(translateX(0%));
   }
@@ -217,7 +217,7 @@
   .feed-scrollable {
     .transform(translateX(0%));
   }
-  
+
   .make-scrollable {
     .transform(translateX(-100%));
   }
@@ -236,7 +236,7 @@
   .content-scrollable {
     .transform(translate3d(0,0,0));
     .transition( all @transition-time @easing );
-    
+
     &.instant {
       .transition( transform 0, top @transition-time @easing );
     }
