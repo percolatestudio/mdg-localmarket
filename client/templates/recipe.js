@@ -9,13 +9,9 @@ Template.recipe.created = function() {
 
 Template.recipe.rendered = function () {
   this.$('.recipe').touchwipe({
-    min_move_y: 50,
     wipeDown: function () {
       if (Session.equals(TAB_KEY, 'recipe'))
-        Session.set(TAB_KEY, 'make');
-    },
-    wipeUp: function () {
-      Session.set(TAB_KEY, 'recipe');
+        Template.recipe.setTab('make')
     },
     preventDefaultEvents: false
   });
