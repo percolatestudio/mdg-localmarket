@@ -15,6 +15,12 @@ Overlay = {
   },
   isOpen: function() {
     return ! Session.equals(TEMPLATE_KEY, null);
+  },
+  template: function () {
+    return Session.get(TEMPLATE_KEY);
+  },
+  data: function () {
+    return Session.get(DATA_KEY);
   }
 }
 
@@ -46,11 +52,11 @@ Template.overlay.rendered = function() {
 
 Template.overlay.helpers({
   template: function() {
-    return Session.get(TEMPLATE_KEY);
+    return Overlay.template();
   },
   
   data: function() {
-    return Session.get(DATA_KEY);
+    return Overlay.data();
   }
 });
 

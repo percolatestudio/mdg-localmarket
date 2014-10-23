@@ -6,7 +6,7 @@
 //   redirect flow.
 Template.authOverlay.created = function() {
   this.autorun(function() {
-    if (Meteor.userId())
+    if (Meteor.userId() && Overlay.template() === 'authOverlay')
       Overlay.close();
   });
 }
