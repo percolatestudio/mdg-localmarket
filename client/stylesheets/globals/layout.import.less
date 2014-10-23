@@ -1,15 +1,15 @@
 @menu-width: 45%;
 
-// iPhone5s for illustrative purposes only
+// iPhone6 for illustrative purposes only
 // Remove when deploying your app
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 376px) {
   body {
     overflow: hidden;
 
     &:after {
-      .position(absolute, 50%, 50%, auto, auto, 384px, 802px);
+      .position(absolute, 50%, 50%, auto, auto, 432px, 882px);
       .transform(translate3d(50%, -50%, 0));
-      background-image: url('img/app/iphone5s-chrome-384x802@2x.jpg');
+      background-image: url('img/app/chrome-iphone6-432x882@2x.jpg');
       content: '';
       display: block;
       background-size: contain;
@@ -19,8 +19,8 @@
     #container {
       .position(absolute, 50%, 0, 0, 0, auto, 100%);
       .transform(translate3d(0, -50%, 0));
-      max-width: 320px;
-      max-height: 568px;
+      max-width: 375px;
+      max-height: 667px;
       margin: 0 auto;
     }
   }
