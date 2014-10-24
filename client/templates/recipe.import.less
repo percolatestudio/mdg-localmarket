@@ -103,7 +103,7 @@
   .content-scrollable {
     background: @color-empty;
     top: 100%;
-    margin-top: -1px; // Fixes flicker from unevenly attached
+    margin-top: -1px; // Fixes flicker from animations behind content-scrollable
   }
 
   .item-ingredient + .item-ingredient,
@@ -167,11 +167,9 @@
   }
 
   .attribution-recipe {
-    top: 0em;
     bottom: 70%;
-    padding-top: 3em;
-    padding-bottom: 3em;
     cursor: pointer;
+    padding-top: .75em;
 
     &:after {
       .transform(scale3d(1,0,1));
@@ -181,11 +179,7 @@
     }
   }
   .title-recipe {
-    .transform(translateY(30%));
     color: @color-empty;
-    margin-bottom: 0;
-    position: absolute;
-    bottom: 50%;
     width: 100%;
   }
 
@@ -222,7 +216,6 @@
 
   .title-recipe {
     .transition( all @transition-time * .75 @easing );
-    transition: all @transition-time * .75 @easing, transform @transition-time  @easing @transition-time * .25; // Workaround for lesshats multiple transforms
   }
 
   .metadata-wrapper { .transition( all @transition-time * .5 @easing); }
