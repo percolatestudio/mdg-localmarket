@@ -18,7 +18,7 @@
         {{latestNews}}
       </div>
 
-      <h2 class="section-title">Our Favorite Recipes</h2>
+      <h2 class="list-title">Our Favorite Recipes</h2>
       <div class="list-recipes">
         {{#each featuredRecipes}}
           {{> recipeItem recipe=this size='small'}}
@@ -27,7 +27,7 @@
 
       <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
 
-      <h2 class="section-title">What's Cooking</h2>
+      <h2 class="list-title">What's Cooking</h2>
       <div class="list-activities">
         {{#each activities}}
           {{> activity}}
