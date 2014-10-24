@@ -4,7 +4,7 @@
     {{>nav title="What's Cooking"}}
 
     <div class="content-scrollable">
-      <div class="list-activities">
+      <div class="list-activities {{#unless ready}}loading{{/unless}}">
         {{#if ready}}
           {{#each activities}}
             {{> activity}}
@@ -15,7 +15,10 @@
             </div>
           {{/each}}
         {{else}}
-          <h2>Loading</h2>
+          <div class="wrapper-message">
+            <div class="icon-sync"></div>
+            <div class="title-message">Loading</div>
+          </div>
         {{/if}}
       </div>
     </div>
