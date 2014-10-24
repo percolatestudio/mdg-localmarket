@@ -26,6 +26,19 @@ Template.appBody.addNotification = function(notification) {
   }, NOTIFICATION_TIMEOUT);
 } 
 
+Meteor.startup(function () {
+  // set up a swipe left / right handler
+  $(document.body).touchwipe({
+    wipeLeft: function () {
+      Session.set(MENU_KEY, false);
+    },
+    wipeRight: function () {
+      Session.set(MENU_KEY, true);
+    },
+    preventDefaultEvents: false
+  });
+});
+
 Template.appBody.rendered = function() {
   this.find("#content-container")._uihooks = {
     insertElement: function(node, next) {
