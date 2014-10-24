@@ -5,14 +5,18 @@
 
     <div class="content-scrollable">
       <div class="list-activities">
-        {{#each activities}}
-          {{> activity}}
+        {{#if ready}}
+          {{#each activities}}
+            {{> activity}}
+          {{else}}
+            <div class="wrapper-message">
+              <div class="title-message">No one is cooking yet!</div>
+              <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>
+            </div>
+          {{/each}}
         {{else}}
-          <div class="wrapper-message">
-            <div class="title-message">No one is cooking yet!</div>
-            <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>
-          </div>
-        {{/each}}
+          <h2>Loading</h2>
+        {{/if}}
       </div>
     </div>
   </div>
