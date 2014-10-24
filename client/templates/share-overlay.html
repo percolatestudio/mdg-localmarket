@@ -26,37 +26,21 @@
               <img src="{{avatar}}" class="image-avatar">
             </div>
 
-            <textarea name="text" type="text" 
+            <textarea name="text" type="text"
               autocapitalize="off" autocorrect="off"
               required maxlength="140"
               class="message-share"
               placeholder="Add advice, suggestions, or thoughts to share with the community..."></textarea>
           </div>
 
-          <div class="wrapper-checkbox {{#if tweeting}}active{{/if}}">
+          <div class="wrapper-checkbox">
             <label for="tweeting" class="checkbox">
               <input type="checkbox" name="tweeting" id="tweeting" value="false">
-              <span>Post to Twitter</span>
+              <span>Also Post to Twitter</span>
             </label>
           </div>
 
-
-          {{#if tweeting}}
-            <span class="message-tweet-arrow"></span>
-            <textarea name="tweet" type="text" 
-              autocapitalize="off" autocorrect="off"
-              required maxlength="140"
-              value="I made {{title}}! {{urlFor 'recipe'}}" 
-              class="message-tweet"></textarea>
-          {{/if}}
-
-          <button class="btn-primary" type='submit'>
-            {{#if tweeting}}
-              Share &amp; Tweet
-            {{else}}
-              Share
-            {{/if}}
-          </button>
+          <button class="btn-primary" type='submit'>Share</button>
         </form>
       {{/unless}}
 

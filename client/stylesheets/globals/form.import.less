@@ -40,14 +40,13 @@ textarea {
 
   input[type="checkbox"] {
     font-size: 1em;
-    margin-right: .5em;
     visibility: hidden;
 
     & + span:before {
-      .position(absolute, .2em, auto, auto, 0, .85em, .85em);
+      .position(relative, auto, auto, auto, -1em, .85em, .85em);
       content: '';
       box-shadow: @color-medium 0 0 0 1px inset;
-      display: block;
+      display: inline-block;
     }
 
     &:checked + span:before {

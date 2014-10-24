@@ -61,43 +61,7 @@
       border-top: 1px solid @color-rare;
       border-bottom: 1px solid @color-rare;
 
-      &.active {
-        bottom: 11rem;
-      }
-
-      .checkbox {
-        margin: 1rem;
-      }
-    }
-
-    .message-tweet {
-      background: @color-raw;
-
-      height:  2rem + 4 * 1.5rem;
-      width: 100%;
-    }
-
-    .message-tweet-arrow {
-      position: relative;
-      display: block;
-
-      &:before,
-      &:after {
-        .position(absolute, auto, auto, -.5rem, 50%);
-        border-left: .5rem solid transparent;
-        border-right: .5rem solid transparent;
-        content: '';
-        display: inline-block;
-        margin-left: -.5rem;
-      }
-
-      &:before {
-        border-top: .5rem solid @color-rare;
-      }
-      &:after {
-        border-top: .5rem solid @color-empty;
-        top: -1px;
-      }
+      .checkbox { padding: 1rem; }
     }
   }
 
