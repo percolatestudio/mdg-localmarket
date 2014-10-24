@@ -35,12 +35,18 @@
 
           <div class="wrapper-checkbox">
             <label for="tweeting" class="checkbox">
-              <input type="checkbox" name="tweeting" id="tweeting" value="false">
-              <span>Also Post to Twitter</span>
+              <input type="checkbox" name="tweeting" id="tweeting" checked>
+              <span>Post to Twitter</span>
             </label>
           </div>
 
-          <button class="btn-primary" type='submit'>Share</button>
+          <button class="btn-primary" type='submit'>
+            {{#if tweeting}}
+              Share &amp; Tweet
+            {{else}}
+              Share
+            {{/if}}
+          </button>
         </form>
       {{/unless}}
 

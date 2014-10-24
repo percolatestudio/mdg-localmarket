@@ -2,7 +2,7 @@ var TWEETING_KEY = 'shareOverlayTweeting';
 var IMAGE_KEY = 'shareOverlayAttachedImage';
 
 Template.shareOverlay.created = function() {
-  Session.set(TWEETING_KEY, false);
+  Session.set(TWEETING_KEY, true);
   Session.set(IMAGE_KEY, null);
 }
 
@@ -44,10 +44,8 @@ Template.shareOverlay.events({
     event.preventDefault();
     
     var text = $(event.target).find('[name=text]').val();
-
-    var tweet = Session.get(TWEETING_KEY) ? 
-      $(event.target).find('[name=tweet]').val() : null;
-
+    var tweet = Session.get(TWEETING_KEY);
+    
     Meteor.call('createActivity', {
       recipeName: self.name,
       text: text,
