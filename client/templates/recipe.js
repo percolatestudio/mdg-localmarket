@@ -15,6 +15,13 @@ Template.recipe.rendered = function () {
     },
     preventDefaultEvents: false
   });
+  this.$('.attribution-recipe').touchwipe({
+    wipeUp: function () {
+      if (! Session.equals(TAB_KEY, 'recipe'))
+        Template.recipe.setTab('recipe')
+    },
+    preventDefaultEvents: false
+  });
 }
 
 // CSS transitions can't tell the difference between e.g. reaching
