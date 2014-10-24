@@ -1,14 +1,17 @@
 <template name="activity">
   <a href="{{path}}" class="item-activity">
 
-    <div class="bg-image" style="background-image: url('{{image}}');"></div>
-
     <span class="attribution">
       <span class="avatar">
         <img src="{{userAvatar}}" class="image-avatar">
       </span>
-      <span class="meta"><span class="author">{{firstName}}</span> {{text}}{{#if city}}<span class="location"> &mdash;in {{city}}</span>{{/if}}</span>
+      <span class="meta">
+        <span class="author">{{firstName}}</span> cooked <span class="recipe">{{recipeTitle}}</span>: {{text}}
+       {{#if city}}<span class="location">&mdash;{{city}}</span>{{/if}}
+       </span>
     </span>
+
+    <div class="bg-image" style="background-image: url('{{image}}');"></div>
 
   </a>
 </template>

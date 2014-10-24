@@ -9,43 +9,47 @@
 
 .item-activity {
   .transform(translate3d(0,0,0));
+  background: @color-empty;
+  border-top: 1px solid @color-rare;
   display: block;
   overflow: hidden;
+  padding: .75em;
   position: relative;
   width: 100%;
 
   .attribution {
-    .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 70%, @color-empty 100%));
-    .display(flex);
-    .flex-wrap(wrap);
-    .position(absolute, auto, 0, 0, 0);
     .font-s2;
-    padding: .5rem;
+    display: block;
+    margin-bottom: .5rem;
+    position: relative;
     z-index: 1;
 
-    .avatar,
-    .meta {
-      .flex(1);
-    }
-
     .avatar {
-      max-width: 2rem;
+      float: left;
       height: 2rem;
       margin-right: .5rem;
+      width: 2rem;
     }
 
     .meta {
       color: @color-well;
       overflow: hidden;
+      display: block;
     }
 
     .author { .type-black; }
+
+    .recipe {
+      .type-bold;
+      color: @color-primary;
+    }
+
     .location { color: @color-medium-rare; }
   }
 
   .bg-image {
     display: block;
-    height: 16rem;
+    height: 16em;
     width: 100%;
   }
 }
