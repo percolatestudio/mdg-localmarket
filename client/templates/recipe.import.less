@@ -37,8 +37,7 @@
     &:after {
       .background-image(linear-gradient(top, rgba(255,255,255,.9), rgba(255,255,255,1) 20%, @color-empty 100%));
       .position(absolute,0,0,5px,0);
-      .transform(scale3d(1,1,1));
-      .transform-origin(bottom center);
+      .transform(translate3d(0,0,0));
       content: '';
       min-height: 12em;
       opacity: 1;
@@ -49,6 +48,7 @@
       .font-m2;
       .type-bold;
       .transform(translateY(0));
+      .backface-visibility(hidden);
       margin-bottom: .5rem;
       padding: 0 1rem;
       width: 100%; // Needed for iOS animation
@@ -172,10 +172,8 @@
     padding-top: .75em;
 
     &:after {
-      .transform(scale3d(1,0,1));
-      height: 12em;
       opacity: .5;
-      top: auto;
+      top: 100%;
     }
   }
   .title-recipe {
