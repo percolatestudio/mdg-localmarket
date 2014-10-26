@@ -1,7 +1,10 @@
 var ANIMATION_DURATION = 300;
 var NOTIFICATION_TIMEOUT = 3000;
 var MENU_KEY = 'menuOpen';
+var SHOW_CONNECTION_ISSUE_KEY = 'showConnectionIssue';
+var CONNECTION_ISSUE_TIMEOUT = 5000;
 
+Session.setDefault(SHOW_CONNECTION_ISSUE_KEY, false);
 Session.setDefault(MENU_KEY, false);
 
 // XXX: this work around until IR properly supports this
@@ -37,6 +40,16 @@ Meteor.startup(function () {
     },
     preventDefaultEvents: false
   });
+
+  // Only show the connection error box if it has been 5 seconds since
+  // the app started
+  setTimeout(function () {
+    // Launch screen handle created in lib/router.js
+    dataReadyHold.release();
+
+    // Show the connection error box
+    Session.set(SHOW_CONNECTION_ISSUE_KEY, true);
+  }, CONNECTION_ISSUE_TIMEOUT);
 });
 
 Template.appBody.rendered = function() {
@@ -107,7 +120,11 @@ Template.appBody.helpers({
   },
   
   connected: function() {
-    return Meteor.status().connected;
+    if (Session.get(SHOW_CONNECTION_ISSUE_KEY)) {
+      return Meteor.status().connected;
+    } else {
+      return true;
+    }
   },
   
   notifications: function() {
