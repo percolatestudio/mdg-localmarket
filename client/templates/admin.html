@@ -3,12 +3,12 @@
     {{#if isAdmin}}
       <h1>Admin</h1>
   
-      <a href="/">Home</a>
+      <a href="/">Back</a>
   
       <form>
-        <label>Latest News</label>
-        <input name="text" type="text" value="{{latestNews.text}}" />
-        <button type="submit">Save</button>
+        <label>Set Latest News</label>
+        <textarea name="text" rows="5">{{latestNews.text}}</textarea>
+        <button type="submit" class="btn-primary">Save</button>
       </form>
     {{else}}
       <h1>Forbidden</h1>
