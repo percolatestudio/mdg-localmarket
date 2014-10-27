@@ -1,17 +1,18 @@
 <template name="admin">
   <div id="admin">
-    {{#if isAdmin}}
-      <h1>Admin</h1>
-  
-      <a href="/">Back</a>
-  
-      <form>
-        <label>Set Latest News</label>
-        <textarea name="text" rows="5">{{latestNews.text}}</textarea>
-        <button type="submit" class="btn-primary">Save</button>
-      </form>
-    {{else}}
-      <h1>Forbidden</h1>
-    {{/if}}
-  </div>  
+    <a href="/" class="back-desktop"><span class="icon-arrow-left-alt"></span> Back</a>
+    <div class="wrapper-admin">
+      {{#if isAdmin}}
+        <h1 class="title-admin">Admin</h1>
+
+        <form>
+          <label>Set Latest News:</label>
+          <textarea name="text" rows="5" placeholder="Show the latest Local Market news on the the frontpage...">{{latestNews.text}}</textarea>
+          <button type="submit" class="btn-primary">Save</button>
+        </form>
+      {{else}}
+        <h1 class="title-admin">Forbidden</h1>
+      {{/if}}
+    </div>
+  </div>
 </template>
