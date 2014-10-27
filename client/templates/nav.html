@@ -2,9 +2,9 @@
   <nav class="{{#if black}}black{{/if}}">
     <div class="nav-group">
       {{#if back}}
-        <a class="nav-item" href="#" data-back><span class="icon-arrow-left-alt"></span></a>
+        <a class="nav-item js-back" href="#"><span class="icon-arrow-left-alt"></span></a>
       {{else}}
-        <a class="nav-item" href="#" data-menu><span class="icon-menu"></span></a>
+        <a class="nav-item js-menu" href="#"><span class="icon-menu"></span></a>
       {{/if}}
     </div>
 
@@ -14,7 +14,7 @@
     </div>
 
     <div class="nav-group right">
-      {{> yield region='rightNav'}}
+      {{> Template.contentBlock }}
     </div>
   </nav>
 </template>

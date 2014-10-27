@@ -1,26 +1,33 @@
-Meteor.publish('featuredRecipes', function() {
-  return Recipes.featured();
+Meteor.publish('bookmarkCounts', function() {
+  return BookmarkCounts.find();
 });
 
-Meteor.publish('favoriteRecipes', function() {
-  return Recipes.favorite();
+Meteor.publish('news', function() {
+  return News.find({}, {sort: {date: -1}, limit: 1});
 });
 
-
-Meteor.publish('seasonCounts', function() {
-  var self = this;
-  _.each(Recipes.SEASONS, function(season) {
-    Counts.publish(self, season.name, Recipes.forSeason(season.name));
-  });
+Meteor.publish('latestActivity', function () {
+  return Activities.latest();
 });
 
-Meteor.publish('seasonRecipes', function(name) {
+Meteor.publish('feed', function() {
+  return Activities.find();
+});
+
+Meteor.publish('recipe', function(name) {
   check(name, String);
-  return Recipes.forSeason(name);
+  return [
+    BookmarkCounts.find({recipeName: name}),
+    Activities.find({recipeName: name})
+  ];
 });
 
-
-Meteor.publish('recipe', function(id) {
-  check(id, String);
-  return Recipes.find(id);
-});
+// autopublish the user's bookmarks
+Meteor.publish(null, function() {
+  return Meteor.users.find(this.userId, {
+    fields: {
+      bookmarkedRecipeNames: 1,
+      'services.twitter.profile_image_url_https': 1
+    }
+  });
+})

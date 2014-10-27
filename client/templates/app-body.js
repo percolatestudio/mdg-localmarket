@@ -1,19 +1,27 @@
 var ANIMATION_DURATION = 300;
+var NOTIFICATION_TIMEOUT = 3000;
 var MENU_KEY = 'menuOpen';
+var SHOW_CONNECTION_ISSUE_KEY = 'showConnectionIssue';
+var CONNECTION_ISSUE_TIMEOUT = 5000;
+
+Session.setDefault(SHOW_CONNECTION_ISSUE_KEY, false);
 Session.setDefault(MENU_KEY, false);
 
-var EMAIL_KEY = 'emailOpen';
-Session.setDefault(EMAIL_KEY, false);
+var setHistoryState = function (ourState) {
+  var state = Iron.Location.get().options.historyState;
+  var newState  = _.extend({}, state, ourState);
+  Iron.Location.go(Iron.Location.get().path, {historyState: newState, replaceState: true});
+}
+
+// Store {initial: true} on the first history entry we meet
+setHistoryState({initial: true});
 
 // each time the router changes page, wait for it to render, then
 //   set up a scroll handler to store scroll position in history
 Router.onAfterAction(function() {
   Tracker.afterFlush(function() {
     $('.content-scrollable').scroll(_.debounce(function() {
-      var state = Iron.Location.get().options.historyState;
-      var scrollTop = $(this).scrollTop();
-      // XXX: this causes the router to reroute. This seems wrong. consult
-      Iron.Location.replaceState(_.extend({}, state, {lastScrollTop: scrollTop}));
+      setHistoryState({lastScrollTop: $(this).scrollTop()})
     }, 100));
   });
 });
@@ -65,6 +73,38 @@ Iron.Location.onPopState(function() {
     Template.appBody.setInitiator('history')
 });
 
+var notifications = new Meteor.Collection(null);
+
+Template.appBody.addNotification = function(notification) {
+  var id = notifications.insert(notification);
+
+  Meteor.setTimeout(function() {
+    notifications.remove(id);
+  }, NOTIFICATION_TIMEOUT);
+} 
+
+Meteor.startup(function () {
+  // set up a swipe left / right handler
+  $(document.body).touchwipe({
+    wipeLeft: function () {
+      Session.set(MENU_KEY, false);
+    },
+    wipeRight: function () {
+      Session.set(MENU_KEY, true);
+    },
+    preventDefaultEvents: false
+  });
+
+  // Only show the connection error box if it has been 5 seconds since
+  // the app started
+  setTimeout(function () {
+    // Launch screen handle created in lib/router.js
+    dataReadyHold.release();
+
+    // Show the connection error box
+    Session.set(SHOW_CONNECTION_ISSUE_KEY, true);
+  }, CONNECTION_ISSUE_TIMEOUT);
+});
 
 Template.appBody.rendered = function() {
   this.find("#content-container")._uihooks = {
@@ -127,6 +167,26 @@ Template.appBody.rendered = function() {
       }
     }
   };
+
+  this.find(".notifications")._uihooks = {
+    insertElement: function(node, next) {
+      $(node)
+        .insertBefore(next)
+        .velocity("slideDown", { 
+          duration: ANIMATION_DURATION, 
+          easing: [0.175, 0.885, 0.335, 1.05]
+        });
+    },
+    removeElement: function(node) {
+      $(node)
+        .velocity("fadeOut", {
+          duration: ANIMATION_DURATION,
+          complete: function() {
+            $(node).remove();
+          }
+        });
+    }
+  };
 }
 
 Template.appBody.helpers({
@@ -134,43 +194,58 @@ Template.appBody.helpers({
     return Session.get(MENU_KEY) && 'menu-open';
   },
   
-  emailOpen: function() {
-    return Session.get(EMAIL_KEY) && 'email-open';
+  overlayOpen: function() {
+    return Overlay.isOpen() ? 'overlay-open' : '';
   },
-
+  
   connected: function() {
-    return Meteor.status().connected;
+    if (Session.get(SHOW_CONNECTION_ISSUE_KEY)) {
+      return Meteor.status().connected;
+    } else {
+      return true;
+    }
+  },
+  
+  notifications: function() {
+    return notifications.find();
   }
 });
 
 Template.appBody.events({
-  'click [data-menu]': function(e) {
+  'click .js-menu': function(event) {
+    event.stopImmediatePropagation();
+    event.preventDefault();
     Session.set(MENU_KEY, ! Session.get(MENU_KEY));
-    e.stopImmediatePropagation();
-    e.preventDefault();
   },
 
-  'click [data-back]': function(e) {
+  'click .js-back': function(event) {
     Template.appBody.goBack();
-    e.stopImmediatePropagation();
-    e.preventDefault();
+    event.stopImmediatePropagation();
+    event.preventDefault();
+  },
+  
+  'click a.js-open': function(event) {
+    // On Cordova, open links in the system browser rather than In-App
+    if (Meteor.isCordova) {
+      event.preventDefault();
+      window.open(event.target.href, '_system');
+    }
   },
 
-  'click .content-overlay': function(e) {
+  'click .content-overlay': function(event) {
     Session.set(MENU_KEY, false);
-    e.preventDefault();
+    event.preventDefault();
   },
 
-  'click #menu a': function(e) {
+  'click #menu a': function() {
     Template.appBody.setInitiator('menu');
     Session.set(MENU_KEY, false);
   },
-
-  'click [data-email]': function() {
-    Session.set(EMAIL_KEY, true);
-  },
-
-  'click [data-close-overlay]': function() {
-    Session.set(EMAIL_KEY, false);
+  
+  'click .js-notification-action': function() {
+    if (_.isFunction(this.callback)) {
+      this.callback();
+      notifications.remove(this._id);
+    }
   }
 });

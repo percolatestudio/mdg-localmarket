@@ -1,38 +1,63 @@
 <template name="recipe">
-  <div class="page recipe">
-    {{> nav black=true back=true}}
 
-    {{#contentFor 'rightNav'}}
-      {{#if favorite}}
-        <a href="#" class="nav-item" data-unfavorite><span class="icon-heart"></span></a>
+  <div class="page recipe {{activeTabClass}}">
+    {{#nav title='Recipe' black=true back=true}}
+      {{#if bookmarked}}
+        <a href="#" class="nav-item js-remove-bookmark bookmarked"><span class="icon-bookmark"></span></a>
       {{else}}
-        <a href="#" class="nav-item" data-favorite><span class="icon-heart-hollow"></span></a>
+        <a href="#" class="nav-item js-add-bookmark"><span class="icon-bookmark-hollow"></span></a>
       {{/if}}
-      <a href="#" class="nav-item" data-email><span class="icon-share"></span></a>
-    {{/contentFor}}
+      <a href="#" class="nav-item js-share"><span class="icon-camera"></span></a>
+    {{/nav}}
 
-    <div class="content-scrollable">
-      <div class="image" style="background-image: url('{{recipeImage recipe=this size='640x800'}}')"></div>
+    <div class="image-recipe" style="background-image: url('{{recipeImage recipe=this size='full'}}')"></div>
 
-      <div class="attribution">
-        <h1 class="title-recipe">{{title}}</h1>
+    <div class="attribution-recipe js-uncollapse">
+      <h1 class="title-recipe">{{title}}</h1>
+      <div class="metadata-wrapper">
         <p class="description-recipe">{{excerpt}}</p>
         <span class="source">{{source.name}}</span>
         <span class="time">{{cookTime}}</span>
       </div>
 
       <div class="btns-group">
-        <a class="btn-primary" data-ingredients-trigger>Ingredients</a>
-        <a href="{{source.url}}/" class="btn-secondary" target="_blank">Directions</a>
+        <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Make It</a>
+        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} js-show-feed">Pictures</a>
       </div>
+    </div>
 
-      <div class="ingredients" name="ingredients" data-ingredients>
-        <h2 class="title-ingredients">21 Ingredients</h2>
-        <ul class="list-ingredients">
-          {{#each ingredients}}
-            <li class="item-ingredient">{{this}}</li>
-          {{/each}}
-        </ul>
+
+    <div class="content-scrollable static-nav make-scrollable">
+      <a class="btn-tertiary js-share">Share that you made this</a>
+
+      <h2 class="list-title">Ingredients</h2>
+      <ul class="list-ingredients">
+        {{#each ingredients}}
+          <li class="item-ingredient">{{this}}</li>
+        {{/each}}
+      </ul>
+
+      <h2 class="list-title">Directions</h2>
+      <ol class="list-directions">
+        {{#each directions}}
+          <li class="item-direction">
+            <span class="text">{{this}}..</span>
+          </li>
+        {{/each}}
+      </ol>
+      <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full recipe on {{source.name}}</a>
+    </div>
+
+    <div class="content-scrollable static-nav feed-scrollable">
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message">No feed activity yet</div>
+            <div class="subtitle-message">Be the first to share that you made this recipe. <a class="js-share">Share now</a></div>
+          </div>
+        {{/each}}
       </div>
     </div>
   </div>

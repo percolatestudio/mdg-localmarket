@@ -17,16 +17,22 @@ pluralize = function(n, thing, options) {
 
 Handlebars.registerHelper('pluralize', pluralize);
 
+var DIMENSIONS = {
+  small: '320x350',
+  large: '640x480',
+  full: '640x800'
+};
+
 UI.registerHelper('recipeImage', function(options) {
-  var size = options.hash.size || '640x800';
+  var size = options.hash.size || 'large';
 
   if (options.hash.recipe)
-    return '/img/recipes/' + size + '/' + options.hash.recipe.imageName;
+    return '/img/recipes/' + DIMENSIONS[size] + '/' + options.hash.recipe.name + '.jpg';
 });
 
 Handlebars.registerHelper('activePage', function() {
   // includes Spacebars.kw but that's OK because the route name ain't that.
   var routeNames = arguments;
 
-  return _.include(routeNames, Router.current().route.name) && 'active';
+  return _.include(routeNames, Router.current().route.getName()) && 'active';
 });

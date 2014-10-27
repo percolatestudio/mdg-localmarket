@@ -1,23 +1,44 @@
 <template name="home">
   <div class="page home">
-    {{> nav title='Sous' black=true}}
+
+    {{>nav title='Local Market' black=true}}
 
     <div class="content-scrollable">
+      <div class="bg-image home">
+        <h1 class="title-home">
+          <img src="img/app/logo-local.svg" alt="Local Market"/>
+        </h1>
+        <span class="hours"><span class="title-callout">Hours</span>
+        Mon–Fri 9-6pm, Sat 10-5pm</span>
+        <span class="arrow"></span>
+      </div>
+
+      <div class="callout-news">
+        <span class="title-callout">News</span>
+        {{latestNews}}
+      </div>
+
+      <h2 class="list-title">Our Favorite Recipes</h2>
       <div class="list-recipes">
         {{#each featuredRecipes}}
-          <a class="item-recipe {{#if highlighted}}highlighted{{/if}}" href="{{pathFor 'recipe'}}">
-            <span class="attribution">
-              <span class="title-recipe">{{title}}</span>
-              <span class="author-recipe">{{source.name}}</span>
-            </span>
-            {{#if highlighted}}
-              <img src="{{recipeImage recipe=this size='640x480'}}" />
-            {{else}}
-              <img src="{{recipeImage recipe=this size='320x350'}}" />
-            {{/if}}
-          </a>
+          {{> recipeItem recipe=this size='small'}}
         {{/each}}
       </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
+
+      <h2 class="list-title">What's Cooking</h2>
+      <div class="list-activities">
+        {{#each activities}}
+          {{> activity}}
+        {{else}}
+          <div class="wrapper-message">
+            <div class="title-message">No one is cooking yet!</div>
+            <div class="subtitle-message">Share that you made a recipe and it will show up here.</div>
+          </div>
+        {{/each}}
+      </div>
+      <a href="{{pathFor 'feed'}}" class="btn-primary">See what's cooking</a>
     </div>
 
   </div>

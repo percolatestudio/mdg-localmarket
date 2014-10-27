@@ -1,37 +1,63 @@
 <template name="appBody">
-  <div id="container" class="{{menuOpen}} {{emailOpen}}">
+  <div class="wrapper-welcome">
+    <div class="title-welcome">Local Market</div>
+    <div class="description-welcome">Local Market is an open source mobile app powered by <a href="http://meteor.com">MeteorJS</a> and made by <a href="http://percolatestudio.com">Percolate Studio</a>. This example app explores intermediate techniques: database, OAUTH, Cordova, and mobile UI.
+    </div>
+    <div class="description-welcome">
+    When running this example on a physical phone you won't see the device chrome we've included here.
+    </div>
+  </div>
+
+  <div id="container" class="{{menuOpen}} {{overlayOpen}}">
     <section id="menu" class="overthrow">
       <a href="{{pathFor 'home'}}" class="{{activePage 'home'}}">
-        <span class="icon-home"></span>
-        <span class="title-menu">Home</span>
+        <span class="wrapper-menu-item">
+          <span class="icon-home"></span>
+          <span class="title-menu">Home</span>
+        </span>
       </a>
-      <a href="{{pathFor 'categories'}}" class="{{activePage 'categories' 'category' 'recipe'}}">
-        <span class="icon-category"></span>
-        <span class="title-menu">Categories</span>
+      <a href="{{pathFor 'feed'}}" class="{{activePage 'feed'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-rss"></span>
+          <span class="title-menu">What's<br>Cooking</span>
+        </span>
       </a>
-      <a href="{{pathFor 'favorites'}}" class="{{activePage 'favorites'}}">
-        <span class="icon-heart-hollow"></span>
-        <span class="title-menu">Favorites</span>
+      <a href="{{pathFor 'recipes'}}" class="{{activePage 'recipes' 'recipe'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-category"></span>
+          <span class="title-menu">Recipes</span>
+        </span>
+      </a>
+      <a href="{{pathFor 'bookmarks'}}" class="{{activePage 'bookmarks'}}">
+        <span class="wrapper-menu-item">
+          <span class="icon-bookmark-hollow"></span>
+          <span class="title-menu">Bookmarks</span>
+        </span>
       </a>
       <a href="{{pathFor 'about'}}" class="{{activePage 'about'}}">
-        <span class="icon-question"></span>
-        <span class="title-menu">About</span>
+        <span class="wrapper-menu-item">
+          <span class="icon-question"></span>
+          <span class="title-menu">About</span>
+        </span>
       </a>
     </section>
 
-    {{#unless connected}}
       <div class="notifications">
-        <div class="notification">
-          <span class="icon-sync"></span>
-          <div class="meta">
+        {{#unless connected}}
+          <div class="notification">
+            <span class="icon-sync"></span>
             <div class="title-notification">Trying to connect</div>
-            <div class="description">There seems to be a connection issue</div>
           </div>
-        </div>
+        {{/unless}}
+        {{#each notifications}}
+          <div class="notification">
+            <a class="btn-primary js-notification-action">{{action}}</a>
+            <div class="title-notification">{{title}}</div>
+          </div>
+        {{/each}}
       </div>
-    {{/unless}}
 
-    {{> emailOverlay}}
+    {{> overlay}}
 
     <div class="content-overlay"></div>
 

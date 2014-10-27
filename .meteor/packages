@@ -11,4 +11,12 @@ fastclick
 tmeasday:publish-counts
 iron:router@1.0.0-pre3
 percolate:velocityjs
+accounts-twitter
+service-configuration
+percolate:wireframing
+mdg:camera
+mdg:geolocation
+oauth1
+request
+launch-screen
 
