@@ -13,10 +13,14 @@ urlForRecipeImage = function (name, size) {
 var preloadedImageUrls = [];
 _.each(["small", "large", "full"], function (size) {
   _.each(RecipesData, function (_, name) {
-    preloadedImageUrls.push(urlForRecipeImage(name, size));
+    preloadedImageUrls.push("url(" + urlForRecipeImage(name, size) + ")");
   });
 });
 
-Template.body.helpers({
-  preloadedImageUrls: preloadedImageUrls
-});
+head = document.getElementsByTagName('head')[0],
+style = document.createElement('style');
+style.type = 'text/css';
+style.id = 'preload';
+style.innerHTML = 'body::before { content: ' + preloadedImageUrls.join(' ') + '; display: none; }';
+head.appendChild(style);
+
