@@ -1,15 +1,17 @@
 <template name="admin">
-  {{#if isAdmin}}
-    <h1>Admin</h1>
-    
-    <a href="/">Home</a>
-    
-    <form>
-      <label>Latest News</label>
-      <input name="text" type="text" value="{{latestNews.text}}" />
-      <button type="submit">Save</button>
-    </form>
-  {{else}}
-    <h1>Forbidden</h1>
-  {{/if}}
+  <div id="admin">
+    {{#if isAdmin}}
+      <h1>Admin</h1>
+  
+      <a href="/">Home</a>
+  
+      <form>
+        <label>Latest News</label>
+        <input name="text" type="text" value="{{latestNews.text}}" />
+        <button type="submit">Save</button>
+      </form>
+    {{else}}
+      <h1>Forbidden</h1>
+    {{/if}}
+  </div>  
 </template>
