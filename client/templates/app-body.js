@@ -13,9 +13,6 @@ var setHistoryState = function (ourState) {
   Iron.Location.go(Iron.Location.get().path, {historyState: newState, replaceState: true});
 }
 
-// Store {initial: true} on the first history entry we meet
-setHistoryState({initial: true});
-
 // each time the router changes page, wait for it to render, then
 //   set up a scroll handler to store scroll position in history
 Router.onAfterAction(function() {
