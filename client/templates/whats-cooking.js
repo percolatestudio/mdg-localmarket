@@ -3,6 +3,8 @@ Template.feed.helpers({
     return Activities.find({}, {sort: {date: -1}});
   },
   ready: function() {
-    return Router.current().feedSubscription.ready();
+    return true;
+    // xcxc:
+    return feedSubscription && feedSubscription.ready();
   }
 })
