@@ -17,7 +17,6 @@ Template.home.helpers({
   },
   
   latestNews: function() {
-    var news = News.findOne({}, {sort: {date: -1}, limit: 1});
-    return news && news.text;
+    return News.latest();
   }
 });
