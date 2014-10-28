@@ -22,13 +22,13 @@
 
       <div class="btns-group">
         <a class="btn-secondary {{#if isActiveTab 'make'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-recipe">Make It</a>
-        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} js-show-feed">Pictures</a>
+        <a class="btn-secondary {{#if isActiveTab 'feed'}}active{{/if}} {{#if isActiveTab 'recipe'}}no-state{{/if}} js-show-feed">Pictures</a>
       </div>
     </div>
 
 
     <div class="content-scrollable static-nav make-scrollable">
-      <a class="btn-tertiary js-share">Share that you made this</a>
+      <a class="btn-tertiary js-share"><span class="icon-camera"></span> Share that you made this</a>
 
       <h2 class="list-title">Ingredients</h2>
       <ul class="list-ingredients">
