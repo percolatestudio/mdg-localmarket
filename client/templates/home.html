@@ -18,16 +18,6 @@
         {{latestNews.text}}
       </div>
 
-      <h2 class="list-title">Our Favorite Recipes</h2>
-      <div class="list-subtitle">Hand-picked by neighborhood chefs</div>
-      <div class="list-recipes">
-        {{#each featuredRecipes}}
-          {{> recipeItem recipe=this size='small'}}
-        {{/each}}
-      </div>
-
-      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
-
       <h2 class="list-title">What's Cooking</h2>
       <div class="list-subtitle">See what the community is cooking</div>
       <div class="list-activities">
@@ -41,6 +31,16 @@
         {{/each}}
       </div>
       <a href="{{pathFor 'feed'}}" class="btn-primary">See what's cooking</a>
+
+      <h2 class="list-title">Our Favorite Recipes</h2>
+      <div class="list-subtitle">Hand-picked by neighborhood chefs</div>
+      <div class="list-recipes">
+        {{#each featuredRecipes}}
+          {{> recipeItem recipe=this size='small'}}
+        {{/each}}
+      </div>
+
+      <a href="{{pathFor 'recipes'}}" class="btn-primary">Explore all our recipes</a>
     </div>
 
   </div>
