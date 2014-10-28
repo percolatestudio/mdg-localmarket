@@ -41,14 +41,18 @@
       <ol class="list-directions">
         {{#each directions}}
           <li class="item-direction">
-            <span class="text">{{this}}..</span>
+            <span class="text">{{this}}</span>
           </li>
         {{/each}}
+          <li class="item-direction">
+          ...
+          </li>
       </ol>
       <a href="{{source.url}}" target="_blank" class="btn-primary js-open">See full recipe on {{source.name}}</a>
     </div>
 
     <div class="content-scrollable static-nav feed-scrollable">
+      <a class="btn-tertiary js-share"><span class="icon-camera"></span> Share that you made this</a>
       <div class="list-activities">
         {{#each activities}}
           {{> activity}}
