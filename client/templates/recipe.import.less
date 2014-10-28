@@ -98,7 +98,17 @@
     z-index:1;
   }
 
-  .btn-tertiary { display: block; }
+  .btn-tertiary {
+    display: block;
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      .font-s3;
+      letter-spacing: 0;
+      line-height: 1;
+      vertical-align: text-top;
+    }
+  }
 
   .content-scrollable {
     top: 100%;
